@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_44dcf5939dbf46b3b98479b664d51815 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_44dcf5939dbf46b3b98479b664d51815" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_44dcf5939dbf46b3b98479b664d51815 = L.map(
+                                  'map_44dcf5939dbf46b3b98479b664d51815',
+                                  {center: [23.8,90.351756],
+                                  zoom: 7,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_f86e24260a544b229a3fd709f3c89127 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(map_44dcf5939dbf46b3b98479b664d51815);
+        
+    
+            var feature_group_36e2b9dba5394ef9b58e0720ef0f8667 = L.featureGroup(
+                ).addTo(map_44dcf5939dbf46b3b98479b664d51815);
+        
+    
+
+            var marker_0aaa3d6beaa94a92b55b52591a2d3618 = L.marker(
+                [23.8704253,90.403649],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_06ebbbfd85f3458eaa7da3bd137619bf = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_0aaa3d6beaa94a92b55b52591a2d3618.setIcon(icon_06ebbbfd85f3458eaa7da3bd137619bf);
+            
+    
+            var popup_2b6a8e1553ec4aac9f11e7a336f4489b = L.popup({maxWidth: '300'});
+
+            
+                var html_b85e55daf13c409ab598924d5b1e15d0 = $('<div id="html_b85e55daf13c409ab598924d5b1e15d0" style="width: 100.0%; height: 100.0%;"><h5> <b>কুয়েত বাংলাদেশ মৈত্রী সরকারী হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 11</b><br><b>মোট আইসিইউ সংখ্যা : </b>26<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>52<br><b>মোট সাধারণ বেড সংখ্যা : </b>200<br><b>এলাকা : </b> উত্তরা<br><b>জেলা : </b> ঢাকা<br><b>যোগাযোগ : </b>ডাঃ শিহাব উদ্দীন ০১৭-১১-৩০৭০৬৯ (তত্বাবধায়ক)ডাঃ এ.কে.এম সরওয়ারুল আলম ০১৭-১১-৩৬৮৮৪১ (পরিচালক)</div>')[0];
+                popup_2b6a8e1553ec4aac9f11e7a336f4489b.setContent(html_b85e55daf13c409ab598924d5b1e15d0);
+            
+
+            marker_0aaa3d6beaa94a92b55b52591a2d3618.bindPopup(popup_2b6a8e1553ec4aac9f11e7a336f4489b);
+
+            
+        
+    
+
+            var marker_a00ffc52c0a64786a0318dec9414bddd = L.marker(
+                [23.8191217,90.4094053],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_70a6a8f8f05c4cabb9866a73b4edc5d7 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a00ffc52c0a64786a0318dec9414bddd.setIcon(icon_70a6a8f8f05c4cabb9866a73b4edc5d7);
+            
+    
+            var popup_5a2b55731f9a44e09b57507990cacdda = L.popup({maxWidth: '300'});
+
+            
+                var html_ca845429a4e740e8b539ee8765bdb7d8 = $('<div id="html_ca845429a4e740e8b539ee8765bdb7d8" style="width: 100.0%; height: 100.0%;"><h5> <b>৫০০ শয্যা কুর্মিটোলা জেনারেল হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 17</b><br><b>মোট আইসিইউ সংখ্যা : </b>27<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>-52<br><b>মোট সাধারণ বেড সংখ্যা : </b>275<br><b>এলাকা : </b>nan<br><b>জেলা : </b> ঢাকা<br><b>যোগাযোগ : </b>বিগেঃ জেনারেল জামিল আহমেদ- ০১৭-৬৯-০১০২০১ (পরিচালক)</div>')[0];
+                popup_5a2b55731f9a44e09b57507990cacdda.setContent(html_ca845429a4e740e8b539ee8765bdb7d8);
+            
+
+            marker_a00ffc52c0a64786a0318dec9414bddd.bindPopup(popup_5a2b55731f9a44e09b57507990cacdda);
+
+            
+        
+    
+
+            var marker_22ddef699f044a9d83b6b700ab68ed63 = L.marker(
+                [23.7249083,90.3977102],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_14378629e81046b087931d41735ffb43 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_22ddef699f044a9d83b6b700ab68ed63.setIcon(icon_14378629e81046b087931d41735ffb43);
+            
+    
+            var popup_e7f45a5d476847448070dc6178a27420 = L.popup({maxWidth: '300'});
+
+            
+                var html_76e5c3da02fc483c8c8797f03e3d005c = $('<div id="html_76e5c3da02fc483c8c8797f03e3d005c" style="width: 100.0%; height: 100.0%;"><h5> <b>ঢাকা মেডিকেল কলেজ হাসপাতাল (ইউনিট-২) ও বার্ণ ইউনিট<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 31</b><br><b>মোট আইসিইউ সংখ্যা : </b>44<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>128<br><b>মোট সাধারণ বেড সংখ্যা : </b>793<br><b>এলাকা : </b>nan<br><b>জেলা : </b> ঢাকা<br><b>যোগাযোগ : </b>বিগেঃ জেন এ.কে.এম নাসির উদ্দিন-০১৭-১৫০১৬৯৮৪ (পরিচালক)</div>')[0];
+                popup_e7f45a5d476847448070dc6178a27420.setContent(html_76e5c3da02fc483c8c8797f03e3d005c);
+            
+
+            marker_22ddef699f044a9d83b6b700ab68ed63.bindPopup(popup_e7f45a5d476847448070dc6178a27420);
+
+            
+        
+    
+
+            var marker_646bb3be7d2f4350b17a03e7d19bb4bd = L.marker(
+                [23.7320123,90.4300171],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_e09986ab878e40d28e5d2054ad0e3065 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_646bb3be7d2f4350b17a03e7d19bb4bd.setIcon(icon_e09986ab878e40d28e5d2054ad0e3065);
+            
+    
+            var popup_55e71912fa4843fc9fedae4e18e9d1fd = L.popup({maxWidth: '300'});
+
+            
+                var html_7a3101d4092040bc91eea700dcc66cf5 = $('<div id="html_7a3101d4092040bc91eea700dcc66cf5" style="width: 100.0%; height: 100.0%;"><h5> <b>৫০০ শয্যা মুগদা মেডিকেল কলেজ হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 0</b><br><b>মোট আইসিইউ সংখ্যা : </b>10<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>104<br><b>মোট সাধারণ বেড সংখ্যা : </b>306<br><b>এলাকা : </b>nan<br><b>জেলা : </b> ঢাকা<br><b>যোগাযোগ : </b>ডাঃ রওশন আনোয়ার ০১৭-১৫-০২৩৯০৫ (পরিচালক)</div>')[0];
+                popup_55e71912fa4843fc9fedae4e18e9d1fd.setContent(html_7a3101d4092040bc91eea700dcc66cf5);
+            
+
+            marker_646bb3be7d2f4350b17a03e7d19bb4bd.bindPopup(popup_55e71912fa4843fc9fedae4e18e9d1fd);
+
+            
+        
+    
+
+            var marker_e97e6d969bf2415e9b695fb7ce6c48e6 = L.marker(
+                [23.7356646,90.4169772],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_7e75418073fb4024aa736e1ec8d1d9c1 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e97e6d969bf2415e9b695fb7ce6c48e6.setIcon(icon_7e75418073fb4024aa736e1ec8d1d9c1);
+            
+    
+            var popup_f76dbc07d8c7455192f2c02f8f434bd4 = L.popup({maxWidth: '300'});
+
+            
+                var html_1ba970159c364b4eac274d639a98b939 = $('<div id="html_1ba970159c364b4eac274d639a98b939" style="width: 100.0%; height: 100.0%;"><h5> <b>রাজারবাগ পুলিশ হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 1</b><br><b>মোট আইসিইউ সংখ্যা : </b>15<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>426<br><b>মোট সাধারণ বেড সংখ্যা : </b>1012<br><b>এলাকা : </b>nan<br><b>জেলা : </b> ঢাকা<br><b>যোগাযোগ : </b>ডাঃ হাসানুল হায়দার ০১৭-৬৯-০৫৮১১৯ (পরিচালক)</div>')[0];
+                popup_f76dbc07d8c7455192f2c02f8f434bd4.setContent(html_1ba970159c364b4eac274d639a98b939);
+            
+
+            marker_e97e6d969bf2415e9b695fb7ce6c48e6.bindPopup(popup_f76dbc07d8c7455192f2c02f8f434bd4);
+
+            
+        
+    
+
+            var marker_d59b306c5a354140837a500782e494d2 = L.marker(
+                [23.8761481,90.3881669],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_73a551b6848b42bbad3ca32d9655ebf5 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d59b306c5a354140837a500782e494d2.setIcon(icon_73a551b6848b42bbad3ca32d9655ebf5);
+            
+    
+            var popup_8daed61b8bfe40dfa49e5358ea2b50e4 = L.popup({maxWidth: '300'});
+
+            
+                var html_1897125de92a46a78d75e208443a23fa = $('<div id="html_1897125de92a46a78d75e208443a23fa" style="width: 100.0%; height: 100.0%;"><h5> <b>রিজেন্ট হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 5</b><br><b>মোট আইসিইউ সংখ্যা : </b>10<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>35<br><b>মোট সাধারণ বেড সংখ্যা : </b>60<br><b>এলাকা : </b> উত্তরা<br><b>জেলা : </b> ঢাকা<br><b>যোগাযোগ : </b>মোঃ সাইফ চৌধুরী ০১৯-৮০-২২২২১১</div>')[0];
+                popup_8daed61b8bfe40dfa49e5358ea2b50e4.setContent(html_1897125de92a46a78d75e208443a23fa);
+            
+
+            marker_d59b306c5a354140837a500782e494d2.bindPopup(popup_8daed61b8bfe40dfa49e5358ea2b50e4);
+
+            
+        
+    
+
+            var marker_314e8b2efde8451e9b060ece1b215d70 = L.marker(
+                [23.8277841,90.3639945],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_dbbd548c104c42818e60a2c68b39f6cc = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_314e8b2efde8451e9b060ece1b215d70.setIcon(icon_dbbd548c104c42818e60a2c68b39f6cc);
+            
+    
+            var popup_d11c1fab02304127b07abc96a50f0c7d = L.popup({maxWidth: '300'});
+
+            
+                var html_bba964a8f70f459b9cadcacf76aef965 = $('<div id="html_bba964a8f70f459b9cadcacf76aef965" style="width: 100.0%; height: 100.0%;"><h5> <b>রিজেন্ট হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 7</b><br><b>মোট আইসিইউ সংখ্যা : </b>12<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>22<br><b>মোট সাধারণ বেড সংখ্যা : </b>80<br><b>এলাকা : </b> মিরপুর<br><b>জেলা : </b> ঢাকা<br><b>যোগাযোগ : </b>মোঃ সাইফ চৌধুরী ০১৯-৮০-২২২২১১</div>')[0];
+                popup_d11c1fab02304127b07abc96a50f0c7d.setContent(html_bba964a8f70f459b9cadcacf76aef965);
+            
+
+            marker_314e8b2efde8451e9b060ece1b215d70.bindPopup(popup_d11c1fab02304127b07abc96a50f0c7d);
+
+            
+        
+    
+
+            var marker_c59d5e05505e47eb99323bcfd0cd3418 = L.marker(
+                [23.7140424,90.4050703],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_5f17b7bde3bd4482be194de105c5703e = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c59d5e05505e47eb99323bcfd0cd3418.setIcon(icon_5f17b7bde3bd4482be194de105c5703e);
+            
+    
+            var popup_c9529bc3883e49378819f3e5f51d968a = L.popup({maxWidth: '300'});
+
+            
+                var html_51b0086a40504290856cea5dc4c9e382 = $('<div id="html_51b0086a40504290856cea5dc4c9e382" style="width: 100.0%; height: 100.0%;"><h5> <b>ঢাকা মহানগর হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 5</b><br><b>মোট আইসিইউ সংখ্যা : </b>5<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>72<br><b>মোট সাধারণ বেড সংখ্যা : </b>105<br><b>এলাকা : </b> বাবু বাজার<br><b>জেলা : </b> ঢাকা<br><b>যোগাযোগ : </b>ডাঃ প্রকাশ চন্দ্র রায় ০১৭-১৮-৮৮৪৪৭৬ (পরিচালক)</div>')[0];
+                popup_c9529bc3883e49378819f3e5f51d968a.setContent(html_51b0086a40504290856cea5dc4c9e382);
+            
+
+            marker_c59d5e05505e47eb99323bcfd0cd3418.bindPopup(popup_c9529bc3883e49378819f3e5f51d968a);
+
+            
+        
+    
+
+            var marker_052ad560a0ae4f81a30616e00cd0184e = L.marker(
+                [23.7761064,90.4058473],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_812172232276475a888616e816c8275c = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_052ad560a0ae4f81a30616e00cd0184e.setIcon(icon_812172232276475a888616e816c8275c);
+            
+    
+            var popup_933329a4d07a447f826119a177bc37f3 = L.popup({maxWidth: '300'});
+
+            
+                var html_56c862835c1749a981f1f931b0f2a516 = $('<div id="html_56c862835c1749a981f1f931b0f2a516" style="width: 100.0%; height: 100.0%;"><h5> <b>সংক্রামক ব্যাধি হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 0</b><br><b>মোট আইসিইউ সংখ্যা : </b>0<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>9<br><b>মোট সাধারণ বেড সংখ্যা : </b>10<br><b>এলাকা : </b> মহাখালী<br><b>জেলা : </b> ঢাকা<br><b>যোগাযোগ : </b>ডাঃ ভোলানাথ বশাক ০১৭-১৫-৪৭২২৬১ (পরিচালক)</div>')[0];
+                popup_933329a4d07a447f826119a177bc37f3.setContent(html_56c862835c1749a981f1f931b0f2a516);
+            
+
+            marker_052ad560a0ae4f81a30616e00cd0184e.bindPopup(popup_933329a4d07a447f826119a177bc37f3);
+
+            
+        
+    
+
+            var marker_5882561c16324433ba261e839c1036a0 = L.marker(
+                [23.7884078,90.3461605],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_667c53d9c961455993a90672429e2c53 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5882561c16324433ba261e839c1036a0.setIcon(icon_667c53d9c961455993a90672429e2c53);
+            
+    
+            var popup_651fbd2aa6ad4b6b8eb425b48ff9d993 = L.popup({maxWidth: '300'});
+
+            
+                var html_9e87c89dfe3844d597e2ca4b6c1f2ae5 = $('<div id="html_9e87c89dfe3844d597e2ca4b6c1f2ae5" style="width: 100.0%; height: 100.0%;"><h5> <b>লালকুঠি হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 3</b><br><b>মোট আইসিইউ সংখ্যা : </b>5<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>66<br><b>মোট সাধারণ বেড সংখ্যা : </b>121<br><b>এলাকা : </b> মিরপুর<br><b>জেলা : </b> ঢাকা<br><b>যোগাযোগ : </b>ডাঃ শামছুল করিম- ০১৭২০৪২৭৯৫৯ (পরিচালক)</div>')[0];
+                popup_651fbd2aa6ad4b6b8eb425b48ff9d993.setContent(html_9e87c89dfe3844d597e2ca4b6c1f2ae5);
+            
+
+            marker_5882561c16324433ba261e839c1036a0.bindPopup(popup_651fbd2aa6ad4b6b8eb425b48ff9d993);
+
+            
+        
+    
+
+            var marker_2131213dd1434709beac1c20d80f93f0 = L.marker(
+                [23.7363656,90.4236821],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_f517d6dc664545a8a0a1b88f2a91cf98 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2131213dd1434709beac1c20d80f93f0.setIcon(icon_f517d6dc664545a8a0a1b88f2a91cf98);
+            
+    
+            var popup_4672299ff33a4b45853e48d368085f2a = L.popup({maxWidth: '300'});
+
+            
+                var html_4065c8c0eb924699ad7e42a4907f3263 = $('<div id="html_4065c8c0eb924699ad7e42a4907f3263" style="width: 100.0%; height: 100.0%;"><h5> <b>রেলওয়ে হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 0</b><br><b>মোট আইসিইউ সংখ্যা : </b>0<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>21<br><b>মোট সাধারণ বেড সংখ্যা : </b>30<br><b>এলাকা : </b> কমলাপুর<br><b>জেলা : </b> ঢাকা<br><b>যোগাযোগ : </b>ডাঃ মোঃ আলমগীর ০১৭-১১-৫৩৫০৪২ (তত্বাবধায়ক)</div>')[0];
+                popup_4672299ff33a4b45853e48d368085f2a.setContent(html_4065c8c0eb924699ad7e42a4907f3263);
+            
+
+            marker_2131213dd1434709beac1c20d80f93f0.bindPopup(popup_4672299ff33a4b45853e48d368085f2a);
+
+            
+        
+    
+
+            var marker_b0f8fa86e1e246d9b451042e4e03cd95 = L.marker(
+                [23.7777571,90.4057408],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_946914c672a546448bb04662177536a7 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b0f8fa86e1e246d9b451042e4e03cd95.setIcon(icon_946914c672a546448bb04662177536a7);
+            
+    
+            var popup_e6378eb068fb4345a86233eba7501b0d = L.popup({maxWidth: '300'});
+
+            
+                var html_7e4b7489789b4af59175429da3698cd2 = $('<div id="html_7e4b7489789b4af59175429da3698cd2" style="width: 100.0%; height: 100.0%;"><h5> <b>২৫০ শয্যা শেখ রাসেল গ্যাস্ট্রোলিভার হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 6</b><br><b>মোট আইসিইউ সংখ্যা : </b>14<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>101<br><b>মোট সাধারণ বেড সংখ্যা : </b>140<br><b>এলাকা : </b> মহাখালী<br><b>জেলা : </b> ঢাকা<br><b>যোগাযোগ : </b>প্রফেঃ পাঃ ফারুক আহমেদ ০১৮-১৯-২২১১১৫ (পরিচালক)</div>')[0];
+                popup_e6378eb068fb4345a86233eba7501b0d.setContent(html_7e4b7489789b4af59175429da3698cd2);
+            
+
+            marker_b0f8fa86e1e246d9b451042e4e03cd95.bindPopup(popup_e6378eb068fb4345a86233eba7501b0d);
+
+            
+        
+    
+
+            var marker_209c01774a5b4fb897cab7f439d69436 = L.marker(
+                [23.7467019,90.403107],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_4ff185d9efc840bba21b530c64ea0d58 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_209c01774a5b4fb897cab7f439d69436.setIcon(icon_4ff185d9efc840bba21b530c64ea0d58);
+            
+    
+            var popup_ea1fedb0461248b8a49605728138e0e8 = L.popup({maxWidth: '300'});
+
+            
+                var html_89ac9df3ff4d48d78670bc80c082690f = $('<div id="html_89ac9df3ff4d48d78670bc80c082690f" style="width: 100.0%; height: 100.0%;"><h5> <b>হলি ফ্যামিলী রেড ক্রিসেন্ট মেডিকেল কলেজ হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 1</b><br><b>মোট আইসিইউ সংখ্যা : </b>10<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>235<br><b>মোট সাধারণ বেড সংখ্যা : </b>420<br><b>এলাকা : </b>nan<br><b>জেলা : </b> ঢাকা<br><b>যোগাযোগ : </b>ডাঃ মোঃ মোরশেদ ০১৭-১৪-২১৮১০৬ (পরিচালক)</div>')[0];
+                popup_ea1fedb0461248b8a49605728138e0e8.setContent(html_89ac9df3ff4d48d78670bc80c082690f);
+            
+
+            marker_209c01774a5b4fb897cab7f439d69436.bindPopup(popup_ea1fedb0461248b8a49605728138e0e8);
+
+            
+        
+    
+
+            var marker_fdafb022971e442ba37965e8ee3b1e78 = L.marker(
+                [23.7452959,90.3825323],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_f159281fca2440e5ae6d13b09b6d1650 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_fdafb022971e442ba37965e8ee3b1e78.setIcon(icon_f159281fca2440e5ae6d13b09b6d1650);
+            
+    
+            var popup_bba02c2d1d584373a73c3bb69c3fd709 = L.popup({maxWidth: '300'});
+
+            
+                var html_bc4d668a6b9c4a51a1b7fb09f5273780 = $('<div id="html_bc4d668a6b9c4a51a1b7fb09f5273780" style="width: 100.0%; height: 100.0%;"><h5> <b>আনোয়ার খান মডার্ন মেডিকেল কলেজ হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 0</b><br><b>মোট আইসিইউ সংখ্যা : </b>10<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>163<br><b>মোট সাধারণ বেড সংখ্যা : </b>200<br><b>এলাকা : </b> ধানমন্ডি<br><b>জেলা : </b> ঢাকা<br><b>যোগাযোগ : </b>প্রফেঃ ডাঃ এহতেশামুল হক ০১৭-১১-৬৭৩৫৫০ (পরিচালক)</div>')[0];
+                popup_bba02c2d1d584373a73c3bb69c3fd709.setContent(html_bc4d668a6b9c4a51a1b7fb09f5273780);
+            
+
+            marker_fdafb022971e442ba37965e8ee3b1e78.bindPopup(popup_bba02c2d1d584373a73c3bb69c3fd709);
+
+            
+        
+    
+
+            var marker_d1a53f171cc74a2fb8fef38a11a2f94e = L.marker(
+                [23.8207146,90.4231228],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_221fec2234b949b4a6f636df7bb4eab1 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d1a53f171cc74a2fb8fef38a11a2f94e.setIcon(icon_221fec2234b949b4a6f636df7bb4eab1);
+            
+    
+            var popup_295aba6b3a604571a1c824284144f49b = L.popup({maxWidth: '300'});
+
+            
+                var html_f772cd23beb846e4813ea7e89895bac9 = $('<div id="html_f772cd23beb846e4813ea7e89895bac9" style="width: 100.0%; height: 100.0%;"><h5> <b>বসুন্ধরা কোভিড হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 0</b><br><b>মোট আইসিইউ সংখ্যা : </b>0<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>1949<br><b>মোট সাধারণ বেড সংখ্যা : </b>2013<br><b>এলাকা : </b> কুড়িল<br><b>জেলা : </b> ঢাকা<br><b>যোগাযোগ : </b>ডাঃ তানভীর আহমেদ চৌধুরী ০১৯-১৪-০৭১৪১৪ (পরিচালক)</div>')[0];
+                popup_295aba6b3a604571a1c824284144f49b.setContent(html_f772cd23beb846e4813ea7e89895bac9);
+            
+
+            marker_d1a53f171cc74a2fb8fef38a11a2f94e.bindPopup(popup_295aba6b3a604571a1c824284144f49b);
+
+            
+        
+    
+
+            var marker_a5aa37d8eb25470b83a42ad8e5d28675 = L.marker(
+                [23.7251713,90.4052992],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_7f7e5d31f00f49e7ad062ff3fa7d8d3d = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a5aa37d8eb25470b83a42ad8e5d28675.setIcon(icon_7f7e5d31f00f49e7ad062ff3fa7d8d3d);
+            
+    
+            var popup_df16f2ebeb724aabb5520ce7206e8836 = L.popup({maxWidth: '300'});
+
+            
+                var html_0795107af76b4758aa75bc1791aa8127 = $('<div id="html_0795107af76b4758aa75bc1791aa8127" style="width: 100.0%; height: 100.0%;"><h5> <b>সরকারী কর্মচারী হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 5</b><br><b>মোট আইসিইউ সংখ্যা : </b>6<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>40<br><b>মোট সাধারণ বেড সংখ্যা : </b>46<br><b>এলাকা : </b> ফুলবাড়িয়া<br><b>জেলা : </b> ঢাকা<br><b>যোগাযোগ : </b>মুহঃ মাহাবুবর রহমান- ০১৭১৫-৬৩৫-৯০৫ (পরিচালক)</div>')[0];
+                popup_df16f2ebeb724aabb5520ce7206e8836.setContent(html_0795107af76b4758aa75bc1791aa8127);
+            
+
+            marker_a5aa37d8eb25470b83a42ad8e5d28675.bindPopup(popup_df16f2ebeb724aabb5520ce7206e8836);
+
+            
+        
+    
+
+            var marker_8c0ab45d869b4fa999f34d5b0c444f92 = L.marker(
+                [23.7692146,90.3713616],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_8102717d3eec40578eff3b5fe5ff4a81 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_8c0ab45d869b4fa999f34d5b0c444f92.setIcon(icon_8102717d3eec40578eff3b5fe5ff4a81);
+            
+    
+            var popup_c4e6c125c1aa46ce92cbc865ab13bf9b = L.popup({maxWidth: '300'});
+
+            
+                var html_f188626a65f947598b71ffef3885413b = $('<div id="html_f188626a65f947598b71ffef3885413b" style="width: 100.0%; height: 100.0%;"><h5> <b>শহীদ সোহরাওয়ার্দী মেডিকেল কলেজ হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 0</b><br><b>মোট আইসিইউ সংখ্যা : </b>0<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>104<br><b>মোট সাধারণ বেড সংখ্যা : </b>184<br><b>এলাকা : </b>শের-এ-বাংলা নগর<br><b>জেলা : </b>ঢাকা<br><b>যোগাযোগ : </b>ডাঃ উত্তম কুমার বড়ুয়া-০১৮-১৯-৪০২৩৫৮(পরিচালক)</div>')[0];
+                popup_c4e6c125c1aa46ce92cbc865ab13bf9b.setContent(html_f188626a65f947598b71ffef3885413b);
+            
+
+            marker_8c0ab45d869b4fa999f34d5b0c444f92.bindPopup(popup_c4e6c125c1aa46ce92cbc865ab13bf9b);
+
+            
+        
+    
+
+            var marker_d476681c5b584e2cb08a9b30a758b2b8 = L.marker(
+                [23.7077358,90.3972052],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_d814608ac5504a2789ed3cf32d5f2809 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d476681c5b584e2cb08a9b30a758b2b8.setIcon(icon_d814608ac5504a2789ed3cf32d5f2809);
+            
+    
+            var popup_b5f482801d534d8d98ce573eca156e2e = L.popup({maxWidth: '300'});
+
+            
+                var html_79cb8600e0d7409793d69cfe9e09b933 = $('<div id="html_79cb8600e0d7409793d69cfe9e09b933" style="width: 100.0%; height: 100.0%;"><h5> <b>জিনজিরা ২০ শয্যা হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 0</b><br><b>মোট আইসিইউ সংখ্যা : </b>0<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>16<br><b>মোট সাধারণ বেড সংখ্যা : </b>27<br><b>এলাকা : </b> কেরানীগঞ্জ<br><b>জেলা : </b> ঢাকা<br><b>যোগাযোগ : </b>ডাঃ পিনজয় বিশ্বাস ০১৭-১৬-৩৫১৪৩৪</div>')[0];
+                popup_b5f482801d534d8d98ce573eca156e2e.setContent(html_79cb8600e0d7409793d69cfe9e09b933);
+            
+
+            marker_d476681c5b584e2cb08a9b30a758b2b8.bindPopup(popup_b5f482801d534d8d98ce573eca156e2e);
+
+            
+        
+    
+
+            var marker_85f34ae269fb424f82ffa1672f7f986a = L.marker(
+                [23.6265177,90.5078152],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_146dd4b074284a1591844c89f27f9da7 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_85f34ae269fb424f82ffa1672f7f986a.setIcon(icon_146dd4b074284a1591844c89f27f9da7);
+            
+    
+            var popup_af17e92c3fd6405e857ffd44195ebdb9 = L.popup({maxWidth: '300'});
+
+            
+                var html_16b2eb0df567471fa3dcc079b217703e = $('<div id="html_16b2eb0df567471fa3dcc079b217703e" style="width: 100.0%; height: 100.0%;"><h5> <b>খানপুর ৩০০ শয্যা হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 10</b><br><b>মোট আইসিইউ সংখ্যা : </b>10<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>62<br><b>মোট সাধারণ বেড সংখ্যা : </b>100<br><b>এলাকা : </b>nan<br><b>জেলা : </b> নারায়নগঞ্জ<br><b>যোগাযোগ : </b>ডাঃ গৌতম রায় ০১৭-১৬-৮৮৫০৪৭ (তত্বাবধায়ক)</div>')[0];
+                popup_af17e92c3fd6405e857ffd44195ebdb9.setContent(html_16b2eb0df567471fa3dcc079b217703e);
+            
+
+            marker_85f34ae269fb424f82ffa1672f7f986a.bindPopup(popup_af17e92c3fd6405e857ffd44195ebdb9);
+
+            
+        
+    
+
+            var marker_5b50ab9034114bdf8c8b94e3ba674658 = L.marker(
+                [23.701093,90.514313],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_f7491b84ae734e4a971d977b2d6730ad = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5b50ab9034114bdf8c8b94e3ba674658.setIcon(icon_f7491b84ae734e4a971d977b2d6730ad);
+            
+    
+            var popup_4233a58cb00942be9c3a94460a7f6518 = L.popup({maxWidth: '300'});
+
+            
+                var html_11263df5d2c942a6bf217e80bf4038c5 = $('<div id="html_11263df5d2c942a6bf217e80bf4038c5" style="width: 100.0%; height: 100.0%;"><h5> <b>সাজেদা ফাউন্ডেশন<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 2</b><br><b>মোট আইসিইউ সংখ্যা : </b>5<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>14<br><b>মোট সাধারণ বেড সংখ্যা : </b>44<br><b>এলাকা : </b> কাঁচপুর<br><b>জেলা : </b> নারায়নগঞ্জ<br><b>যোগাযোগ : </b>ডাঃ ফজলুল হক ০১৭-৩৭-২৯৯২৪৮</div>')[0];
+                popup_4233a58cb00942be9c3a94460a7f6518.setContent(html_11263df5d2c942a6bf217e80bf4038c5);
+            
+
+            marker_5b50ab9034114bdf8c8b94e3ba674658.bindPopup(popup_4233a58cb00942be9c3a94460a7f6518);
+
+            
+        
+    
+
+            var marker_485b31c585ba4ec5b8fa355417263c47 = L.marker(
+                [23.9919935,90.4246154],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_bea3f8bbd62445fbb2d60abe18880da1 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_485b31c585ba4ec5b8fa355417263c47.setIcon(icon_bea3f8bbd62445fbb2d60abe18880da1);
+            
+    
+            var popup_89a0ea95f037495b950cf398eeef1c11 = L.popup({maxWidth: '300'});
+
+            
+                var html_61a46958ab4241cdbac9e0c2aba7f862 = $('<div id="html_61a46958ab4241cdbac9e0c2aba7f862" style="width: 100.0%; height: 100.0%;"><h5> <b>শহীদ তাজউদ্দিন মেডিকেল কলেজ হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 7</b><br><b>মোট আইসিইউ সংখ্যা : </b>10<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>75<br><b>মোট সাধারণ বেড সংখ্যা : </b>100<br><b>এলাকা : </b>nan<br><b>জেলা : </b> গাজীপুর<br><b>যোগাযোগ : </b>ডাঃ মোঃ খলিলুর রহমান ০১৭-১২-১৬৯৫৯০ (পরিচালক)</div>')[0];
+                popup_89a0ea95f037495b950cf398eeef1c11.setContent(html_61a46958ab4241cdbac9e0c2aba7f862);
+            
+
+            marker_485b31c585ba4ec5b8fa355417263c47.bindPopup(popup_89a0ea95f037495b950cf398eeef1c11);
+
+            
+        
+    
+
+            var marker_008cd48474f74ada83d3cc0649718e45 = L.marker(
+                [22.3592709,91.8308045],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_97fb20d617374236a29f4222c758dea6 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_008cd48474f74ada83d3cc0649718e45.setIcon(icon_97fb20d617374236a29f4222c758dea6);
+            
+    
+            var popup_bb30453d4f8e4feeb2b606d2179ac30f = L.popup({maxWidth: '300'});
+
+            
+                var html_8b85a4552a774b07809a1ee8819fe7c8 = $('<div id="html_8b85a4552a774b07809a1ee8819fe7c8" style="width: 100.0%; height: 100.0%;"><h5> <b>চট্টগ্রাম মেডিকেল কলেজ হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 0</b><br><b>মোট আইসিইউ সংখ্যা : </b>6<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>67<br><b>মোট সাধারণ বেড সংখ্যা : </b>220<br><b>এলাকা : </b>nan<br><b>জেলা : </b> চট্টগ্রাম<br><b>যোগাযোগ : </b>ডাঃ সাজ্জাদ হোসেন সহকারী পরিচালক মোবাইল নং-০১৮২৮৪৫৮৪৭৭</div>')[0];
+                popup_bb30453d4f8e4feeb2b606d2179ac30f.setContent(html_8b85a4552a774b07809a1ee8819fe7c8);
+            
+
+            marker_008cd48474f74ada83d3cc0649718e45.bindPopup(popup_bb30453d4f8e4feeb2b606d2179ac30f);
+
+            
+        
+    
+
+            var marker_66bdf66c31aa44a2880540cc89762fd4 = L.marker(
+                [22.4017512,91.7587496],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_ae13f36bc5934974981b158e46c66f02 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_66bdf66c31aa44a2880540cc89762fd4.setIcon(icon_ae13f36bc5934974981b158e46c66f02);
+            
+    
+            var popup_8bb3e1a9fed8416099c51d795d20e552 = L.popup({maxWidth: '300'});
+
+            
+                var html_f333e016c90a43f0971ee9da6857a18a = $('<div id="html_f333e016c90a43f0971ee9da6857a18a" style="width: 100.0%; height: 100.0%;"><h5> <b>বিআইটিআইটি<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 0</b><br><b>মোট আইসিইউ সংখ্যা : </b>0<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>13<br><b>মোট সাধারণ বেড সংখ্যা : </b>32<br><b>এলাকা : </b> ফৌজদারহাট<br><b>জেলা : </b> চট্টগ্রাম<br><b>যোগাযোগ : </b>অধ্যাপক ডা: মো: আবুল হাছান চৌধুরী। পরিচালক- মোবাইল নং- ০১৮১৯৩১০৬০২</div>')[0];
+                popup_8bb3e1a9fed8416099c51d795d20e552.setContent(html_f333e016c90a43f0971ee9da6857a18a);
+            
+
+            marker_66bdf66c31aa44a2880540cc89762fd4.bindPopup(popup_8bb3e1a9fed8416099c51d795d20e552);
+
+            
+        
+    
+
+            var marker_7cf2c0872dd2418a819bd0475a6fd9ed = L.marker(
+                [22.3406339,91.8377319],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_f6915c7e00bf49398c3e8494b86ce3be = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7cf2c0872dd2418a819bd0475a6fd9ed.setIcon(icon_f6915c7e00bf49398c3e8494b86ce3be);
+            
+    
+            var popup_4ea2c9b6a1a341b9b5fae0e16842dc71 = L.popup({maxWidth: '300'});
+
+            
+                var html_ce4cd2c90ecd442fa8dc0f5850e77f67 = $('<div id="html_ce4cd2c90ecd442fa8dc0f5850e77f67" style="width: 100.0%; height: 100.0%;"><h5> <b>২৫০শয্যা বিশিষ্ট জেনারেল হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 0</b><br><b>মোট আইসিইউ সংখ্যা : </b>10<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>48<br><b>মোট সাধারণ বেড সংখ্যা : </b>150<br><b>এলাকা : </b>nan<br><b>জেলা : </b> চট্টগ্রাম<br><b>যোগাযোগ : </b>ডাঃ মোঃ শফিকুল ইসলাম  (ভারপ্রাপ্ত তত্বাবধায়ক) মোবাইল নং- ০১৮১৯৩০৩২৪৫</div>')[0];
+                popup_4ea2c9b6a1a341b9b5fae0e16842dc71.setContent(html_ce4cd2c90ecd442fa8dc0f5850e77f67);
+            
+
+            marker_7cf2c0872dd2418a819bd0475a6fd9ed.bindPopup(popup_4ea2c9b6a1a341b9b5fae0e16842dc71);
+
+            
+        
+    
+
+            var marker_fddbe7d280c144cea7bf23774c71a526 = L.marker(
+                [22.3618627,91.8092569],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_3e3dacd4e18e482999e3a2942ba9b205 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_fddbe7d280c144cea7bf23774c71a526.setIcon(icon_3e3dacd4e18e482999e3a2942ba9b205);
+            
+    
+            var popup_6bf0689ff2864e4ba5d59e1e4421f628 = L.popup({maxWidth: '300'});
+
+            
+                var html_2937f1edb1444a43ba2b46fcbc0df0d8 = $('<div id="html_2937f1edb1444a43ba2b46fcbc0df0d8" style="width: 100.0%; height: 100.0%;"><h5> <b>হলি ক্রিসেন্ট হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 7</b><br><b>মোট আইসিইউ সংখ্যা : </b>10<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>85<br><b>মোট সাধারণ বেড সংখ্যা : </b>100<br><b>এলাকা : </b>nan<br><b>জেলা : </b> চট্টগ্রাম<br><b>যোগাযোগ : </b>ডা: মনোয়ার হোসেন সহকারী পরিচালক মোবাইল নং- ০১৭৫৪৮৯১২৩৯</div>')[0];
+                popup_6bf0689ff2864e4ba5d59e1e4421f628.setContent(html_2937f1edb1444a43ba2b46fcbc0df0d8);
+            
+
+            marker_fddbe7d280c144cea7bf23774c71a526.bindPopup(popup_6bf0689ff2864e4ba5d59e1e4421f628);
+
+            
+        
+    
+
+            var marker_52955425a9a449fca437658fa76d4dcf = L.marker(
+                [22.341941,91.8230077],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_6254058d9ba14355bd01425edfd954c1 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_52955425a9a449fca437658fa76d4dcf.setIcon(icon_6254058d9ba14355bd01425edfd954c1);
+            
+    
+            var popup_ce6bb90d49d74f3394b15371c3c4f221 = L.popup({maxWidth: '300'});
+
+            
+                var html_124e672dc02d418f886144c3dc4e5de2 = $('<div id="html_124e672dc02d418f886144c3dc4e5de2" style="width: 100.0%; height: 100.0%;"><h5> <b>চট্টগ্রাম রেলওয়ে হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 0</b><br><b>মোট আইসিইউ সংখ্যা : </b>0<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>58<br><b>মোট সাধারণ বেড সংখ্যা : </b>100<br><b>এলাকা : </b>nan<br><b>জেলা : </b> চট্টগ্রাম<br><b>যোগাযোগ : </b>ডাঃ নুরুল আবছার সহকারী পরিচালক মোবাইল নং- ০১৮২৪৯০৩৪৯৯</div>')[0];
+                popup_ce6bb90d49d74f3394b15371c3c4f221.setContent(html_124e672dc02d418f886144c3dc4e5de2);
+            
+
+            marker_52955425a9a449fca437658fa76d4dcf.bindPopup(popup_ce6bb90d49d74f3394b15371c3c4f221);
+
+            
+        
+    
+
+            var marker_cb53532d16aa4a41a81de0333c7d7fef = L.marker(
+                [22.3229306,91.8066804],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_6a2e312f2fbe4f67b8aad9b7b85693aa = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_cb53532d16aa4a41a81de0333c7d7fef.setIcon(icon_6a2e312f2fbe4f67b8aad9b7b85693aa);
+            
+    
+            var popup_c858c4acc61c44eeadc70d703a35ba43 = L.popup({maxWidth: '300'});
+
+            
+                var html_a54d02c976e448c191453f4a5d4ba010 = $('<div id="html_a54d02c976e448c191453f4a5d4ba010" style="width: 100.0%; height: 100.0%;"><h5> <b>চট্টগ্রাম মা ও শিশু হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 0</b><br><b>মোট আইসিইউ সংখ্যা : </b>6<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>1<br><b>মোট সাধারণ বেড সংখ্যা : </b>28<br><b>এলাকা : </b> আগ্রাবাদ<br><b>জেলা : </b> চট্টগ্রাম<br><b>যোগাযোগ : </b>ডাঃ মোঃ নুরুল হক পরিচালক (প্রশাসন) মোবাইল নং-০১৭১১১১০৭১৪</div>')[0];
+                popup_c858c4acc61c44eeadc70d703a35ba43.setContent(html_a54d02c976e448c191453f4a5d4ba010);
+            
+
+            marker_cb53532d16aa4a41a81de0333c7d7fef.bindPopup(popup_c858c4acc61c44eeadc70d703a35ba43);
+
+            
+        
+    
+
+            var marker_6d44bd4ee1f141fd96680eb8c9b7a5eb = L.marker(
+                [22.3614427,91.7973215],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_24c8a3f5c7cc4d219aab781e4bad492f = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_6d44bd4ee1f141fd96680eb8c9b7a5eb.setIcon(icon_24c8a3f5c7cc4d219aab781e4bad492f);
+            
+    
+            var popup_b8c41832162346ee8772b466ca66639a = L.popup({maxWidth: '300'});
+
+            
+                var html_858a526b49424b438fa63d5255ddeffd = $('<div id="html_858a526b49424b438fa63d5255ddeffd" style="width: 100.0%; height: 100.0%;"><h5> <b>বঙ্গবন্ধু মেমোরিয়াল হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 3</b><br><b>মোট আইসিইউ সংখ্যা : </b>3<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>18<br><b>মোট সাধারণ বেড সংখ্যা : </b>47<br><b>এলাকা : </b> পাহাড়তলী<br><b>জেলা : </b>চট্টগ্রাম<br><b>যোগাযোগ : </b>ডাঃ কামরুল হাসান পরিচালক মোবাইল নং-০১৭১১৭৪৭৪৭৩</div>')[0];
+                popup_b8c41832162346ee8772b466ca66639a.setContent(html_858a526b49424b438fa63d5255ddeffd);
+            
+
+            marker_6d44bd4ee1f141fd96680eb8c9b7a5eb.bindPopup(popup_b8c41832162346ee8772b466ca66639a);
+
+            
+        
+    
+
+            var marker_e32b233234484dd8aae64d5294cbf9a0 = L.marker(
+                [22.4293328,91.7622643],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_36e2b9dba5394ef9b58e0720ef0f8667);
+            
+    
+
+                var icon_540ebcd0964d4bcd8ae95fdb1190e95d = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e32b233234484dd8aae64d5294cbf9a0.setIcon(icon_540ebcd0964d4bcd8ae95fdb1190e95d);
+            
+    
+            var popup_3eef5eef50da4719a4e9df278873e02b = L.popup({maxWidth: '300'});
+
+            
+                var html_2f28630d19444b558abb919179e18aaa = $('<div id="html_2f28630d19444b558abb919179e18aaa" style="width: 100.0%; height: 100.0%;"><h5> <b>ফিল্ড হাসপাতাল<br></h5></b></h5></b><br><b>ফাঁকা আইসিইউ সংখ্যা : 0</b><br><b>মোট আইসিইউ সংখ্যা : </b>0<br><b>ফাঁকা সাধারণ বেড সংখ্যা : </b>19<br><b>মোট সাধারণ বেড সংখ্যা : </b>40<br><b>এলাকা : </b> ভাটিয়ারী<br><b>জেলা : </b> চট্টগ্রাম<br><b>যোগাযোগ : </b>ডাঃ বিদ্যূৎ বড়ুয়া  প্রধান নির্বাহী ও উদ্যোক্তা মোবাইল নং- ০১৩০৯০৩৪১০০</div>')[0];
+                popup_3eef5eef50da4719a4e9df278873e02b.setContent(html_2f28630d19444b558abb919179e18aaa);
+            
+
+            marker_e32b233234484dd8aae64d5294cbf9a0.bindPopup(popup_3eef5eef50da4719a4e9df278873e02b);
+
+            
+        
+    
+            var feature_group_69206af638b84c39bc3747e496ba0812 = L.featureGroup(
+                ).addTo(map_44dcf5939dbf46b3b98479b664d51815);
+        
+    
+
+            var marker_3392f4a0180c4766a78a84c1e1a33eb9 = L.marker(
+                [23.478242,90.367705],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_69206af638b84c39bc3747e496ba0812);
+            
+    
+
+                var icon_e3e147b9126242208483d18cdaea5fbd = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'lightgreen',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_3392f4a0180c4766a78a84c1e1a33eb9.setIcon(icon_e3e147b9126242208483d18cdaea5fbd);
+            
+    
+            var popup_b321016b492c4eadbc4d4a6b0fa1ea82 = L.popup({maxWidth: '300'});
+
+            
+                var html_725cc492459c45dbbb439fc4b6b1baa5 = $('<div id="html_725cc492459c45dbbb439fc4b6b1baa5" style="width: 100.0%; height: 100.0%;"><h5> <b>United Hospital <br></h5></b></h5></b><br><b>মোট আইসিইউ সংখ্যা : </b>2<br><b>মোট সাধারণ বেড সংখ্যা : </b>14<br><b>এলাকা : </b>Munshiganj<br><b>যোগাযোগ : </b>10666</div>')[0];
+                popup_b321016b492c4eadbc4d4a6b0fa1ea82.setContent(html_725cc492459c45dbbb439fc4b6b1baa5);
+            
+
+            marker_3392f4a0180c4766a78a84c1e1a33eb9.bindPopup(popup_b321016b492c4eadbc4d4a6b0fa1ea82);
+
+            
+        
+    
+
+            var marker_71bf6ee549764ef3b296ddbc7a50570d = L.marker(
+                [23.554576,90.529987],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_69206af638b84c39bc3747e496ba0812);
+            
+    
+
+                var icon_d398b6b97da44dc1a8abd4e1ce377971 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'lightgreen',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_71bf6ee549764ef3b296ddbc7a50570d.setIcon(icon_d398b6b97da44dc1a8abd4e1ce377971);
+            
+    
+            var popup_a2ea3dcba9af4559bd00aa0503bb7d43 = L.popup({maxWidth: '300'});
+
+            
+                var html_a2537142dc714e5a824b745cea0fe323 = $('<div id="html_a2537142dc714e5a824b745cea0fe323" style="width: 100.0%; height: 100.0%;"><h5> <b>Sayed nazrul islam MCH<br></h5></b></h5></b><br><b>মোট আইসিইউ সংখ্যা : </b>10<br><b>মোট সাধারণ বেড সংখ্যা : </b>200<br><b>এলাকা : </b>Kishorganj<br><b>যোগাযোগ : </b>nan</div>')[0];
+                popup_a2ea3dcba9af4559bd00aa0503bb7d43.setContent(html_a2537142dc714e5a824b745cea0fe323);
+            
+
+            marker_71bf6ee549764ef3b296ddbc7a50570d.bindPopup(popup_a2ea3dcba9af4559bd00aa0503bb7d43);
+
+            
+        
+    
+
+            var marker_c662198522ab4ebc8a5ea2c49b8938c9 = L.marker(
+                [23.4696747,91.1480904],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_69206af638b84c39bc3747e496ba0812);
+            
+    
+
+                var icon_273afb9b7bc7434ba650602a33c52126 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'lightgreen',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c662198522ab4ebc8a5ea2c49b8938c9.setIcon(icon_273afb9b7bc7434ba650602a33c52126);
+            
+    
+            var popup_c24bb39962994bdbaa34e18f3885d349 = L.popup({maxWidth: '300'});
+
+            
+                var html_1124ea6e99474ad79aa07e5cea640e0f = $('<div id="html_1124ea6e99474ad79aa07e5cea640e0f" style="width: 100.0%; height: 100.0%;"><h5> <b>Fortis pvt heart centre <br></h5></b></h5></b><br><b>মোট আইসিইউ সংখ্যা : </b>12<br><b>মোট সাধারণ বেড সংখ্যা : </b>38<br><b>এলাকা : </b>Cumilla<br><b>যোগাযোগ : </b>nan</div>')[0];
+                popup_c24bb39962994bdbaa34e18f3885d349.setContent(html_1124ea6e99474ad79aa07e5cea640e0f);
+            
+
+            marker_c662198522ab4ebc8a5ea2c49b8938c9.bindPopup(popup_c24bb39962994bdbaa34e18f3885d349);
+
+            
+        
+    
+
+            var marker_51c5621690124db9bfa7de30354c5e5d = L.marker(
+                [23.4509493,91.2034967],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_69206af638b84c39bc3747e496ba0812);
+            
+    
+
+                var icon_5086f5a729f145e0a4efcc0664957125 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'lightgreen',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_51c5621690124db9bfa7de30354c5e5d.setIcon(icon_5086f5a729f145e0a4efcc0664957125);
+            
+    
+            var popup_997d6b1a342d45a8ae9c3558ade07333 = L.popup({maxWidth: '300'});
+
+            
+                var html_d4738c295b59434486e03bc96adb15d9 = $('<div id="html_d4738c295b59434486e03bc96adb15d9" style="width: 100.0%; height: 100.0%;"><h5> <b>Cumilia Medical College Hospital <br></h5></b></h5></b><br><b>মোট আইসিইউ সংখ্যা : </b>12<br><b>মোট সাধারণ বেড সংখ্যা : </b>100<br><b>এলাকা : </b>Cumilla<br><b>যোগাযোগ : </b>01731-554088</div>')[0];
+                popup_997d6b1a342d45a8ae9c3558ade07333.setContent(html_d4738c295b59434486e03bc96adb15d9);
+            
+
+            marker_51c5621690124db9bfa7de30354c5e5d.bindPopup(popup_997d6b1a342d45a8ae9c3558ade07333);
+
+            
+        
+    
+
+            var marker_cfcd5589c6be41e8b52811da348b0f85 = L.marker(
+                [24.7471492,90.4202734],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_69206af638b84c39bc3747e496ba0812);
+            
+    
+
+                var icon_583da4b21903413a9d83809310a8c2ed = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'lightgreen',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_cfcd5589c6be41e8b52811da348b0f85.setIcon(icon_583da4b21903413a9d83809310a8c2ed);
+            
+    
+            var popup_59fff76951d7404489b68328a7a18855 = L.popup({maxWidth: '300'});
+
+            
+                var html_4424474661164e94b1378c82dc232564 = $('<div id="html_4424474661164e94b1378c82dc232564" style="width: 100.0%; height: 100.0%;"><h5> <b>SK (Surjo Kanto) Hospital <br></h5></b></h5></b><br><b>মোট আইসিইউ সংখ্যা : </b>7<br><b>মোট সাধারণ বেড সংখ্যা : </b>60<br><b>এলাকা : </b>Mymensing<br><b>যোগাযোগ : </b>01711-075044</div>')[0];
+                popup_59fff76951d7404489b68328a7a18855.setContent(html_4424474661164e94b1378c82dc232564);
+            
+
+            marker_cfcd5589c6be41e8b52811da348b0f85.bindPopup(popup_59fff76951d7404489b68328a7a18855);
+
+            
+        
+    
+
+            var marker_9ac2fed057d64e67b9725e67cdee039b = L.marker(
+                [22.688261,90.363615],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_69206af638b84c39bc3747e496ba0812);
+            
+    
+
+                var icon_6e31b968c5fc4197b3b86ec1523faf44 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'lightgreen',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9ac2fed057d64e67b9725e67cdee039b.setIcon(icon_6e31b968c5fc4197b3b86ec1523faf44);
+            
+    
+            var popup_51863e5eaa754e98b8c6ef420d5d695d = L.popup({maxWidth: '300'});
+
+            
+                var html_fe11ca075e434382bce76b9c2dffa906 = $('<div id="html_fe11ca075e434382bce76b9c2dffa906" style="width: 100.0%; height: 100.0%;"><h5> <b>Sher-E-Bangla Medical College Hospital<br></h5></b></h5></b><br><b>মোট আইসিইউ সংখ্যা : </b>18<br><b>মোট সাধারণ বেড সংখ্যা : </b>150<br><b>এলাকা : </b>Barisal<br><b>যোগাযোগ : </b>01711-387622</div>')[0];
+                popup_51863e5eaa754e98b8c6ef420d5d695d.setContent(html_fe11ca075e434382bce76b9c2dffa906);
+            
+
+            marker_9ac2fed057d64e67b9725e67cdee039b.bindPopup(popup_51863e5eaa754e98b8c6ef420d5d695d);
+
+            
+        
+    
+
+            var marker_0fa0ba48ca7649388769a89e35ea534e = L.marker(
+                [24.8991849,91.86724],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_69206af638b84c39bc3747e496ba0812);
+            
+    
+
+                var icon_4f72d02592024c1b9d62d110afc444c4 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'lightgreen',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_0fa0ba48ca7649388769a89e35ea534e.setIcon(icon_4f72d02592024c1b9d62d110afc444c4);
+            
+    
+            var popup_c73a1035ce014d02a5b59c232db6f3fa = L.popup({maxWidth: '300'});
+
+            
+                var html_2c96d7eaf4794622a893012e03c02a4d = $('<div id="html_2c96d7eaf4794622a893012e03c02a4d" style="width: 100.0%; height: 100.0%;"><h5> <b>Shahid Samsuddin Ahmed Hospital <br></h5></b></h5></b><br><b>মোট আইসিইউ সংখ্যা : </b>16<br><b>মোট সাধারণ বেড সংখ্যা : </b>100<br><b>এলাকা : </b>Sylhet<br><b>যোগাযোগ : </b>01716-551214</div>')[0];
+                popup_c73a1035ce014d02a5b59c232db6f3fa.setContent(html_2c96d7eaf4794622a893012e03c02a4d);
+            
+
+            marker_0fa0ba48ca7649388769a89e35ea534e.bindPopup(popup_c73a1035ce014d02a5b59c232db6f3fa);
+
+            
+        
+    
+
+            var marker_ffb4bcf91b914e2e806f99dbfb4a0b92 = L.marker(
+                [24.372001,88.586412],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_69206af638b84c39bc3747e496ba0812);
+            
+    
+
+                var icon_1de2a035ac2b4942add648d417978af2 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'lightgreen',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ffb4bcf91b914e2e806f99dbfb4a0b92.setIcon(icon_1de2a035ac2b4942add648d417978af2);
+            
+    
+            var popup_b9b48f538bfa4f12a7c491889f8443a9 = L.popup({maxWidth: '300'});
+
+            
+                var html_a3bad2ca48344e7993c29a7fbfd3f5a6 = $('<div id="html_a3bad2ca48344e7993c29a7fbfd3f5a6" style="width: 100.0%; height: 100.0%;"><h5> <b>Rajshahi MCH <br></h5></b></h5></b><br><b>মোট আইসিইউ সংখ্যা : </b>15<br><b>মোট সাধারণ বেড সংখ্যা : </b>100<br><b>এলাকা : </b>Rajshahi<br><b>যোগাযোগ : </b>01714-029424</div>')[0];
+                popup_b9b48f538bfa4f12a7c491889f8443a9.setContent(html_a3bad2ca48344e7993c29a7fbfd3f5a6);
+            
+
+            marker_ffb4bcf91b914e2e806f99dbfb4a0b92.bindPopup(popup_b9b48f538bfa4f12a7c491889f8443a9);
+
+            
+        
+    
+
+            var marker_3b51334d88f944d99f258c0eeb9c70d6 = L.marker(
+                [24.3721087,88.5814205],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_69206af638b84c39bc3747e496ba0812);
+            
+    
+
+                var icon_8660f4df71e84fa0a08722fd91c7c980 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'lightgreen',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_3b51334d88f944d99f258c0eeb9c70d6.setIcon(icon_8660f4df71e84fa0a08722fd91c7c980);
+            
+    
+            var popup_343589466431436892ec5f7edf15f19f = L.popup({maxWidth: '300'});
+
+            
+                var html_1d75b7fc6e1e4c33a77c798f3d8a26dd = $('<div id="html_1d75b7fc6e1e4c33a77c798f3d8a26dd" style="width: 100.0%; height: 100.0%;"><h5> <b>CDM hospital Pvt <br></h5></b></h5></b><br><b>মোট আইসিইউ সংখ্যা : </b>6<br><b>মোট সাধারণ বেড সংখ্যা : </b>50<br><b>এলাকা : </b>Rajshahi<br><b>যোগাযোগ : </b>nan</div>')[0];
+                popup_343589466431436892ec5f7edf15f19f.setContent(html_1d75b7fc6e1e4c33a77c798f3d8a26dd);
+            
+
+            marker_3b51334d88f944d99f258c0eeb9c70d6.bindPopup(popup_343589466431436892ec5f7edf15f19f);
+
+            
+        
+    
+
+            var marker_398fba62aba645df9ead9007364d515e = L.marker(
+                [24.835604,89.374202],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_69206af638b84c39bc3747e496ba0812);
+            
+    
+
+                var icon_6d28e56af83145fdaf820e5d7994e60a = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'lightgreen',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_398fba62aba645df9ead9007364d515e.setIcon(icon_6d28e56af83145fdaf820e5d7994e60a);
+            
+    
+            var popup_a6249119965643eea4034b533d9cc386 = L.popup({maxWidth: '300'});
+
+            
+                var html_81ea1fa858534e28aaaafa300b0d3f48 = $('<div id="html_81ea1fa858534e28aaaafa300b0d3f48" style="width: 100.0%; height: 100.0%;"><h5> <b>250 beded Mohammad Ali Sadar Hospital <br></h5></b></h5></b><br><b>মোট আইসিইউ সংখ্যা : </b>7<br><b>মোট সাধারণ বেড সংখ্যা : </b>120<br><b>এলাকা : </b>Bogura<br><b>যোগাযোগ : </b>01730-324803</div>')[0];
+                popup_a6249119965643eea4034b533d9cc386.setContent(html_81ea1fa858534e28aaaafa300b0d3f48);
+            
+
+            marker_398fba62aba645df9ead9007364d515e.bindPopup(popup_a6249119965643eea4034b533d9cc386);
+
+            
+        
+    
+
+            var marker_0c7ee0b3affe4ed3b80f98462c07de2a = L.marker(
+                [22.8312361,89.5435564],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_69206af638b84c39bc3747e496ba0812);
+            
+    
+
+                var icon_dc93bac509af462b8180a3b1439167fe = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'lightgreen',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_0c7ee0b3affe4ed3b80f98462c07de2a.setIcon(icon_dc93bac509af462b8180a3b1439167fe);
+            
+    
+            var popup_f5b70ba5f1d6496694ae8bbe20145b1f = L.popup({maxWidth: '300'});
+
+            
+                var html_034f47d614e848ab99cc5eabbbddff71 = $('<div id="html_034f47d614e848ab99cc5eabbbddff71" style="width: 100.0%; height: 100.0%;"><h5> <b>Khulna Diabetic Hospital <br></h5></b></h5></b><br><b>মোট আইসিইউ সংখ্যা : </b>10<br><b>মোট সাধারণ বেড সংখ্যা : </b>150<br><b>এলাকা : </b>Khulna<br><b>যোগাযোগ : </b>nan</div>')[0];
+                popup_f5b70ba5f1d6496694ae8bbe20145b1f.setContent(html_034f47d614e848ab99cc5eabbbddff71);
+            
+
+            marker_0c7ee0b3affe4ed3b80f98462c07de2a.bindPopup(popup_f5b70ba5f1d6496694ae8bbe20145b1f);
+
+            
+        
+    
+
+            var marker_17a9c8e86bf540c9b03dfed4a2c2988e = L.marker(
+                [22.6901577,89.0469437],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_69206af638b84c39bc3747e496ba0812);
+            
+    
+
+                var icon_0d5f4d47e5c54dc9939634ceea037ec8 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'lightgreen',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_17a9c8e86bf540c9b03dfed4a2c2988e.setIcon(icon_0d5f4d47e5c54dc9939634ceea037ec8);
+            
+    
+            var popup_a9307dc8e9d8437196f5cd5d4ce5e8c4 = L.popup({maxWidth: '300'});
+
+            
+                var html_86aa5cc829454057912e02ce0e7b9fad = $('<div id="html_86aa5cc829454057912e02ce0e7b9fad" style="width: 100.0%; height: 100.0%;"><h5> <b>Satkhira Medical college Hospital <br></h5></b></h5></b><br><b>মোট আইসিইউ সংখ্যা : </b>8<br><b>মোট সাধারণ বেড সংখ্যা : </b>30<br><b>এলাকা : </b>Shatkhira<br><b>যোগাযোগ : </b>01718-550966</div>')[0];
+                popup_a9307dc8e9d8437196f5cd5d4ce5e8c4.setContent(html_86aa5cc829454057912e02ce0e7b9fad);
+            
+
+            marker_17a9c8e86bf540c9b03dfed4a2c2988e.bindPopup(popup_a9307dc8e9d8437196f5cd5d4ce5e8c4);
+
+            
+        
+    
+
+            var marker_32d1af562aca4b02b7b0d82e0c5ac7d6 = L.marker(
+                [25.7324157,89.2381024],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_69206af638b84c39bc3747e496ba0812);
+            
+    
+
+                var icon_4272fa47c5c94b5a808821a526a29ae4 = L.AwesomeMarkers.icon({
+                    icon: 'plus-sign',
+                    iconColor: 'white',
+                    markerColor: 'lightgreen',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_32d1af562aca4b02b7b0d82e0c5ac7d6.setIcon(icon_4272fa47c5c94b5a808821a526a29ae4);
+            
+    
+            var popup_f84eefe94caf433b88cbcae95eeb2b66 = L.popup({maxWidth: '300'});
+
+            
+                var html_a7a8880fcd2648fd98edb2ca50f4e6e3 = $('<div id="html_a7a8880fcd2648fd98edb2ca50f4e6e3" style="width: 100.0%; height: 100.0%;"><h5> <b>Rangpur Shishu Hospital <br></h5></b></h5></b><br><b>মোট আইসিইউ সংখ্যা : </b>10<br><b>মোট সাধারণ বেড সংখ্যা : </b>100<br><b>এলাকা : </b>Rangpur <br><b>যোগাযোগ : </b>nan</div>')[0];
+                popup_f84eefe94caf433b88cbcae95eeb2b66.setContent(html_a7a8880fcd2648fd98edb2ca50f4e6e3);
+            
+
+            marker_32d1af562aca4b02b7b0d82e0c5ac7d6.bindPopup(popup_f84eefe94caf433b88cbcae95eeb2b66);
+
+            
+        
+    
+            var layer_control_660488cb62b24dacbb82078f97f02fa9 = {
+                base_layers : { "openstreetmap" : tile_layer_f86e24260a544b229a3fd709f3c89127, },
+                overlays : { "ঢাকা ও চট্টগ্রাম জেলার আইসিইউ" : feature_group_36e2b9dba5394ef9b58e0720ef0f8667,"অন্য সকল জেলার আইসিইউ" : feature_group_69206af638b84c39bc3747e496ba0812, }
+                };
+            L.control.layers(
+                layer_control_660488cb62b24dacbb82078f97f02fa9.base_layers,
+                layer_control_660488cb62b24dacbb82078f97f02fa9.overlays,
+                {position: 'topright',
+                 collapsed: true,
+                 autoZIndex: true
+                }).addTo(map_44dcf5939dbf46b3b98479b664d51815);
+        
+</script>

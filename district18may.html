@@ -1,0 +1,2438 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_c781e42335c64f048473459ebc451e57 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+    
+            <style> #vega_lite_7f41408f77e04f41925633b597b794f1 {
+                position : relative;
+                width : 700.0px;
+                height: 350.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/2.6.5/vega.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/1.3.1/vega-lite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/2.2.0/vega-embed.min.js"></script>
+    
+            <style> #vega_lite_e3519acb536c4a368d119692c6161302 {
+                position : relative;
+                width : 800.0px;
+                height: 550.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_c781e42335c64f048473459ebc451e57" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_c781e42335c64f048473459ebc451e57 = L.map(
+                                  'map_c781e42335c64f048473459ebc451e57',
+                                  {center: [23.789412,90.351756],
+                                  zoom: 7,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_4e4718e87b684c12abb65d59ec0e2376 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(map_c781e42335c64f048473459ebc451e57);
+        
+    
+            var feature_group_dd9dbd1fa11144238fd6f51097699270 = L.featureGroup(
+                ).addTo(map_c781e42335c64f048473459ebc451e57);
+        
+    
+            var feature_group_92408630598b453c975d133a7327faee = L.featureGroup(
+                ).addTo(map_c781e42335c64f048473459ebc451e57);
+        
+    
+
+            var marker_bc9367ec4c5a425b9d8ecdeb26b78483 = L.marker(
+                [23.943049,90.178041],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_92408630598b453c975d133a7327faee);
+            
+    
+            var popup_aebfad27be5843d6acd05302cc5411c9 = L.popup({maxWidth: '700'});
+
+            
+                var vega_lite_7f41408f77e04f41925633b597b794f1 = $('             <div id="vega_lite_7f41408f77e04f41925633b597b794f1"></div>             ')[0];
+                popup_aebfad27be5843d6acd05302cc5411c9.setContent(vega_lite_7f41408f77e04f41925633b597b794f1);
+            
+
+            marker_bc9367ec4c5a425b9d8ecdeb26b78483.bindPopup(popup_aebfad27be5843d6acd05302cc5411c9);
+
+            
+                
+            var embedSpec = {
+                mode: "vega-lite",
+                spec: {"data": {"values": [{"THANAME": "Ramna", "Cases": 585}, {"THANAME": "Jatrabari", "Cases": 345}, {"THANAME": "Mirpur", "Cases": 344}, {"THANAME": "Mohammadpur", "Cases": 323}, {"THANAME": "Paltan", "Cases": 320}, {"THANAME": "Banani", "Cases": 312}, {"THANAME": "Mugda", "Cases": 287}, {"THANAME": "Tejgaon", "Cases": 268}, {"THANAME": "Kotwali", "Cases": 205}, {"THANAME": "Bangshal", "Cases": 189}, {"THANAME": "Shahjahanpur", "Cases": 181}, {"THANAME": "Lalbagh", "Cases": 176}, {"THANAME": "Sutrapur", "Cases": 155}, {"THANAME": "Chak Bazar", "Cases": 142}, {"THANAME": "Kalabagan", "Cases": 134}, {"THANAME": "Uttara", "Cases": 134}, {"THANAME": "Dhanmondi", "Cases": 132}, {"THANAME": "Khilgaon", "Cases": 119}, {"THANAME": "Pallabi", "Cases": 114}, {"THANAME": "Sher-E-Bangla Nagar", "Cases": 108}, {"THANAME": "Badda", "Cases": 103}, {"THANAME": "Wari", "Cases": 103}, {"THANAME": "Hazaribagh", "Cases": 92}, {"THANAME": "Gulshan", "Cases": 90}, {"THANAME": "Sabujbagh", "Cases": 90}, {"THANAME": "Shahbag", "Cases": 89}, {"THANAME": "Rampura", "Cases": 85}, {"THANAME": "Gendaria", "Cases": 82}, {"THANAME": "Motijheel", "Cases": 74}, {"THANAME": "Shyampur", "Cases": 68}, {"THANAME": "Vatara", "Cases": 48}, {"THANAME": "Kamrangir Char", "Cases": 44}, {"THANAME": "Kadamtali", "Cases": 42}, {"THANAME": "New Market", "Cases": 39}, {"THANAME": "Adabor", "Cases": 30}, {"THANAME": "Demra", "Cases": 26}, {"THANAME": "Cantonment", "Cases": 22}, {"THANAME": "Kafrul", "Cases": 22}, {"THANAME": "Khilkhet", "Cases": 7}, {"THANAME": "Hatir jheel", "Cases": 6}, {"THANAME": "Turag", "Cases": 6}, {"THANAME": "Tejgaon Industrial Area", "Cases": 4}, {"THANAME": "Bhashantek", "Cases": 3}, {"THANAME": "Darus Salam", "Cases": 3}, {"THANAME": "Dakshin khan", "Cases": 2}, {"THANAME": "Rupnagar", "Cases": 2}, {"THANAME": "Bimanbandar", "Cases": 0}, {"THANAME": "Shah Ali", "Cases": 0}, {"THANAME": "Uttar khan", "Cases": 0}]}, "mark": "bar", "width": 650, "encoding": {"x": {"field": "THANAME", "type": "nominal", "axis": {"labelAngle": 270, "title": "Thana"}, "sort": "-y"}, "y": {"field": "Cases", "type": "quantitative", "title": "# of Cases"}, "tooltip": {"field": "Cases", "type": "quantitative"}}}
+            };
+            vg.embed(
+                vega_lite_7f41408f77e04f41925633b597b794f1, embedSpec, function(error, result) {}
+            );
+        
+            
+        
+    
+
+            var marker_82d27085262944948ef2e7de995461cb = L.marker(
+                [21.1,90.178041],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_92408630598b453c975d133a7327faee);
+            
+    
+            var popup_fe38712aaefd4106b035817e78357b4d = L.popup({maxWidth: '800'});
+
+            
+                var vega_lite_e3519acb536c4a368d119692c6161302 = $('             <div id="vega_lite_e3519acb536c4a368d119692c6161302"></div>             ')[0];
+                popup_fe38712aaefd4106b035817e78357b4d.setContent(vega_lite_e3519acb536c4a368d119692c6161302);
+            
+
+            marker_82d27085262944948ef2e7de995461cb.bindPopup(popup_fe38712aaefd4106b035817e78357b4d);
+
+            
+                
+            var embedSpec = {
+                mode: "vega-lite",
+                spec: {"data": {"values": [{"District": "Narayanganj", "Weekly": 220}, {"District": "Gazipur", "Weekly": 189}, {"District": "Munshigonj", "Weekly": 113}, {"District": "Faridpur", "Weekly": 25}, {"District": "Gopalganj", "Weekly": 25}, {"District": "Manikganj", "Weekly": 9}, {"District": "Madaripur", "Weekly": 6}, {"District": "Shariatpur", "Weekly": 6}, {"District": "Rajbari", "Weekly": 4}, {"District": "Kishoreganj", "Weekly": 2}, {"District": "Narshingdi", "Weekly": 2}, {"District": "Chattogram", "Weekly": 429}, {"District": "Cumilla", "Weekly": 116}, {"District": "Coxs bazar", "Weekly": 90}, {"District": "Feni", "Weekly": 67}, {"District": "Noakhali", "Weekly": 65}, {"District": "Laksmipur", "Weekly": 30}, {"District": "Chandpur", "Weekly": 25}, {"District": "Rangamati", "Weekly": 23}, {"District": "Brahmanbaria", "Weekly": 10}, {"District": "Khagrachhari", "Weekly": 4}, {"District": "Bandarban", "Weekly": 2}, {"District": "Bogra", "Weekly": 27}, {"District": "Joypurhat", "Weekly": 22}, {"District": "Naogaon", "Weekly": 12}, {"District": "Rajshahi", "Weekly": 5}, {"District": "Chapainawabganj", "Weekly": 1}, {"District": "Natore", "Weekly": 1}, {"District": "Pabna", "Weekly": 1}, {"District": "Sirajganj", "Weekly": 1}, {"District": "Chuadanga", "Weekly": 62}, {"District": "Jessore", "Weekly": 29}, {"District": "Magura", "Weekly": 9}, {"District": "Bagerhat", "Weekly": 5}, {"District": "Khulna", "Weekly": 5}, {"District": "Jhenaidah", "Weekly": 4}, {"District": "Kushtia", "Weekly": 4}, {"District": "Narail", "Weekly": 2}, {"District": "Satkhira", "Weekly": 2}, {"District": "Meherpur", "Weekly": 0}, {"District": "Sylhet", "Weekly": 12}, {"District": "Sunamganj", "Weekly": 8}, {"District": "Moulovi Bazar", "Weekly": 3}, {"District": "Barishal", "Weekly": 5}, {"District": "Jhalokathi", "Weekly": 3}, {"District": "Bhola", "Weekly": 2}, {"District": "Barguna", "Weekly": 0}, {"District": "Pirojpur", "Weekly": 0}, {"District": "Potuakhali", "Weekly": 0}, {"District": "Rangpur", "Weekly": 138}, {"District": "Hobiganj", "Weekly": 38}, {"District": "Kurigram", "Weekly": 19}, {"District": "Dinajpur", "Weekly": 14}, {"District": "Nilphamari", "Weekly": 11}, {"District": "Lalmonirhat", "Weekly": 10}, {"District": "Panchagar", "Weekly": 5}, {"District": "Thakurgaon", "Weekly": 4}, {"District": "Gaibandha", "Weekly": 1}, {"District": "Mymensingh", "Weekly": 62}, {"District": "Netrokona", "Weekly": 38}, {"District": "Jamalpur", "Weekly": 10}, {"District": "Tangail", "Weekly": 9}, {"District": "Sherpur", "Weekly": 3}]}, "mark": "bar", "width": 750, "height": 450, "encoding": {"x": {"field": "District", "type": "nominal", "axis": {"labelAngle": 270, "title": "Thana"}, "sort": "-y"}, "y": {"field": "Weekly", "type": "quantitative", "title": "# of Cases"}, "tooltip": {"field": "Cases", "type": "quantitative"}}}
+            };
+            vg.embed(
+                vega_lite_e3519acb536c4a368d119692c6161302, embedSpec, function(error, result) {}
+            );
+        
+            
+        
+    
+            var feature_group_597e0c6b2423458c8841f6f5f229686a = L.featureGroup(
+                ).addTo(map_c781e42335c64f048473459ebc451e57);
+        
+    
+            var circle_marker_3f6edc8a802a4b83bd32b54d975c4475 = L.circleMarker(
+                [23.76480929,90.38650719],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "darkred",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 80,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_3e928c880a164cdf81d361ffef88db19 = L.popup({maxWidth: '300'});
+
+            
+                var html_334c342e1ea4486f9674c688b6ac89df = $('<div id="html_334c342e1ea4486f9674c688b6ac89df" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspDhaka</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>9855 person <br><b>Weekly New Cases: </b>2346 person </div>')[0];
+                popup_3e928c880a164cdf81d361ffef88db19.setContent(html_334c342e1ea4486f9674c688b6ac89df);
+            
+
+            circle_marker_3f6edc8a802a4b83bd32b54d975c4475.bindPopup(popup_3e928c880a164cdf81d361ffef88db19);
+
+            
+        
+    
+            var circle_marker_36fed8804bad400bbda2567a7b2bfe36 = L.circleMarker(
+                [22.6214725,91.75077116],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "red",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 40,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_f3a4a394ed764a97929735a28d3264e6 = L.popup({maxWidth: '300'});
+
+            
+                var html_c2e64a05610d453fb7e9a1f44bc2c44c = $('<div id="html_c2e64a05610d453fb7e9a1f44bc2c44c" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspChattogram</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>695 person <br><b>Weekly New Cases: </b>429 person </div>')[0];
+                popup_f3a4a394ed764a97929735a28d3264e6.setContent(html_c2e64a05610d453fb7e9a1f44bc2c44c);
+            
+
+            circle_marker_36fed8804bad400bbda2567a7b2bfe36.bindPopup(popup_f3a4a394ed764a97929735a28d3264e6);
+
+            
+        
+    
+            var circle_marker_bbc4eca4c04a49108c66bb33aff95841 = L.circleMarker(
+                [23.74307489,90.59273668],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "darkred",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 55,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_8796da7b0d604484a438f47d42d94452 = L.popup({maxWidth: '300'});
+
+            
+                var html_6865c056c12b4e8ebf2c5bf8cbce3454 = $('<div id="html_6865c056c12b4e8ebf2c5bf8cbce3454" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspNarayanganj</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>1463 person <br><b>Weekly New Cases: </b>220 person </div>')[0];
+                popup_8796da7b0d604484a438f47d42d94452.setContent(html_6865c056c12b4e8ebf2c5bf8cbce3454);
+            
+
+            circle_marker_bbc4eca4c04a49108c66bb33aff95841.bindPopup(popup_8796da7b0d604484a438f47d42d94452);
+
+            
+        
+    
+            var circle_marker_f77f5c3d52004583a1a69257c6c7d991 = L.circleMarker(
+                [24.09727364,90.44865547],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "red",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 40,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_39c9136f694b4989800d02f3a0f821b5 = L.popup({maxWidth: '300'});
+
+            
+                var html_74c3fc578b8047b3833bbd1af48b7645 = $('<div id="html_74c3fc578b8047b3833bbd1af48b7645" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspGazipur</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>527 person <br><b>Weekly New Cases: </b>189 person </div>')[0];
+                popup_39c9136f694b4989800d02f3a0f821b5.setContent(html_74c3fc578b8047b3833bbd1af48b7645);
+            
+
+            circle_marker_f77f5c3d52004583a1a69257c6c7d991.bindPopup(popup_39c9136f694b4989800d02f3a0f821b5);
+
+            
+        
+    
+            var circle_marker_c0b272371bc34fad8c9e8f634a5941cb = L.circleMarker(
+                [25.64744585,89.24708777],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "red",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 25,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_98d6eb59033f406fb4e495ffd7e82eeb = L.popup({maxWidth: '300'});
+
+            
+                var html_2330497e045241a8b01de4a6b659e426 = $('<div id="html_2330497e045241a8b01de4a6b659e426" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspRangpur</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>272 person <br><b>Weekly New Cases: </b>138 person </div>')[0];
+                popup_98d6eb59033f406fb4e495ffd7e82eeb.setContent(html_2330497e045241a8b01de4a6b659e426);
+            
+
+            circle_marker_c0b272371bc34fad8c9e8f634a5941cb.bindPopup(popup_98d6eb59033f406fb4e495ffd7e82eeb);
+
+            
+        
+    
+            var circle_marker_c8248cb13dfe446cb7f147fe00d500f3 = L.circleMarker(
+                [23.43310165,91.04123925],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "red",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 25,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_88a0510553c149f9aad05d5aceee36d3 = L.popup({maxWidth: '300'});
+
+            
+                var html_022f85aeab6847f0a646bd6dfd43869a = $('<div id="html_022f85aeab6847f0a646bd6dfd43869a" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspCumilla</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>298 person <br><b>Weekly New Cases: </b>116 person </div>')[0];
+                popup_88a0510553c149f9aad05d5aceee36d3.setContent(html_022f85aeab6847f0a646bd6dfd43869a);
+            
+
+            circle_marker_c8248cb13dfe446cb7f147fe00d500f3.bindPopup(popup_88a0510553c149f9aad05d5aceee36d3);
+
+            
+        
+    
+            var circle_marker_1bc5244b90e141a7b51cff0ec3d8db43 = L.circleMarker(
+                [23.54457165,90.30887728],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "red",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 25,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_39a11763db87425098598411ce859783 = L.popup({maxWidth: '300'});
+
+            
+                var html_bd0123d5b82a443e9b8c18a4f942d6c0 = $('<div id="html_bd0123d5b82a443e9b8c18a4f942d6c0" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspMunshigonj</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>329 person <br><b>Weekly New Cases: </b>113 person </div>')[0];
+                popup_39a11763db87425098598411ce859783.setContent(html_bd0123d5b82a443e9b8c18a4f942d6c0);
+            
+
+            circle_marker_1bc5244b90e141a7b51cff0ec3d8db43.bindPopup(popup_39a11763db87425098598411ce859783);
+
+            
+        
+    
+            var circle_marker_f1e548e14b354cdcbb00b94f3b947813 = L.circleMarker(
+                [21.48671986,92.06464965],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "red",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 15,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_b76a4fd9f65d4680a685bd9ef8a31330 = L.popup({maxWidth: '300'});
+
+            
+                var html_96efbc1e043349468b61d49c49a3cada = $('<div id="html_96efbc1e043349468b61d49c49a3cada" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspCoxs bazar</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>185 person <br><b>Weekly New Cases: </b>90 person </div>')[0];
+                popup_b76a4fd9f65d4680a685bd9ef8a31330.setContent(html_96efbc1e043349468b61d49c49a3cada);
+            
+
+            circle_marker_f1e548e14b354cdcbb00b94f3b947813.bindPopup(popup_b76a4fd9f65d4680a685bd9ef8a31330);
+
+            
+        
+    
+            var circle_marker_bd9a69aacfa645b5afb9b3cf67483bd4 = L.circleMarker(
+                [22.98186491,91.41323265],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_369a3c249ca44c40b750e4acff039f7d = L.popup({maxWidth: '300'});
+
+            
+                var html_436ccef6f13a4479a3ea5e4b2cde9d50 = $('<div id="html_436ccef6f13a4479a3ea5e4b2cde9d50" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspFeni</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>76 person <br><b>Weekly New Cases: </b>67 person </div>')[0];
+                popup_369a3c249ca44c40b750e4acff039f7d.setContent(html_436ccef6f13a4479a3ea5e4b2cde9d50);
+            
+
+            circle_marker_bd9a69aacfa645b5afb9b3cf67483bd4.bindPopup(popup_369a3c249ca44c40b750e4acff039f7d);
+
+            
+        
+    
+            var circle_marker_527cd67a2a3e43d1a896daf09ba4f776 = L.circleMarker(
+                [22.66439356,91.13055842],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "red",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 15,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_b1a0390aa3804f3a91850e83e0db6bb6 = L.popup({maxWidth: '300'});
+
+            
+                var html_45e8e197d8044cf9a828e64a9faf8047 = $('<div id="html_45e8e197d8044cf9a828e64a9faf8047" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspNoakhali</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>113 person <br><b>Weekly New Cases: </b>65 person </div>')[0];
+                popup_b1a0390aa3804f3a91850e83e0db6bb6.setContent(html_45e8e197d8044cf9a828e64a9faf8047);
+            
+
+            circle_marker_527cd67a2a3e43d1a896daf09ba4f776.bindPopup(popup_b1a0390aa3804f3a91850e83e0db6bb6);
+
+            
+        
+    
+            var circle_marker_5ce36ebb95d645109598fbe469fe6cb5 = L.circleMarker(
+                [23.60715466,88.85230329],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_abaed2673c2e4348b04aafb03fdf8485 = L.popup({maxWidth: '300'});
+
+            
+                var html_6f50f0fa91d94485bd692dd135eae062 = $('<div id="html_6f50f0fa91d94485bd692dd135eae062" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspChuadanga</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>87 person <br><b>Weekly New Cases: </b>62 person </div>')[0];
+                popup_abaed2673c2e4348b04aafb03fdf8485.setContent(html_6f50f0fa91d94485bd692dd135eae062);
+            
+
+            circle_marker_5ce36ebb95d645109598fbe469fe6cb5.bindPopup(popup_abaed2673c2e4348b04aafb03fdf8485);
+
+            
+        
+    
+            var circle_marker_9adb5439816b43f18d48e4ad85ba71bf = L.circleMarker(
+                [24.70007783,90.43143765],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "red",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 25,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_b4f92b478438412bb879dba66156b393 = L.popup({maxWidth: '300'});
+
+            
+                var html_5739023ca52f496cb0c697b751bf33e2 = $('<div id="html_5739023ca52f496cb0c697b751bf33e2" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspMymensingh</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>295 person <br><b>Weekly New Cases: </b>62 person </div>')[0];
+                popup_b4f92b478438412bb879dba66156b393.setContent(html_5739023ca52f496cb0c697b751bf33e2);
+            
+
+            circle_marker_9adb5439816b43f18d48e4ad85ba71bf.bindPopup(popup_b4f92b478438412bb879dba66156b393);
+
+            
+        
+    
+            var circle_marker_d58be0afedf844958541889ae1c2325a = L.circleMarker(
+                [24.37074414,91.43452885],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "red",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 15,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_8590306947834a9d89a9421e986fc47d = L.popup({maxWidth: '300'});
+
+            
+                var html_c59cd5f9a37d4202b963ef186d0199d8 = $('<div id="html_c59cd5f9a37d4202b963ef186d0199d8" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspHobiganj</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>112 person <br><b>Weekly New Cases: </b>38 person </div>')[0];
+                popup_8590306947834a9d89a9421e986fc47d.setContent(html_c59cd5f9a37d4202b963ef186d0199d8);
+            
+
+            circle_marker_d58be0afedf844958541889ae1c2325a.bindPopup(popup_8590306947834a9d89a9421e986fc47d);
+
+            
+        
+    
+            var circle_marker_10aee10a3bb944c2aac77f8497ab4261 = L.circleMarker(
+                [24.87569438,90.84671708],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "red",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 15,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_f82e43c91f86438b95b8a00109fbe50b = L.popup({maxWidth: '300'});
+
+            
+                var html_a9722fbf4b734944839ab3fdff7e78da = $('<div id="html_a9722fbf4b734944839ab3fdff7e78da" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspNetrokona</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>108 person <br><b>Weekly New Cases: </b>38 person </div>')[0];
+                popup_f82e43c91f86438b95b8a00109fbe50b.setContent(html_a9722fbf4b734944839ab3fdff7e78da);
+            
+
+            circle_marker_10aee10a3bb944c2aac77f8497ab4261.bindPopup(popup_f82e43c91f86438b95b8a00109fbe50b);
+
+            
+        
+    
+            var circle_marker_31ea0c80f6c742d0b20252f1158471ee = L.circleMarker(
+                [22.87580957,90.83719384],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_f794f3c3bb7945208684eaed8c12c93f = L.popup({maxWidth: '300'});
+
+            
+                var html_b573209649a148438cd241f3b055ae27 = $('<div id="html_b573209649a148438cd241f3b055ae27" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspLaksmipur</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>89 person <br><b>Weekly New Cases: </b>30 person </div>')[0];
+                popup_f794f3c3bb7945208684eaed8c12c93f.setContent(html_b573209649a148438cd241f3b055ae27);
+            
+
+            circle_marker_31ea0c80f6c742d0b20252f1158471ee.bindPopup(popup_f794f3c3bb7945208684eaed8c12c93f);
+
+            
+        
+    
+            var circle_marker_e342ee55ca4346b5bd595730ebe012bc = L.circleMarker(
+                [23.0912039,89.18082012],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "red",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 15,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_ff2629f08903480180f2570e67701c3b = L.popup({maxWidth: '300'});
+
+            
+                var html_e76af478a42649098ddc4d57bf0f3d0b = $('<div id="html_e76af478a42649098ddc4d57bf0f3d0b" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspJessore</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>108 person <br><b>Weekly New Cases: </b>29 person </div>')[0];
+                popup_ff2629f08903480180f2570e67701c3b.setContent(html_e76af478a42649098ddc4d57bf0f3d0b);
+            
+
+            circle_marker_e342ee55ca4346b5bd595730ebe012bc.bindPopup(popup_ff2629f08903480180f2570e67701c3b);
+
+            
+        
+    
+            var circle_marker_197fbfc5eddb4603aeedcf7d71de6505 = L.circleMarker(
+                [24.82487514,89.37869469],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_9793c903eb6b4346a8b921e3fbfc9fef = L.popup({maxWidth: '300'});
+
+            
+                var html_237288f733264892a6701f84ad026a15 = $('<div id="html_237288f733264892a6701f84ad026a15" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspBogra</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>45 person <br><b>Weekly New Cases: </b>27 person </div>')[0];
+                popup_9793c903eb6b4346a8b921e3fbfc9fef.setContent(html_237288f733264892a6701f84ad026a15);
+            
+
+            circle_marker_197fbfc5eddb4603aeedcf7d71de6505.bindPopup(popup_9793c903eb6b4346a8b921e3fbfc9fef);
+
+            
+        
+    
+            var circle_marker_2817564d0f454beeb99bce3de625b63f = L.circleMarker(
+                [23.25599331,90.75322427],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_bff63fd6c4624845bf928b876a70b9c9 = L.popup({maxWidth: '300'});
+
+            
+                var html_ce12c1daf5784c0a82fc5ca1f728290d = $('<div id="html_ce12c1daf5784c0a82fc5ca1f728290d" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspChandpur</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>81 person <br><b>Weekly New Cases: </b>25 person </div>')[0];
+                popup_bff63fd6c4624845bf928b876a70b9c9.setContent(html_ce12c1daf5784c0a82fc5ca1f728290d);
+            
+
+            circle_marker_2817564d0f454beeb99bce3de625b63f.bindPopup(popup_bff63fd6c4624845bf928b876a70b9c9);
+
+            
+        
+    
+            var circle_marker_cef5b6eef3734d9d8c129c60105b13e3 = L.circleMarker(
+                [23.47706917,89.84153284],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_cfb24d41a43b45f9a6136f39ed069bb9 = L.popup({maxWidth: '300'});
+
+            
+                var html_884c7c870cdd42e2895b27e15de16371 = $('<div id="html_884c7c870cdd42e2895b27e15de16371" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspFaridpur</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>56 person <br><b>Weekly New Cases: </b>25 person </div>')[0];
+                popup_cfb24d41a43b45f9a6136f39ed069bb9.setContent(html_884c7c870cdd42e2895b27e15de16371);
+            
+
+            circle_marker_cef5b6eef3734d9d8c129c60105b13e3.bindPopup(popup_cfb24d41a43b45f9a6136f39ed069bb9);
+
+            
+        
+    
+            var circle_marker_10718378df2143f78c24f3084e38df7c = L.circleMarker(
+                [23.10437275,89.90392307],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_ff847dda376545a1a03ad9447bc0186a = L.popup({maxWidth: '300'});
+
+            
+                var html_cfbf616bc2b34f31ba7eb91e6faabc0b = $('<div id="html_cfbf616bc2b34f31ba7eb91e6faabc0b" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspGopalganj</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>83 person <br><b>Weekly New Cases: </b>25 person </div>')[0];
+                popup_ff847dda376545a1a03ad9447bc0186a.setContent(html_cfbf616bc2b34f31ba7eb91e6faabc0b);
+            
+
+            circle_marker_10718378df2143f78c24f3084e38df7c.bindPopup(popup_ff847dda376545a1a03ad9447bc0186a);
+
+            
+        
+    
+            var circle_marker_0e4043c0d7824e21aed87c3aab2764ea = L.circleMarker(
+                [22.8319573,92.28177778],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_69a098c3fa444e98bc3ad26a7bbb6fd0 = L.popup({maxWidth: '300'});
+
+            
+                var html_d449acd428854a868a43b5cce1cfbf74 = $('<div id="html_d449acd428854a868a43b5cce1cfbf74" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspRangamati</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>27 person <br><b>Weekly New Cases: </b>23 person </div>')[0];
+                popup_69a098c3fa444e98bc3ad26a7bbb6fd0.setContent(html_d449acd428854a868a43b5cce1cfbf74);
+            
+
+            circle_marker_0e4043c0d7824e21aed87c3aab2764ea.bindPopup(popup_69a098c3fa444e98bc3ad26a7bbb6fd0);
+
+            
+        
+    
+            var circle_marker_efe11e65e4044269b3709ca88bce7588 = L.circleMarker(
+                [25.10664414,89.10404485],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_fc25fe984d90420dbed144d2e6f46ded = L.popup({maxWidth: '300'});
+
+            
+                var html_5d89252922024fcd861215580f18f0f8 = $('<div id="html_5d89252922024fcd861215580f18f0f8" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspJoypurhat</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>69 person <br><b>Weekly New Cases: </b>22 person </div>')[0];
+                popup_fc25fe984d90420dbed144d2e6f46ded.setContent(html_5d89252922024fcd861215580f18f0f8);
+            
+
+            circle_marker_efe11e65e4044269b3709ca88bce7588.bindPopup(popup_fc25fe984d90420dbed144d2e6f46ded);
+
+            
+        
+    
+            var circle_marker_bd3ae62de8404b129d5e4a1c15a1cc2a = L.circleMarker(
+                [25.79248939,89.70226799],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_e827a08523094e8cb215022b138e3f1d = L.popup({maxWidth: '300'});
+
+            
+                var html_e834e1f48dc142d68276c18e0aaa9246 = $('<div id="html_e834e1f48dc142d68276c18e0aaa9246" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspKurigram</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>54 person <br><b>Weekly New Cases: </b>19 person </div>')[0];
+                popup_e827a08523094e8cb215022b138e3f1d.setContent(html_e834e1f48dc142d68276c18e0aaa9246);
+            
+
+            circle_marker_bd3ae62de8404b129d5e4a1c15a1cc2a.bindPopup(popup_e827a08523094e8cb215022b138e3f1d);
+
+            
+        
+    
+            var circle_marker_093bb874eb61434fa07b47788785fcc5 = L.circleMarker(
+                [25.77529426,88.61809431],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_e44baba48e6848d6b315cfecaa9f2933 = L.popup({maxWidth: '300'});
+
+            
+                var html_3b85dba9d1754f52892e882c5ab20715 = $('<div id="html_3b85dba9d1754f52892e882c5ab20715" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspDinajpur</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>56 person <br><b>Weekly New Cases: </b>14 person </div>')[0];
+                popup_e44baba48e6848d6b315cfecaa9f2933.setContent(html_3b85dba9d1754f52892e882c5ab20715);
+            
+
+            circle_marker_093bb874eb61434fa07b47788785fcc5.bindPopup(popup_e44baba48e6848d6b315cfecaa9f2933);
+
+            
+        
+    
+            var circle_marker_f0c90e34b00747f0a1e2e01b984fb144 = L.circleMarker(
+                [24.89503639,88.74900741],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_53b0adf43d1a4c0d92cdf95b5ed0310f = L.popup({maxWidth: '300'});
+
+            
+                var html_cb01c64db2ca45778887c87b655ce676 = $('<div id="html_cb01c64db2ca45778887c87b655ce676" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspNaogaon</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>45 person <br><b>Weekly New Cases: </b>12 person </div>')[0];
+                popup_53b0adf43d1a4c0d92cdf95b5ed0310f.setContent(html_cb01c64db2ca45778887c87b655ce676);
+            
+
+            circle_marker_f0c90e34b00747f0a1e2e01b984fb144.bindPopup(popup_53b0adf43d1a4c0d92cdf95b5ed0310f);
+
+            
+        
+    
+            var circle_marker_ffc55afc358644029099f8e5b6d95207 = L.circleMarker(
+                [24.9124405,91.99479761],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_25d526487a2c473d88ded72cf40d4f03 = L.popup({maxWidth: '300'});
+
+            
+                var html_ea7ba1a8959f4533a135552589bfc215 = $('<div id="html_ea7ba1a8959f4533a135552589bfc215" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspSylhet</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>48 person <br><b>Weekly New Cases: </b>12 person </div>')[0];
+                popup_25d526487a2c473d88ded72cf40d4f03.setContent(html_ea7ba1a8959f4533a135552589bfc215);
+            
+
+            circle_marker_ffc55afc358644029099f8e5b6d95207.bindPopup(popup_25d526487a2c473d88ded72cf40d4f03);
+
+            
+        
+    
+            var circle_marker_701616cfdffb42dc8985b08a4f2acf07 = L.circleMarker(
+                [26.04060872,88.92533087],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_758aad990c4b4850bf32816dc5c423fa = L.popup({maxWidth: '300'});
+
+            
+                var html_00e1e27f5bdb44c091052fc28fce8bb2 = $('<div id="html_00e1e27f5bdb44c091052fc28fce8bb2" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspNilphamari</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>52 person <br><b>Weekly New Cases: </b>11 person </div>')[0];
+                popup_758aad990c4b4850bf32816dc5c423fa.setContent(html_00e1e27f5bdb44c091052fc28fce8bb2);
+            
+
+            circle_marker_701616cfdffb42dc8985b08a4f2acf07.bindPopup(popup_758aad990c4b4850bf32816dc5c423fa);
+
+            
+        
+    
+            var circle_marker_69bd10a8573748dfb8f3fb2aaf516c14 = L.circleMarker(
+                [23.94506896,91.0851994],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_1c0a5cc25caf4548a7fbdbedcd4505b8 = L.popup({maxWidth: '300'});
+
+            
+                var html_f6837d60a86f431eb55574e47c2da1df = $('<div id="html_f6837d60a86f431eb55574e47c2da1df" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspBrahmanbaria</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>67 person <br><b>Weekly New Cases: </b>10 person </div>')[0];
+                popup_1c0a5cc25caf4548a7fbdbedcd4505b8.setContent(html_f6837d60a86f431eb55574e47c2da1df);
+            
+
+            circle_marker_69bd10a8573748dfb8f3fb2aaf516c14.bindPopup(popup_1c0a5cc25caf4548a7fbdbedcd4505b8);
+
+            
+        
+    
+            var circle_marker_746a6e0b0fc145f9a552434b6e55e0f9 = L.circleMarker(
+                [24.9928385,89.78592809],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "red",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 15,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_147587f41c3f4464b4ec5123ba1e9fc7 = L.popup({maxWidth: '300'});
+
+            
+                var html_f6ddb004fae64a7288a269ee20e85aa1 = $('<div id="html_f6ddb004fae64a7288a269ee20e85aa1" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspJamalpur</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>120 person <br><b>Weekly New Cases: </b>10 person </div>')[0];
+                popup_147587f41c3f4464b4ec5123ba1e9fc7.setContent(html_f6ddb004fae64a7288a269ee20e85aa1);
+            
+
+            circle_marker_746a6e0b0fc145f9a552434b6e55e0f9.bindPopup(popup_147587f41c3f4464b4ec5123ba1e9fc7);
+
+            
+        
+    
+            var circle_marker_090c45c8f977467083709aa428fbf7f9 = L.circleMarker(
+                [26.01253777,89.23537065],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_3246964a2c1648dcb993ebf35c8ec491 = L.popup({maxWidth: '300'});
+
+            
+                var html_c950510eb7c741be9edfa0d882423bbb = $('<div id="html_c950510eb7c741be9edfa0d882423bbb" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspLalmonirhat</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>23 person <br><b>Weekly New Cases: </b>10 person </div>')[0];
+                popup_3246964a2c1648dcb993ebf35c8ec491.setContent(html_c950510eb7c741be9edfa0d882423bbb);
+            
+
+            circle_marker_090c45c8f977467083709aa428fbf7f9.bindPopup(popup_3246964a2c1648dcb993ebf35c8ec491);
+
+            
+        
+    
+            var circle_marker_33a2c458dd4b46efb0a7725163ae6870 = L.circleMarker(
+                [23.44192971,89.44158195],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_143aff7fb2354cce8059a220f8721737 = L.popup({maxWidth: '300'});
+
+            
+                var html_3c06e282e27e4472871459b460089623 = $('<div id="html_3c06e282e27e4472871459b460089623" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspMagura</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>23 person <br><b>Weekly New Cases: </b>9 person </div>')[0];
+                popup_143aff7fb2354cce8059a220f8721737.setContent(html_3c06e282e27e4472871459b460089623);
+            
+
+            circle_marker_33a2c458dd4b46efb0a7725163ae6870.bindPopup(popup_143aff7fb2354cce8059a220f8721737);
+
+            
+        
+    
+            var circle_marker_33f0f21935f547e8b1d2a18fc83ce499 = L.circleMarker(
+                [23.83839714,89.9507272],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_797f984a89e2482fa16342081a7d971c = L.popup({maxWidth: '300'});
+
+            
+                var html_3ecdbf2883fc4ade8a7de7fde539b0f0 = $('<div id="html_3ecdbf2883fc4ade8a7de7fde539b0f0" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspManikganj</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>38 person <br><b>Weekly New Cases: </b>9 person </div>')[0];
+                popup_797f984a89e2482fa16342081a7d971c.setContent(html_3ecdbf2883fc4ade8a7de7fde539b0f0);
+            
+
+            circle_marker_33f0f21935f547e8b1d2a18fc83ce499.bindPopup(popup_797f984a89e2482fa16342081a7d971c);
+
+            
+        
+    
+            var circle_marker_2f1a337a1c66469ab655091e7c384378 = L.circleMarker(
+                [24.350468,89.99937396],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_9a97b4590b354600b763d1c8056bc519 = L.popup({maxWidth: '300'});
+
+            
+                var html_099b9b8cea4d4001b0038faa77eee0b3 = $('<div id="html_099b9b8cea4d4001b0038faa77eee0b3" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspTangail</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>40 person <br><b>Weekly New Cases: </b>9 person </div>')[0];
+                popup_9a97b4590b354600b763d1c8056bc519.setContent(html_099b9b8cea4d4001b0038faa77eee0b3);
+            
+
+            circle_marker_2f1a337a1c66469ab655091e7c384378.bindPopup(popup_9a97b4590b354600b763d1c8056bc519);
+
+            
+        
+    
+            var circle_marker_1bef662cb39b4c49b511a6701d0d0f84 = L.circleMarker(
+                [24.9296255,91.35024779],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_cfab36a81a0344698a620558d084cca9 = L.popup({maxWidth: '300'});
+
+            
+                var html_138a60970c43444298a51a2fd6d18012 = $('<div id="html_138a60970c43444298a51a2fd6d18012" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspSunamganj</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>46 person <br><b>Weekly New Cases: </b>8 person </div>')[0];
+                popup_cfab36a81a0344698a620558d084cca9.setContent(html_138a60970c43444298a51a2fd6d18012);
+            
+
+            circle_marker_1bef662cb39b4c49b511a6701d0d0f84.bindPopup(popup_cfab36a81a0344698a620558d084cca9);
+
+            
+        
+    
+            var circle_marker_eccdcfe0694d46deb471bb3600d434d9 = L.circleMarker(
+                [23.21485857,90.16948145],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_2614bfcf8c1d4b9fb515549919f60aca = L.popup({maxWidth: '300'});
+
+            
+                var html_fdd21ad116824a37b064ee550b82ea27 = $('<div id="html_fdd21ad116824a37b064ee550b82ea27" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspMadaripur</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>63 person <br><b>Weekly New Cases: </b>6 person </div>')[0];
+                popup_2614bfcf8c1d4b9fb515549919f60aca.setContent(html_fdd21ad116824a37b064ee550b82ea27);
+            
+
+            circle_marker_eccdcfe0694d46deb471bb3600d434d9.bindPopup(popup_2614bfcf8c1d4b9fb515549919f60aca);
+
+            
+        
+    
+            var circle_marker_14369a912376481c8ba58e25aebf21ab = L.circleMarker(
+                [22.31164028,89.14873259],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_3b1ee3cf508d43db885d5e600d37613c = L.popup({maxWidth: '300'});
+
+            
+                var html_d47e8f98fdb948c1bceae48e091985ad = $('<div id="html_d47e8f98fdb948c1bceae48e091985ad" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspShariatpur</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>71 person <br><b>Weekly New Cases: </b>6 person </div>')[0];
+                popup_3b1ee3cf508d43db885d5e600d37613c.setContent(html_d47e8f98fdb948c1bceae48e091985ad);
+            
+
+            circle_marker_14369a912376481c8ba58e25aebf21ab.bindPopup(popup_3b1ee3cf508d43db885d5e600d37613c);
+
+            
+        
+    
+            var circle_marker_a48d61d39d764516a14e2ecca6cfbd07 = L.circleMarker(
+                [22.3403684,89.7390672],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 1,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_a8cdfecc188b41669f6440918b448976 = L.popup({maxWidth: '300'});
+
+            
+                var html_d39b064fc9d64490bb836af8ce8ba8bb = $('<div id="html_d39b064fc9d64490bb836af8ce8ba8bb" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspBagerhat</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>8 person <br><b>Weekly New Cases: </b>5 person </div>')[0];
+                popup_a8cdfecc188b41669f6440918b448976.setContent(html_d39b064fc9d64490bb836af8ce8ba8bb);
+            
+
+            circle_marker_a48d61d39d764516a14e2ecca6cfbd07.bindPopup(popup_a8cdfecc188b41669f6440918b448976);
+
+            
+        
+    
+            var circle_marker_9a3a90d82bb342af8528558ef95b6167 = L.circleMarker(
+                [22.81696364,90.36737758],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_c11e923e3ee14d22964ae7dd27fa19f6 = L.popup({maxWidth: '300'});
+
+            
+                var html_f726c0917d3f4db69841ce24cb521814 = $('<div id="html_f726c0917d3f4db69841ce24cb521814" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspBarishal</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>60 person <br><b>Weekly New Cases: </b>5 person </div>')[0];
+                popup_c11e923e3ee14d22964ae7dd27fa19f6.setContent(html_f726c0917d3f4db69841ce24cb521814);
+            
+
+            circle_marker_9a3a90d82bb342af8528558ef95b6167.bindPopup(popup_c11e923e3ee14d22964ae7dd27fa19f6);
+
+            
+        
+    
+            var circle_marker_3fb5bcdc65e04ddb9b200928a6b98bc7 = L.circleMarker(
+                [22.40374042,89.45322049],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_486a05b5537c49108c74644706879d5d = L.popup({maxWidth: '300'});
+
+            
+                var html_bf9518bdd4b641d180c88188ed144220 = $('<div id="html_bf9518bdd4b641d180c88188ed144220" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspKhulna</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>27 person <br><b>Weekly New Cases: </b>5 person </div>')[0];
+                popup_486a05b5537c49108c74644706879d5d.setContent(html_bf9518bdd4b641d180c88188ed144220);
+            
+
+            circle_marker_3fb5bcdc65e04ddb9b200928a6b98bc7.bindPopup(popup_486a05b5537c49108c74644706879d5d);
+
+            
+        
+    
+            var circle_marker_15a49165d51e4680b05e2313cc6c11a7 = L.circleMarker(
+                [26.29023916,88.57480463],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_897fd33b7d5a4d15adf1eaa1adf4d982 = L.popup({maxWidth: '300'});
+
+            
+                var html_189bf7661694480285dba281dedff58e = $('<div id="html_189bf7661694480285dba281dedff58e" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspPanchagar</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>15 person <br><b>Weekly New Cases: </b>5 person </div>')[0];
+                popup_897fd33b7d5a4d15adf1eaa1adf4d982.setContent(html_189bf7661694480285dba281dedff58e);
+            
+
+            circle_marker_15a49165d51e4680b05e2313cc6c11a7.bindPopup(popup_897fd33b7d5a4d15adf1eaa1adf4d982);
+
+            
+        
+    
+            var circle_marker_55623a242caf471d87f0ebc191e9d64a = L.circleMarker(
+                [24.49565864,88.63403416],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_50c1abdcc5ef4dbdab8e8486bf67abd4 = L.popup({maxWidth: '300'});
+
+            
+                var html_8ace883437134717992393c86df61846 = $('<div id="html_8ace883437134717992393c86df61846" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspRajshahi</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>32 person <br><b>Weekly New Cases: </b>5 person </div>')[0];
+                popup_50c1abdcc5ef4dbdab8e8486bf67abd4.setContent(html_8ace883437134717992393c86df61846);
+            
+
+            circle_marker_55623a242caf471d87f0ebc191e9d64a.bindPopup(popup_50c1abdcc5ef4dbdab8e8486bf67abd4);
+
+            
+        
+    
+            var circle_marker_98e76fa7d7c54114bdfa2605343c3f9b = L.circleMarker(
+                [23.4888283,89.09326341],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_1399605105794581956fe1f71758a8f8 = L.popup({maxWidth: '300'});
+
+            
+                var html_e81a9e8655a14ad0aff886affbb4994f = $('<div id="html_e81a9e8655a14ad0aff886affbb4994f" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspJhenaidah</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>44 person <br><b>Weekly New Cases: </b>4 person </div>')[0];
+                popup_1399605105794581956fe1f71758a8f8.setContent(html_e81a9e8655a14ad0aff886affbb4994f);
+            
+
+            circle_marker_98e76fa7d7c54114bdfa2605343c3f9b.bindPopup(popup_1399605105794581956fe1f71758a8f8);
+
+            
+        
+    
+            var circle_marker_9a9f50fb19624ad89d38a827562efe9b = L.circleMarker(
+                [23.16651652,91.95702208],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 1,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_b2abbfe5946e4e439268c99fe6639804 = L.popup({maxWidth: '300'});
+
+            
+                var html_d0d8b41ed2c64ece8e9f9257d6e31e35 = $('<div id="html_d0d8b41ed2c64ece8e9f9257d6e31e35" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspKhagrachhari</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>7 person <br><b>Weekly New Cases: </b>4 person </div>')[0];
+                popup_b2abbfe5946e4e439268c99fe6639804.setContent(html_d0d8b41ed2c64ece8e9f9257d6e31e35);
+            
+
+            circle_marker_9a9f50fb19624ad89d38a827562efe9b.bindPopup(popup_b2abbfe5946e4e439268c99fe6639804);
+
+            
+        
+    
+            var circle_marker_b4587ee2877f497fa938f65a4413d315 = L.circleMarker(
+                [23.92405419,89.02235449],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_b2939a7dc83947ceb66b5b690e4bf9ca = L.popup({maxWidth: '300'});
+
+            
+                var html_22b50016a19f45c9a3c979758c778946 = $('<div id="html_22b50016a19f45c9a3c979758c778946" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspKushtia</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>27 person <br><b>Weekly New Cases: </b>4 person </div>')[0];
+                popup_b2939a7dc83947ceb66b5b690e4bf9ca.setContent(html_22b50016a19f45c9a3c979758c778946);
+            
+
+            circle_marker_b4587ee2877f497fa938f65a4413d315.bindPopup(popup_b2939a7dc83947ceb66b5b690e4bf9ca);
+
+            
+        
+    
+            var circle_marker_436a25fdee9b4ad3abf748c9e429d399 = L.circleMarker(
+                [23.70000982,89.58245495],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_f88a84a2f574452b97ff2afbeea916dc = L.popup({maxWidth: '300'});
+
+            
+                var html_5f11de463c554a509c2b6f9d64ae8e16 = $('<div id="html_5f11de463c554a509c2b6f9d64ae8e16" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspRajbari</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>27 person <br><b>Weekly New Cases: </b>4 person </div>')[0];
+                popup_f88a84a2f574452b97ff2afbeea916dc.setContent(html_5f11de463c554a509c2b6f9d64ae8e16);
+            
+
+            circle_marker_436a25fdee9b4ad3abf748c9e429d399.bindPopup(popup_f88a84a2f574452b97ff2afbeea916dc);
+
+            
+        
+    
+            var circle_marker_22fb16e387ff46d3aad9fdf1636e9ef4 = L.circleMarker(
+                [25.98250367,88.34877914],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_cdedcfa06b5f476897c89717cc85a854 = L.popup({maxWidth: '300'});
+
+            
+                var html_8d85b655a3bd4450a49b65dc2a5ad61b = $('<div id="html_8d85b655a3bd4450a49b65dc2a5ad61b" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspThakurgaon</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>27 person <br><b>Weekly New Cases: </b>4 person </div>')[0];
+                popup_cdedcfa06b5f476897c89717cc85a854.setContent(html_8d85b655a3bd4450a49b65dc2a5ad61b);
+            
+
+            circle_marker_22fb16e387ff46d3aad9fdf1636e9ef4.bindPopup(popup_cdedcfa06b5f476897c89717cc85a854);
+
+            
+        
+    
+            var circle_marker_4463899bf4b24962a2a9b8f462f7903c = L.circleMarker(
+                [22.57105142,90.18688202],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_ee2e5cf65e014b78825657964de3cce8 = L.popup({maxWidth: '300'});
+
+            
+                var html_ea8bdd59f31a47e1a4a4fba99543eb07 = $('<div id="html_ea8bdd59f31a47e1a4a4fba99543eb07" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspJhalokathi</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>16 person <br><b>Weekly New Cases: </b>3 person </div>')[0];
+                popup_ee2e5cf65e014b78825657964de3cce8.setContent(html_ea8bdd59f31a47e1a4a4fba99543eb07);
+            
+
+            circle_marker_4463899bf4b24962a2a9b8f462f7903c.bindPopup(popup_ee2e5cf65e014b78825657964de3cce8);
+
+            
+        
+    
+            var circle_marker_3ad43fdd3d3c40f89d03bd86de5467bf = L.circleMarker(
+                [24.47436539,91.92010816],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_b6d4b6cf97004280a473dfd536a5e868 = L.popup({maxWidth: '300'});
+
+            
+                var html_3ba190b7784b402db8a67ab6f6eb52b4 = $('<div id="html_3ba190b7784b402db8a67ab6f6eb52b4" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspMoulovi Bazar</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>39 person <br><b>Weekly New Cases: </b>3 person </div>')[0];
+                popup_b6d4b6cf97004280a473dfd536a5e868.setContent(html_3ba190b7784b402db8a67ab6f6eb52b4);
+            
+
+            circle_marker_3ad43fdd3d3c40f89d03bd86de5467bf.bindPopup(popup_b6d4b6cf97004280a473dfd536a5e868);
+
+            
+        
+    
+            var circle_marker_c724e0b5819a4e60b2359189475850b0 = L.circleMarker(
+                [25.08408877,90.08081471],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_50e159c9ceaf4bd68333a09a1a7d0562 = L.popup({maxWidth: '300'});
+
+            
+                var html_2d5248b34ed14d77bddcbe118f77d6a2 = $('<div id="html_2d5248b34ed14d77bddcbe118f77d6a2" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspSherpur</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>42 person <br><b>Weekly New Cases: </b>3 person </div>')[0];
+                popup_50e159c9ceaf4bd68333a09a1a7d0562.setContent(html_2d5248b34ed14d77bddcbe118f77d6a2);
+            
+
+            circle_marker_c724e0b5819a4e60b2359189475850b0.bindPopup(popup_50e159c9ceaf4bd68333a09a1a7d0562);
+
+            
+        
+    
+            var circle_marker_3020a07464e043a3adf8370792484c83 = L.circleMarker(
+                [21.90637765,92.37557822],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 1,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_304e965e757e44e1bbd4175e76e68bc1 = L.popup({maxWidth: '300'});
+
+            
+                var html_0af6fb745e8444ab870e84cf71f4d287 = $('<div id="html_0af6fb745e8444ab870e84cf71f4d287" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspBandarban</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>6 person <br><b>Weekly New Cases: </b>2 person </div>')[0];
+                popup_304e965e757e44e1bbd4175e76e68bc1.setContent(html_0af6fb745e8444ab870e84cf71f4d287);
+            
+
+            circle_marker_3020a07464e043a3adf8370792484c83.bindPopup(popup_304e965e757e44e1bbd4175e76e68bc1);
+
+            
+        
+    
+            var circle_marker_554bdfa5afd54a749dfe1a8966e36e6d = L.circleMarker(
+                [22.33820033,90.76082475],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_82773bc4f07f4f078e33521e59c16034 = L.popup({maxWidth: '300'});
+
+            
+                var html_171f432cd8eb4d8c9296fd9446616290 = $('<div id="html_171f432cd8eb4d8c9296fd9446616290" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspBhola</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>12 person <br><b>Weekly New Cases: </b>2 person </div>')[0];
+                popup_82773bc4f07f4f078e33521e59c16034.setContent(html_171f432cd8eb4d8c9296fd9446616290);
+            
+
+            circle_marker_554bdfa5afd54a749dfe1a8966e36e6d.bindPopup(popup_82773bc4f07f4f078e33521e59c16034);
+
+            
+        
+    
+            var circle_marker_5d2c0f2c2c7f4dd091da68b43dd049b3 = L.circleMarker(
+                [24.37643284,90.95011569],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "red",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 15,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_365753e78aca488483ea7dce69035824 = L.popup({maxWidth: '300'});
+
+            
+                var html_6a4f6a312bc14991b29b9dde6ef8f3e9 = $('<div id="html_6a4f6a312bc14991b29b9dde6ef8f3e9" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspKishoreganj</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>207 person <br><b>Weekly New Cases: </b>2 person </div>')[0];
+                popup_365753e78aca488483ea7dce69035824.setContent(html_6a4f6a312bc14991b29b9dde6ef8f3e9);
+            
+
+            circle_marker_5d2c0f2c2c7f4dd091da68b43dd049b3.bindPopup(popup_365753e78aca488483ea7dce69035824);
+
+            
+        
+    
+            var circle_marker_344e692807cd41b4944fcbb101569e3a = L.circleMarker(
+                [23.1290999,89.58537715],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_963285cfca994b83905d09ea0f3777bd = L.popup({maxWidth: '300'});
+
+            
+                var html_e6e77501085c4e818d2b92a1417208ce = $('<div id="html_e6e77501085c4e818d2b92a1417208ce" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspNarail</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>16 person <br><b>Weekly New Cases: </b>2 person </div>')[0];
+                popup_963285cfca994b83905d09ea0f3777bd.setContent(html_e6e77501085c4e818d2b92a1417208ce);
+            
+
+            circle_marker_344e692807cd41b4944fcbb101569e3a.bindPopup(popup_963285cfca994b83905d09ea0f3777bd);
+
+            
+        
+    
+            var circle_marker_40108432e27247268dec752c2cb3889a = L.circleMarker(
+                [24.00017573,90.77810263],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "red",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 15,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_b51cb3721402485798d741bb4b051e37 = L.popup({maxWidth: '300'});
+
+            
+                var html_f75ce326429e4445bd6c24de14871e09 = $('<div id="html_f75ce326429e4445bd6c24de14871e09" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspNarshingdi</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>174 person <br><b>Weekly New Cases: </b>2 person </div>')[0];
+                popup_b51cb3721402485798d741bb4b051e37.setContent(html_f75ce326429e4445bd6c24de14871e09);
+            
+
+            circle_marker_40108432e27247268dec752c2cb3889a.bindPopup(popup_b51cb3721402485798d741bb4b051e37);
+
+            
+        
+    
+            var circle_marker_bf8320f16db544ea8be714d15ba5048a = L.circleMarker(
+                [23.23979149,90.42278507],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 1,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_a915ad78860d4d6f875043aa659bd131 = L.popup({maxWidth: '300'});
+
+            
+                var html_59e23d684b674d6b95a6021406b885ce = $('<div id="html_59e23d684b674d6b95a6021406b885ce" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspSatkhira</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>6 person <br><b>Weekly New Cases: </b>2 person </div>')[0];
+                popup_a915ad78860d4d6f875043aa659bd131.setContent(html_59e23d684b674d6b95a6021406b885ce);
+            
+
+            circle_marker_bf8320f16db544ea8be714d15ba5048a.bindPopup(popup_a915ad78860d4d6f875043aa659bd131);
+
+            
+        
+    
+            var circle_marker_f0d3f87f03574e63a43c5158b8e4a57a = L.circleMarker(
+                [24.71130549,88.2685723],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_2322b544dd304e1089dee124a7de8645 = L.popup({maxWidth: '300'});
+
+            
+                var html_277cc2246dc645288a7b04eb499d1315 = $('<div id="html_277cc2246dc645288a7b04eb499d1315" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspChapainawabganj</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>15 person <br><b>Weekly New Cases: </b>1 person </div>')[0];
+                popup_2322b544dd304e1089dee124a7de8645.setContent(html_277cc2246dc645288a7b04eb499d1315);
+            
+
+            circle_marker_f0d3f87f03574e63a43c5158b8e4a57a.bindPopup(popup_2322b544dd304e1089dee124a7de8645);
+
+            
+        
+    
+            var circle_marker_7bcf808b5ddc4e0b85003e3c927ce209 = L.circleMarker(
+                [25.29885314,89.51266194],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_e1d9fc99464643e8bb9463bc048ef76c = L.popup({maxWidth: '300'});
+
+            
+                var html_39e3df6e06364a8d887b5cfecca35228 = $('<div id="html_39e3df6e06364a8d887b5cfecca35228" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspGaibandha</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>26 person <br><b>Weekly New Cases: </b>1 person </div>')[0];
+                popup_e1d9fc99464643e8bb9463bc048ef76c.setContent(html_39e3df6e06364a8d887b5cfecca35228);
+            
+
+            circle_marker_7bcf808b5ddc4e0b85003e3c927ce209.bindPopup(popup_e1d9fc99464643e8bb9463bc048ef76c);
+
+            
+        
+    
+            var circle_marker_967ca07de0a94ae7836e6deeac88f597 = L.circleMarker(
+                [24.38135837,89.09520953],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_59a4adecf6134184abef9eade6b53da0 = L.popup({maxWidth: '300'});
+
+            
+                var html_e63b796c65d8423f870dfcc259fe7fb2 = $('<div id="html_e63b796c65d8423f870dfcc259fe7fb2" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspNatore</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>14 person <br><b>Weekly New Cases: </b>1 person </div>')[0];
+                popup_59a4adecf6134184abef9eade6b53da0.setContent(html_e63b796c65d8423f870dfcc259fe7fb2);
+            
+
+            circle_marker_967ca07de0a94ae7836e6deeac88f597.bindPopup(popup_59a4adecf6134184abef9eade6b53da0);
+
+            
+        
+    
+            var circle_marker_1e8824d38d1b403d8f0a3972d63c5ff6 = L.circleMarker(
+                [24.0522705,89.38283522],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_cf01271ff0744b23a791e8bab554f765 = L.popup({maxWidth: '300'});
+
+            
+                var html_a0efe97df1f94846a8121088ad7b8ae6 = $('<div id="html_a0efe97df1f94846a8121088ad7b8ae6" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspPabna</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>19 person <br><b>Weekly New Cases: </b>1 person </div>')[0];
+                popup_cf01271ff0744b23a791e8bab554f765.setContent(html_a0efe97df1f94846a8121088ad7b8ae6);
+            
+
+            circle_marker_1e8824d38d1b403d8f0a3972d63c5ff6.bindPopup(popup_cf01271ff0744b23a791e8bab554f765);
+
+            
+        
+    
+            var circle_marker_9fa72b3dd5214f5db26458c1b174e612 = L.circleMarker(
+                [24.38495324,89.59735976],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 1,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_4056facda71842f599be652371d56ca0 = L.popup({maxWidth: '300'});
+
+            
+                var html_7b001109fd1040e5936cc7455afda5a2 = $('<div id="html_7b001109fd1040e5936cc7455afda5a2" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspSirajganj</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>7 person <br><b>Weekly New Cases: </b>1 person </div>')[0];
+                popup_4056facda71842f599be652371d56ca0.setContent(html_7b001109fd1040e5936cc7455afda5a2);
+            
+
+            circle_marker_9fa72b3dd5214f5db26458c1b174e612.bindPopup(popup_4056facda71842f599be652371d56ca0);
+
+            
+        
+    
+            var circle_marker_dee6df91901d4432808e99e4a4ce3884 = L.circleMarker(
+                [22.13052044,90.11098216],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_b8b9ccfd26b340619cd968029894232a = L.popup({maxWidth: '300'});
+
+            
+                var html_0a624111c4b5475994fb65b0ab1e7836 = $('<div id="html_0a624111c4b5475994fb65b0ab1e7836" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspBarguna</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>37 person <br><b>Weekly New Cases: </b>0 person </div>')[0];
+                popup_b8b9ccfd26b340619cd968029894232a.setContent(html_0a624111c4b5475994fb65b0ab1e7836);
+            
+
+            circle_marker_dee6df91901d4432808e99e4a4ce3884.bindPopup(popup_b8b9ccfd26b340619cd968029894232a);
+
+            
+        
+    
+            var circle_marker_0b7f05aa0ea7489fa39d74b8554126a9 = L.circleMarker(
+                [23.78928673,88.70680717],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 1,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_26074d324a9848fd9194edf90e074594 = L.popup({maxWidth: '300'});
+
+            
+                var html_942d728fcc894f5ebc6cd5de363ae4b0 = $('<div id="html_942d728fcc894f5ebc6cd5de363ae4b0" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspMeherpur</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>5 person <br><b>Weekly New Cases: </b>0 person </div>')[0];
+                popup_26074d324a9848fd9194edf90e074594.setContent(html_942d728fcc894f5ebc6cd5de363ae4b0);
+            
+
+            circle_marker_0b7f05aa0ea7489fa39d74b8554126a9.bindPopup(popup_26074d324a9848fd9194edf90e074594);
+
+            
+        
+    
+            var circle_marker_f9ffedc6f3864775af1050e23ce6c5cc = L.circleMarker(
+                [22.30991595,89.94300541],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 1,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_59e8fd0c3c864e568ed054e0a889c64a = L.popup({maxWidth: '300'});
+
+            
+                var html_40ecfaaf8b054d59b3cd9d1629ab7444 = $('<div id="html_40ecfaaf8b054d59b3cd9d1629ab7444" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspPirojpur</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>7 person <br><b>Weekly New Cases: </b>0 person </div>')[0];
+                popup_59e8fd0c3c864e568ed054e0a889c64a.setContent(html_40ecfaaf8b054d59b3cd9d1629ab7444);
+            
+
+            circle_marker_f9ffedc6f3864775af1050e23ce6c5cc.bindPopup(popup_59e8fd0c3c864e568ed054e0a889c64a);
+
+            
+        
+    
+            var circle_marker_e9a6d61473fc4247b488aa3530c5a76a = L.circleMarker(
+                [22.1595886,90.40825393],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": "true",
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 4,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_597e0c6b2423458c8841f6f5f229686a);
+            
+    
+            var popup_3452cfdda16348478a97db8ce1e12df7 = L.popup({maxWidth: '300'});
+
+            
+                var html_56d0d00820344c3c9a9fd7e993ca350d = $('<div id="html_56d0d00820344c3c9a9fd7e993ca350d" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspPotuakhali</h4></b><br><b>Cases Upto 18 May: &nbsp: </b>29 person <br><b>Weekly New Cases: </b>0 person </div>')[0];
+                popup_3452cfdda16348478a97db8ce1e12df7.setContent(html_56d0d00820344c3c9a9fd7e993ca350d);
+            
+
+            circle_marker_e9a6d61473fc4247b488aa3530c5a76a.bindPopup(popup_3452cfdda16348478a97db8ce1e12df7);
+
+            
+        
+    
+            var feature_group_43b242056bc9438395759701a5066c8a = L.featureGroup(
+                ).addTo(map_c781e42335c64f048473459ebc451e57);
+        
+    
+
+            var marker_57a381d45f2847cc8010c900dd115174 = L.marker(
+                [22.13052044,90.11098216],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_43b242056bc9438395759701a5066c8a);
+            
+    
+
+                var icon_5a8396692542498a8576f23ceb798c1d = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_57a381d45f2847cc8010c900dd115174.setIcon(icon_5a8396692542498a8576f23ceb798c1d);
+            
+    
+            var popup_30b96d65290648feb3c3a0d1e376d253 = L.popup({maxWidth: '300'});
+
+            
+                var html_873a96c7c9fc44ec978c4206a077aca5 = $('<div id="html_873a96c7c9fc44ec978c4206a077aca5" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspBarguna</h4></b><br><b>Cases Upto 18 May: </b>37 person <br><b>Weekly New Cases : </b>0 person </div>')[0];
+                popup_30b96d65290648feb3c3a0d1e376d253.setContent(html_873a96c7c9fc44ec978c4206a077aca5);
+            
+
+            marker_57a381d45f2847cc8010c900dd115174.bindPopup(popup_30b96d65290648feb3c3a0d1e376d253);
+
+            
+        
+    
+
+            var marker_a2c18a47b97648d09dc1891d004f879a = L.marker(
+                [23.78928673,88.70680717],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_43b242056bc9438395759701a5066c8a);
+            
+    
+
+                var icon_590c895a82b246ed9ff7fe78f91f312a = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a2c18a47b97648d09dc1891d004f879a.setIcon(icon_590c895a82b246ed9ff7fe78f91f312a);
+            
+    
+            var popup_de81f892c7ee4301a901e4a42aede561 = L.popup({maxWidth: '300'});
+
+            
+                var html_f8e031226a504a94bcdade5158483c20 = $('<div id="html_f8e031226a504a94bcdade5158483c20" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspMeherpur</h4></b><br><b>Cases Upto 18 May: </b>5 person <br><b>Weekly New Cases : </b>0 person </div>')[0];
+                popup_de81f892c7ee4301a901e4a42aede561.setContent(html_f8e031226a504a94bcdade5158483c20);
+            
+
+            marker_a2c18a47b97648d09dc1891d004f879a.bindPopup(popup_de81f892c7ee4301a901e4a42aede561);
+
+            
+        
+    
+
+            var marker_44d834dfff6a4bfda48c3c2e05511aa5 = L.marker(
+                [22.30991595,89.94300541],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_43b242056bc9438395759701a5066c8a);
+            
+    
+
+                var icon_9967064e06c34cbb8845f9de1f63f320 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_44d834dfff6a4bfda48c3c2e05511aa5.setIcon(icon_9967064e06c34cbb8845f9de1f63f320);
+            
+    
+            var popup_49b3cb4814c640b5a4bd4a622895c62a = L.popup({maxWidth: '300'});
+
+            
+                var html_856399cb01fb42f08d290e0b507e6381 = $('<div id="html_856399cb01fb42f08d290e0b507e6381" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspPirojpur</h4></b><br><b>Cases Upto 18 May: </b>7 person <br><b>Weekly New Cases : </b>0 person </div>')[0];
+                popup_49b3cb4814c640b5a4bd4a622895c62a.setContent(html_856399cb01fb42f08d290e0b507e6381);
+            
+
+            marker_44d834dfff6a4bfda48c3c2e05511aa5.bindPopup(popup_49b3cb4814c640b5a4bd4a622895c62a);
+
+            
+        
+    
+
+            var marker_237621b568ec4c95bb210b9a91f13588 = L.marker(
+                [22.1595886,90.40825393],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_43b242056bc9438395759701a5066c8a);
+            
+    
+
+                var icon_d9ab1233fc4e4906a6b6289d8f662c09 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_237621b568ec4c95bb210b9a91f13588.setIcon(icon_d9ab1233fc4e4906a6b6289d8f662c09);
+            
+    
+            var popup_4f88a62fedae4dacb7ef2d23716c75c7 = L.popup({maxWidth: '300'});
+
+            
+                var html_140f49d18cc3463f80d5ae6c2181fec9 = $('<div id="html_140f49d18cc3463f80d5ae6c2181fec9" style="width: 100.0%; height: 100.0%;"><h4> <b>District :&nbspPotuakhali</h4></b><br><b>Cases Upto 18 May: </b>29 person <br><b>Weekly New Cases : </b>0 person </div>')[0];
+                popup_4f88a62fedae4dacb7ef2d23716c75c7.setContent(html_140f49d18cc3463f80d5ae6c2181fec9);
+            
+
+            marker_237621b568ec4c95bb210b9a91f13588.bindPopup(popup_4f88a62fedae4dacb7ef2d23716c75c7);
+
+            
+        
+    
+            var feature_group_d84cddb96a21413981c6ea1d3b83ea9d = L.featureGroup(
+                ).addTo(map_c781e42335c64f048473459ebc451e57);
+        
+    
+
+            
+
+                var geo_json_7647667add864ec2b9bdfdbef60625ef = L.geoJson(
+                    {"crs": {"properties": {"name": "urn:ogc:def:crs:OGC:1.3:CRS84"}, "type": "name"}, "features": [{"geometry": {"coordinates": [[[88.76215395435406, 26.32710893827715], [88.76248861265742, 26.2530726976064], [88.74322022357154, 26.017127412793116], [88.6267207581082, 26.05655047866253], [88.6409658352108, 26.10753118248084], [88.49105932067891, 26.202948182555076], [88.32139611041549, 26.203096442666094], [88.37644372593593, 26.30325281601023], [88.5250099160516, 26.359245706354045], [88.48692286861854, 26.4599595596963], [88.33418226108597, 26.487517898234614], [88.41765625154164, 26.63156218031702], [88.43859352754737, 26.544880941845065], [88.52068687014832, 26.500746422392126], [88.762142796116, 26.329577468061643], [88.76215395435406, 26.32710893827715]]], "type": "Polygon"}, "properties": {"DISTNAME": "Panchagarh", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[88.97315357520671, 26.275466316061966], [89.05492206410491, 26.170452101128262], [89.09298820426352, 26.114688262831066], [89.14259518298798, 25.966793666728336], [89.08550795709607, 25.82569736754357], [88.95773001865638, 25.810234988450702], [88.93354232369421, 25.72040498185038], [88.75401203418204, 25.94860861714875], [88.74322022357154, 26.017127412793116], [88.76248861265742, 26.2530726976064], [88.76215395435406, 26.32710893827715], [88.97315357520671, 26.275466316061966]]], "type": "Polygon"}, "properties": {"DISTNAME": "Nilphamari", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[88.6267207581082, 26.05655047866253], [88.4881971091375, 25.88436648229623], [88.39003813073248, 25.827867486291893], [88.43314347640506, 25.672552363419186], [88.16252157604958, 25.787390764357326], [88.09557280871576, 25.89885046611937], [88.19889416093508, 26.16270814389941], [88.32139611041549, 26.203096442666094], [88.49105932067891, 26.202948182555076], [88.6409658352108, 26.10753118248084], [88.6267207581082, 26.05655047866253]]], "type": "Polygon"}, "properties": {"DISTNAME": "Thakurgaon", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[89.46596672378752, 25.785277946892563], [89.54130264580363, 25.640340352955945], [89.49913446945607, 25.582574078257892], [89.43028840193597, 25.588025802429172], [89.40960298949472, 25.532288286043922], [89.44717262390492, 25.51406178719185], [89.33505217509753, 25.300441186713556], [89.27438036397825, 25.305118874295374], [89.15364430181228, 25.419281361360163], [89.1138541604376, 25.502622496065783], [89.09306873733152, 25.571087644280396], [88.93354232369421, 25.72040498185038], [88.95773001865638, 25.810234988450702], [89.08550795709607, 25.82569736754357], [89.14259518298798, 25.966793666728336], [89.46596672378752, 25.785277946892563]]], "type": "Polygon"}, "properties": {"DISTNAME": "Rangpur", "Death": 1, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[89.54130264580363, 25.640340352955945], [89.46596672378752, 25.785277946892563], [89.52435367738553, 25.81806072054877], [89.55918727754471, 25.88628762519238], [89.49446395101882, 25.999063649400853], [89.57932921507143, 25.98109185668818], [89.58044860093099, 26.024872434937492], [89.64602165245105, 26.062430434845794], [89.58863852193673, 26.183224990653514], [89.68126795825304, 26.237110471221285], [89.88318158843009, 25.945605974442003], [89.82972763696955, 25.83219582425852], [89.87697205257888, 25.653685061710178], [89.8780148626758, 25.577997932074652], [89.82957573145046, 25.417566538077494], [89.75041636538037, 25.385408369983907], [89.7036421167191, 25.40559421089648], [89.65312458951126, 25.544533409014434], [89.58039050166019, 25.567870256066044], [89.55022760870355, 25.60716450222128], [89.54130264580363, 25.640340352955945]]], "type": "Polygon"}, "properties": {"DISTNAME": "Kurigram", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[89.49446395101882, 25.999063649400853], [89.55918727754471, 25.88628762519238], [89.52435367738553, 25.81806072054877], [89.46596672378752, 25.785277946892563], [89.14259518298798, 25.966793666728336], [89.09298820426352, 26.114688262831066], [89.05492206410491, 26.170452101128262], [88.97315357520671, 26.275466316061966], [89.06500398666128, 26.252985725433803], [89.06340696255455, 26.289686438220144], [88.91155402240747, 26.37951467697684], [88.96999025633158, 26.451022941102394], [89.07868651489298, 26.40075313047481], [89.15155490606628, 26.16923339645507], [89.37624230181336, 26.011406572510566], [89.49221339226722, 26.00298509599304], [89.49446395101882, 25.999063649400853]]], "type": "Polygon"}, "properties": {"DISTNAME": "Lalmonirhat", "Death": 1, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[89.20996188014391, 25.233689342726507], [89.19828910765773, 25.175687083739263], [89.28120856311659, 25.087346447215396], [89.19039007679777, 24.94485990614811], [89.10320178179637, 24.962639386788567], [89.0831629430088, 24.872030125195977], [88.99925455889593, 24.857128909624805], [89.01762003800656, 25.044444169785038], [88.93752761617196, 25.062289412248845], [88.94261233009865, 25.109269136741375], [88.93011948803627, 25.13834270681724], [88.9268811330054, 25.171340145366287], [88.9526251090536, 25.244479742752446], [89.00748908903898, 25.26643814935852], [89.20996188014391, 25.233689342726507]]], "type": "Polygon"}, "properties": {"DISTNAME": "Joypurhat", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[88.93354232369421, 25.72040498185038], [89.09306873733152, 25.571087644280396], [89.1138541604376, 25.502622496065783], [89.15364430181228, 25.419281361360163], [89.27438036397825, 25.305118874295374], [89.27246752654918, 25.273480778020257], [89.30226284916029, 25.223027315756724], [89.21327065455006, 25.233154167542523], [89.20996188014391, 25.233689342726507], [89.00748908903898, 25.26643814935852], [89.01135033975908, 25.298494375777807], [88.86987429140754, 25.342577749136808], [88.82477290104225, 25.415508778241417], [88.84017192704164, 25.47111051979209], [88.80491204067545, 25.523757463885545], [88.70490118829446, 25.4755894799481], [88.5225247777833, 25.536876503736096], [88.43314347640506, 25.672552363419186], [88.39003813073248, 25.827867486291893], [88.4881971091375, 25.88436648229623], [88.6267207581082, 26.05655047866253], [88.74322022357154, 26.017127412793116], [88.75401203418204, 25.94860861714875], [88.93354232369421, 25.72040498185038]]], "type": "Polygon"}, "properties": {"DISTNAME": "Dinajpur", "Death": 1, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[89.75041636538037, 25.385408369983907], [89.75544194358463, 25.27149874771095], [89.74424317004002, 25.23316784214171], [89.70201582428268, 25.22683661260095], [89.6440990734535, 25.04097409148818], [89.30008439341702, 25.116401436526075], [89.28120856311659, 25.087346447215396], [89.19828910765773, 25.175687083739263], [89.20996188014391, 25.233689342726507], [89.21327065455006, 25.233154167542523], [89.30226284916029, 25.223027315756724], [89.27246752654918, 25.273480778020257], [89.27438036397825, 25.305118874295374], [89.33505217509753, 25.300441186713556], [89.44717262390492, 25.51406178719185], [89.40960298949472, 25.532288286043922], [89.43028840193597, 25.588025802429172], [89.49913446945607, 25.582574078257892], [89.54130264580363, 25.640340352955945], [89.55022760870355, 25.60716450222128], [89.58039050166019, 25.567870256066044], [89.65312458951126, 25.544533409014434], [89.7036421167191, 25.40559421089648], [89.75041636538037, 25.385408369983907]]], "type": "Polygon"}, "properties": {"DISTNAME": "Gaibandha", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[89.6440990734535, 25.04097409148818], [89.70201582428268, 25.22683661260095], [89.74424317004002, 25.23316784214171], [89.75544194358463, 25.27149874771095], [89.75041636538037, 25.385408369983907], [89.82957573145046, 25.417566538077494], [89.84341114394732, 25.291976574654427], [89.94665782910874, 25.29086294916999], [89.88969666402289, 25.188731560845213], [89.91945808408036, 25.067099532897487], [89.89678790328713, 25.034733935468694], [89.91738501470837, 24.957654752128178], [90.21141515755079, 24.881435365146046], [90.14439236760597, 24.783666366103375], [90.08472865301536, 24.78049430076976], [89.98520249357796, 24.72472037287497], [89.89897776257175, 24.735215295870717], [89.79309798288716, 24.568530412438292], [89.77049627550508, 24.623102312402068], [89.77824933186662, 24.76921629037878], [89.72277005163721, 24.78256934170173], [89.6440990734535, 25.04097409148818]]], "type": "Polygon"}, "properties": {"DISTNAME": "Jamalpur", "Death": 1, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[88.9268811330054, 25.171340145366287], [88.93011948803627, 25.13834270681724], [88.94261233009865, 25.109269136741375], [88.93752761617196, 25.062289412248845], [89.01762003800656, 25.044444169785038], [88.99925455889593, 24.857128909624805], [88.97578425035016, 24.75499703765047], [89.14710544276994, 24.665767249931832], [89.0971367616475, 24.537276355616996], [88.96329208006955, 24.57832205796757], [88.5278507160026, 24.69610537775617], [88.4296979495121, 24.824596272071005], [88.49215880091515, 24.888841719228424], [88.40649820470526, 24.954871762140215], [88.4689590561083, 25.210068955015515], [88.9268811330054, 25.171340145366287]]], "type": "Polygon"}, "properties": {"DISTNAME": "Naogaon", "Death": 1, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[88.40649820470526, 24.954871762140215], [88.49215880091515, 24.888841719228424], [88.4296979495121, 24.824596272071005], [88.5278507160026, 24.69610537775617], [88.30477624670601, 24.56047610042384], [88.3315451830216, 24.439123589126496], [88.30834543821476, 24.40878546130216], [88.12453207551437, 24.528353376845132], [88.017456330252, 24.669336441440578], [88.16914696937368, 24.849580612632224], [88.14594722456684, 24.933456613087742], [88.22803862926799, 24.967363932420824], [88.33511437453035, 24.869211165930324], [88.40649820470526, 24.954871762140215]]], "type": "Polygon"}, "properties": {"DISTNAME": "Chapai Nawabganj", "Death": 1, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[88.96329208006955, 24.57832205796757], [88.87406229235091, 24.10897337456754], [88.80446305793038, 24.12860392786564], [88.73307922775547, 24.189280183514313], [88.74914058954482, 24.241033460391122], [88.71344867445737, 24.31063269481166], [88.3511757363197, 24.37130895046033], [88.30834543821476, 24.40878546130216], [88.3315451830216, 24.439123589126496], [88.30477624670601, 24.56047610042384], [88.5278507160026, 24.69610537775617], [88.96329208006955, 24.57832205796757]]], "type": "Polygon"}, "properties": {"DISTNAME": "Rajshahi", "Death": 1, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[88.87406229235091, 24.10897337456754], [88.96329208006955, 24.57832205796757], [89.0971367616475, 24.537276355616996], [89.14710544276994, 24.665767249931832], [89.35054935876843, 24.555122313160723], [89.26310416680417, 24.44269278063524], [89.31128825217223, 24.33740163112725], [89.00969156968324, 24.117896353339404], [88.87406229235091, 24.10897337456754]]], "type": "Polygon"}, "properties": {"DISTNAME": "Natore", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[89.6440990734535, 25.04097409148818], [89.72277005163721, 24.78256934170173], [89.54685489174943, 24.653275079651223], [89.6075311473981, 24.60509099428316], [89.56113165778441, 24.55333771740635], [89.35054935876843, 24.555122313160723], [89.14710544276994, 24.665767249931832], [88.97578425035016, 24.75499703765047], [88.99925455889593, 24.857128909624805], [89.0831629430088, 24.872030125195977], [89.10320178179637, 24.962639386788567], [89.19039007679777, 24.94485990614811], [89.28120856311659, 25.087346447215396], [89.30008439341702, 25.116401436526075], [89.6440990734535, 25.04097409148818]]], "type": "Polygon"}, "properties": {"DISTNAME": "Bogra", "Death": 3, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[89.79309798288716, 24.568530412438292], [89.74316042473043, 24.522999589582014], [89.8306056166947, 24.083989034006322], [89.784206127081, 24.032235757129513], [89.72352987143233, 24.014389799585786], [89.31128825217223, 24.33740163112725], [89.26310416680417, 24.44269278063524], [89.35054935876843, 24.555122313160723], [89.56113165778441, 24.55333771740635], [89.6075311473981, 24.60509099428316], [89.54685489174943, 24.653275079651223], [89.72277005163721, 24.78256934170173], [89.77824933186662, 24.76921629037878], [89.77049627550508, 24.623102312402068], [89.79309798288716, 24.568530412438292]]], "type": "Polygon"}, "properties": {"DISTNAME": "Sirajganj", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[90.29995430009473, 24.269586992461086], [90.24463183170917, 24.339186226881623], [90.08472865301536, 24.78049430076976], [90.14439236760597, 24.783666366103375], [90.21141515755079, 24.881435365146046], [90.2428472359548, 24.883487931965306], [90.26604698076164, 25.197576784734906], [90.44807574770766, 25.15474648662996], [90.62118153588182, 25.17437703992806], [90.60868936560121, 25.03696316684136], [90.51410579061945, 24.981640698455806], [90.81927166461702, 24.576537462213196], [90.61939694012744, 24.44090818488087], [90.64973506795178, 24.26601780095234], [90.59084340805748, 24.235679673128004], [90.44807574770766, 24.328478652355386], [90.29995430009473, 24.269586992461086]]], "type": "Polygon"}, "properties": {"DISTNAME": "Mymensingh", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[90.26604698076164, 25.197576784734906], [90.2428472359548, 24.883487931965306], [90.21141515755079, 24.881435365146046], [89.91738501470837, 24.957654752128178], [89.89678790328713, 25.034733935468694], [89.91945808408036, 25.067099532897487], [89.88969666402289, 25.188731560845213], [89.94665782910874, 25.29086294916999], [90.26604698076164, 25.197576784734906]]], "type": "Polygon"}, "properties": {"DISTNAME": "Sherpur", "Death": 1, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[91.17828391549654, 24.634192853250568], [91.23151328387729, 24.653275079651223], [90.97274689949325, 24.960225549403333], [90.96382392072138, 25.158315678138706], [91.09231481503622, 25.195792188980533], [91.47778749798073, 25.14225431634935], [91.60627839229556, 25.16188486964745], [91.64018571162865, 25.119054571542506], [91.7151387333123, 25.138685124840606], [91.72584630783854, 25.060162911648206], [91.68480060548796, 25.031609379578242], [91.71156954180356, 24.954871762140215], [91.66695464794424, 24.812104101790396], [91.65267788190926, 24.66398265417746], [91.35821958243775, 24.680044015966814], [91.24222085840353, 24.55333771740635], [91.17828391549654, 24.634192853250568]]], "type": "Polygon"}, "properties": {"DISTNAME": "Sunamganj", "Death": 1, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[90.96382392072138, 25.158315678138706], [90.97274689949325, 24.960225549403333], [91.23151328387729, 24.653275079651223], [91.17828391549654, 24.634192853250568], [91.13692970889554, 24.61936776031814], [91.07446885749249, 24.669336441440578], [91.04413072966815, 24.61758316456377], [90.81927166461702, 24.576537462213196], [90.51410579061945, 24.981640698455806], [90.60868936560121, 25.03696316684136], [90.62118153588182, 25.17437703992806], [90.96382392072138, 25.158315678138706]]], "type": "Polygon"}, "properties": {"DISTNAME": "Netrakona", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[91.67432720868521, 24.614312751529837], [91.74012307387352, 24.590814228248178], [91.80079932952202, 24.635429122107496], [92.02922758608173, 24.653275079651223], [92.08276545871291, 24.758566229159214], [92.19341039548402, 24.758566229159214], [92.19341039548402, 24.797827335755414], [92.25051745962395, 24.82102708056226], [92.24951306402352, 24.84412817937266], [92.27550180018517, 24.82102708056226], [92.29870154499218, 24.73536648435237], [92.2540866511327, 24.66398265417746], [92.23445609783477, 24.498015249020796], [92.17199524643155, 24.52656878109076], [92.1684260549228, 24.424846823091514], [92.12559575681786, 24.385585716495314], [91.9721205219418, 24.367739758951586], [92.00245864976631, 24.33204784386413], [91.99353567099428, 24.315986482074777], [91.96319754317011, 24.34989380140786], [91.92929022383686, 24.33026324810976], [91.94535158562638, 24.264233205197968], [91.91679805355642, 24.142880693900622], [91.89895209601269, 24.142880693900622], [91.75796903141708, 24.237464268882377], [91.75975362717162, 24.142880693900622], [91.68836979699671, 24.157157459935604], [91.67409303096173, 24.230325885864886], [91.656247073418, 24.21961831133865], [91.66160086068112, 24.17321882172496], [91.64375490313739, 24.164295842953095], [91.61163217955868, 24.283863758496068], [91.62412434983929, 24.505153632038287], [91.6366165201199, 24.57832205796757], [91.67432720868521, 24.614312751529837]]], "type": "Polygon"}, "properties": {"DISTNAME": "Maulvibazar", "Death": 1, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[92.24951306402352, 24.84412817937266], [92.25051745962395, 24.82102708056226], [92.19341039548402, 24.797827335755414], [92.19341039548402, 24.758566229159214], [92.08276545871291, 24.758566229159214], [92.02922758608173, 24.653275079651223], [91.80079932952202, 24.635429122107496], [91.74012307387352, 24.590814228248178], [91.67432720868521, 24.614312751529837], [91.64018571162865, 24.626506143335632], [91.65267788190926, 24.66398265417746], [91.66695464794424, 24.812104101790396], [91.71156954180356, 24.954871762140215], [91.68480060548796, 25.031609379578242], [91.72584630783854, 25.060162911648206], [91.7151387333123, 25.138685124840606], [91.97747430920509, 25.169023252664942], [92.11667277804617, 25.169023252664942], [92.33974724734259, 25.067301294665697], [92.49679167372739, 24.92453363431588], [92.50036086523613, 24.87278035743907], [92.40577729025455, 24.842442229614733], [92.31119371527262, 24.91204146403527], [92.2469482681152, 24.903118485263406], [92.24951306402352, 24.84412817937266]]], "type": "Polygon"}, "properties": {"DISTNAME": "Sylhet", "Death": 3, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[91.65267788190926, 24.66398265417746], [91.64018571162865, 24.626506143335632], [91.67432720868521, 24.614312751529837], [91.6366165201199, 24.57832205796757], [91.62412434983929, 24.505153632038287], [91.61163217955868, 24.283863758496068], [91.64375490313739, 24.164295842953095], [91.64553949889176, 24.092912012778186], [91.58307864748872, 24.07685065098883], [91.37785013573586, 24.11432716183066], [91.37963473149023, 23.976913288743958], [91.3028971140522, 24.000113033550804], [91.31538928433281, 24.046512523164495], [91.28505115650847, 24.07506605523446], [91.2832665607541, 24.169649630216213], [91.32966605036779, 24.235679673128004], [91.31003549706969, 24.269586992461086], [91.27434358198224, 24.217833715584277], [91.19939056029858, 24.23389507737363], [91.17619081549174, 24.257094822180477], [91.19939056029858, 24.28564835425044], [91.16905243247425, 24.28564835425044], [91.18154460275485, 24.323124865092268], [91.24757464566665, 24.308848099057286], [91.22615949661417, 24.35703218442535], [91.25471302868414, 24.385585716495314], [91.2243749008598, 24.40878546130216], [91.2243749008598, 24.426631418845886], [91.24579004991227, 24.426631418845886], [91.23508247538604, 24.473030908459577], [91.16369864521113, 24.476600099968323], [91.24222085840353, 24.55333771740635], [91.35821958243775, 24.680044015966814], [91.65267788190926, 24.66398265417746]]], "type": "Polygon"}, "properties": {"DISTNAME": "Habiganj", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[91.16150758947731, 23.660619869105574], [91.17083702822862, 23.59857898881694], [91.27434358198224, 23.44331915818651], [91.36714256120962, 23.066769454013865], [91.263636007456, 23.05070809222451], [91.15477566643926, 23.077477028540102], [91.07982264475561, 23.068554049768238], [90.9888082612826, 23.12744570966254], [91.03342315514192, 23.22559847615304], [90.84960979244153, 23.471872690256475], [90.73896485567042, 23.41655022187092], [90.69613455756547, 23.486149456291457], [90.72647268538981, 23.512918392607048], [90.63188911040805, 23.619994137869412], [90.65330425946053, 23.67174741474622], [90.72647268538981, 23.661039840219985], [90.74711814238037, 23.693482701205028], [90.75145702595103, 23.687808776535576], [90.78893353679285, 23.68423958502683], [90.80142570707346, 23.73599286190364], [90.89600928205522, 23.721716095868658], [90.90136306931834, 23.752054223692994], [91.04591532542253, 23.796669117552312], [91.13336051738679, 23.666393627483103], [91.16150758947731, 23.660619869105574]]], "type": "Polygon"}, "properties": {"DISTNAME": "Comilla", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[90.98345447401948, 24.02331277835765], [90.91207064384457, 23.86091456470973], [90.76751838774038, 23.86091456470973], [90.74988977764463, 23.78633198353492], [90.69078077030235, 23.825222649622276], [90.69078077030235, 23.78953073453482], [90.64438128068866, 23.818084266604785], [90.65865804672364, 23.85377618169224], [90.63188911040805, 23.86626835197285], [90.61939694012744, 23.82879184113102], [90.59976638682934, 23.84663779867475], [90.61404315286433, 23.878760522253458], [90.56585906749626, 23.903744862814676], [90.6158277486187, 23.930513799130267], [90.65330425946053, 24.01617439534016], [90.64795047219741, 24.092912012778186], [90.70505753633734, 24.098265800041304], [90.68615327200905, 24.24477384858568], [90.69256536605673, 24.241033460391122], [90.72825728114418, 24.224972098601768], [90.75502621745977, 24.25174103491736], [90.78714894103848, 24.224972098601768], [90.84604060093278, 24.142880693900622], [90.86924034573963, 24.139311502391877], [90.871024941494, 24.126819332111268], [90.8513943881959, 24.112542566076286], [90.92634740987955, 24.066143076462595], [90.95133175044077, 24.08220443825195], [90.98345447401948, 24.02331277835765]]], "type": "Polygon"}, "properties": {"DISTNAME": "Narsingdi", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[91.24222085840353, 24.55333771740635], [91.16369864521113, 24.476600099968323], [91.23508247538604, 24.473030908459577], [91.24579004991227, 24.426631418845886], [91.2243749008598, 24.426631418845886], [91.2243749008598, 24.40878546130216], [91.25471302868414, 24.385585716495314], [91.22615949661417, 24.35703218442535], [91.24757464566665, 24.308848099057286], [91.18154460275485, 24.323124865092268], [91.16905243247425, 24.28564835425044], [91.19939056029858, 24.28564835425044], [91.17619081549174, 24.257094822180477], [90.99416204854572, 24.144665289654995], [91.05840749570314, 24.080419842497577], [90.98345447401948, 24.02331277835765], [90.95133175044077, 24.08220443825195], [90.92634740987955, 24.066143076462595], [90.8513943881959, 24.112542566076286], [90.871024941494, 24.126819332111268], [90.86924034573963, 24.139311502391877], [90.84604060093278, 24.142880693900622], [90.78714894103848, 24.224972098601768], [90.75502621745977, 24.25174103491736], [90.72825728114418, 24.224972098601768], [90.69256536605673, 24.241033460391122], [90.68615327200905, 24.24477384858568], [90.64973506795178, 24.26601780095234], [90.61939694012744, 24.44090818488087], [90.81927166461702, 24.576537462213196], [91.04413072966815, 24.61758316456377], [91.07446885749249, 24.669336441440578], [91.13692970889554, 24.61936776031814], [91.17828391549654, 24.634192853250568], [91.24222085840353, 24.55333771740635]]], "type": "Polygon"}, "properties": {"DISTNAME": "Kishoreganj", "Death": 1, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[91.3028971140522, 24.000113033550804], [91.25114383717539, 23.92516001186715], [91.23329787963166, 23.876975926499085], [91.25292843292976, 23.835930224148512], [91.2243749008598, 23.737777457658012], [91.1654832409655, 23.744915840675503], [91.15120647493052, 23.69673175530744], [91.21009813482482, 23.682454989272458], [91.20295975180733, 23.65211686144812], [91.16150758947731, 23.660619869105574], [91.13336051738679, 23.666393627483103], [91.04591532542253, 23.796669117552312], [90.90136306931834, 23.752054223692994], [90.89600928205522, 23.721716095868658], [90.80142570707346, 23.73599286190364], [90.78893353679285, 23.68423958502683], [90.75145702595103, 23.687808776535576], [90.74711814238037, 23.693482701205028], [90.72825728114418, 23.718146904359912], [90.74431864293354, 23.76276179821923], [90.74988977764463, 23.78633198353492], [90.76751838774038, 23.86091456470973], [90.91207064384457, 23.86091456470973], [90.98345447401948, 24.02331277835765], [91.05840749570314, 24.080419842497577], [90.99416204854572, 24.144665289654995], [91.17619081549174, 24.257094822180477], [91.19939056029858, 24.23389507737363], [91.27434358198224, 24.217833715584277], [91.31003549706969, 24.269586992461086], [91.32966605036779, 24.235679673128004], [91.2832665607541, 24.169649630216213], [91.28505115650847, 24.07506605523446], [91.31538928433281, 24.046512523164495], [91.3028971140522, 24.000113033550804]]], "type": "Polygon"}, "properties": {"DISTNAME": "Brahmanbaria", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[90.64973506795178, 24.26601780095234], [90.68615327200905, 24.24477384858568], [90.70505753633734, 24.098265800041304], [90.64795047219741, 24.092912012778186], [90.65330425946053, 24.01617439534016], [90.6158277486187, 23.930513799130267], [90.56585906749626, 23.903744862814676], [90.52302876939132, 23.88589890527095], [90.47484468402325, 23.837714819902885], [90.46770630100576, 23.884114309516576], [90.36419974725214, 23.889468096779694], [90.33743081093655, 23.950144352428367], [90.26426238500727, 23.980482480252704], [90.25533940623541, 24.026881969866395], [90.23749344869168, 24.025097374112022], [90.23570885293731, 24.000113033550804], [90.1839555760605, 24.00368222505955], [90.15183285248179, 24.034020352883886], [90.29995430009473, 24.269586992461086], [90.44807574770766, 24.328478652355386], [90.59084340805748, 24.235679673128004], [90.64973506795178, 24.26601780095234]]], "type": "Polygon"}, "properties": {"DISTNAME": "Gazipur", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[90.47484468402325, 23.837714819902885], [90.48019847128637, 23.77525396849984], [90.51053659911071, 23.705654734079303], [90.46770630100576, 23.68423958502683], [90.45699872647953, 23.653901457202494], [90.478413875532, 23.63784009541314], [90.44093736469017, 23.609286563343176], [90.3802611090415, 23.64497847843063], [90.3606305557434, 23.628917116641276], [90.28567753405974, 23.67174741474622], [90.16967881002552, 23.516487584115794], [90.1250639161662, 23.562887073729485], [90.06260306476315, 23.561102477975112], [90.0465417029738, 23.62534792513253], [90.01441897939509, 23.63248630815002], [90.05546468174566, 23.718146904359912], [90.16610961851677, 23.737777457658012], [90.21786289539358, 23.705654734079303], [90.2624777892529, 23.70922392558805], [90.23213966142856, 23.739562053412385], [90.24463183170917, 23.835930224148512], [90.18217098030613, 23.810945883587294], [90.07331063928939, 23.918021628849658], [90.0400408132902, 24.01104938592664], [90.15183285248179, 24.034020352883886], [90.1839555760605, 24.00368222505955], [90.23570885293731, 24.000113033550804], [90.23749344869168, 24.025097374112022], [90.25533940623541, 24.026881969866395], [90.26426238500727, 23.980482480252704], [90.33743081093655, 23.950144352428367], [90.36419974725214, 23.889468096779694], [90.46770630100576, 23.884114309516576], [90.47484468402325, 23.837714819902885]]], "type": "Polygon"}, "properties": {"DISTNAME": "Dhaka", "Death": 7, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[90.29995430009473, 24.269586992461086], [90.15183285248179, 24.034020352883886], [90.0400408132902, 24.01104938592664], [90.02155736241258, 24.007251416568295], [89.87878970206276, 23.967990309972095], [89.7913445100985, 23.989405459024567], [89.784206127081, 24.032235757129513], [89.8306056166947, 24.083989034006322], [89.74316042473043, 24.522999589582014], [89.79309798288716, 24.568530412438292], [89.89897776257175, 24.735215295870717], [89.98520249357796, 24.72472037287497], [90.08472865301536, 24.78049430076976], [90.24463183170917, 24.339186226881623], [90.29995430009473, 24.269586992461086]]], "type": "Polygon"}, "properties": {"DISTNAME": "Tangail", "Death": 1, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[90.74988977764463, 23.78633198353492], [90.74431864293354, 23.76276179821923], [90.72825728114418, 23.718146904359912], [90.74711814238037, 23.693482701205028], [90.72647268538981, 23.661039840219985], [90.65330425946053, 23.67174741474622], [90.63188911040805, 23.619994137869412], [90.61404315286433, 23.595009797308194], [90.58548962079436, 23.596794393062567], [90.56764366325064, 23.57894843551884], [90.58727421654874, 23.52719515864203], [90.5765666420225, 23.523625967133285], [90.5373055354263, 23.562887073729485], [90.50161362033884, 23.57181005250135], [90.4587833222339, 23.548610307694503], [90.43558357742705, 23.557533286466366], [90.44986034346203, 23.580733031273212], [90.44093736469017, 23.609286563343176], [90.478413875532, 23.63784009541314], [90.45699872647953, 23.653901457202494], [90.46770630100576, 23.68423958502683], [90.51053659911071, 23.705654734079303], [90.48019847128637, 23.77525396849984], [90.47484468402325, 23.837714819902885], [90.52302876939132, 23.88589890527095], [90.56585906749626, 23.903744862814676], [90.61404315286433, 23.878760522253458], [90.59976638682934, 23.84663779867475], [90.61939694012744, 23.82879184113102], [90.63188911040805, 23.86626835197285], [90.65865804672364, 23.85377618169224], [90.64438128068866, 23.818084266604785], [90.69078077030235, 23.78953073453482], [90.69078077030235, 23.825222649622276], [90.74988977764463, 23.78633198353492]]], "type": "Polygon"}, "properties": {"DISTNAME": "Narayanganj", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[89.72352987143233, 24.014389799585786], [89.69497633936237, 23.992974650533313], [89.70925310539735, 23.87340673499034], [89.73602204171294, 23.835930224148512], [89.59146978560875, 23.80916128783292], [89.49867080638137, 23.82165345811353], [89.39694884838212, 23.901960267060304], [89.36304152904904, 23.882329713762203], [89.28451931585664, 23.89303728828844], [89.24347361350607, 23.962636522708976], [89.1827973578574, 23.98405167176145], [89.17744357059428, 23.943005969410876], [89.07929080410378, 23.982267076007076], [89.00969156968324, 24.117896353339404], [89.31128825217223, 24.33740163112725], [89.72352987143233, 24.014389799585786]]], "type": "Polygon"}, "properties": {"DISTNAME": "Pabna", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[88.87406229235091, 24.10897337456754], [89.00969156968324, 24.117896353339404], [89.07929080410378, 23.982267076007076], [89.17744357059428, 23.943005969410876], [89.1827973578574, 23.98405167176145], [89.24347361350607, 23.962636522708976], [89.28451931585664, 23.89303728828844], [89.36304152904904, 23.882329713762203], [89.3130728479266, 23.727069883131776], [89.24525820926044, 23.75562341520174], [89.11855191069998, 23.721716095868658], [89.05609105929693, 23.76811558548235], [89.04359888901632, 23.686024180781203], [89.0186145484551, 23.705654734079303], [89.00433778242012, 23.78953073453482], [88.87049310084217, 23.832361032639767], [88.85621633480719, 23.92694460762152], [88.77947871736916, 23.955498139691485], [88.74735599379045, 23.95192894818274], [88.70631029143988, 24.110757970321913], [88.74021761077296, 24.142880693900622], [88.73307922775547, 24.189280183514313], [88.80446305793038, 24.12860392786564], [88.87406229235091, 24.10897337456754]]], "type": "Polygon"}, "properties": {"DISTNAME": "Kushtia", "Death": 1, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[89.73602204171294, 23.835930224148512], [89.77528314830914, 23.823438053867903], [89.78777531858975, 23.784176947271703], [89.85183705736074, 23.720115208500715], [89.73959123322169, 23.66996281899185], [89.72352987143233, 23.63070171239565], [89.75743719076542, 23.600363584571312], [89.74851421199355, 23.582517627027585], [89.65571523276617, 23.59857898881694], [89.5093783809076, 23.580733031273212], [89.48617863610076, 23.587871414290703], [89.48439404034639, 23.63248630815002], [89.40587182715399, 23.680670393518085], [89.3719645078209, 23.653901457202494], [89.3130728479266, 23.727069883131776], [89.36304152904904, 23.882329713762203], [89.39694884838212, 23.901960267060304], [89.49867080638137, 23.82165345811353], [89.59146978560875, 23.80916128783292], [89.73602204171294, 23.835930224148512]]], "type": "Polygon"}, "properties": {"DISTNAME": "Rajbari", "Death": 1, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[90.0400408132902, 24.01104938592664], [90.07331063928939, 23.918021628849658], [90.18217098030613, 23.810945883587294], [90.24463183170917, 23.835930224148512], [90.23213966142856, 23.739562053412385], [90.2624777892529, 23.70922392558805], [90.21786289539358, 23.705654734079303], [90.16610961851677, 23.737777457658012], [90.05546468174566, 23.718146904359912], [90.01441897939509, 23.63248630815002], [89.90377404262398, 23.668178223237476], [89.85183705736074, 23.720115208500715], [89.78777531858975, 23.784176947271703], [89.77528314830914, 23.823438053867903], [89.73602204171294, 23.835930224148512], [89.70925310539735, 23.87340673499034], [89.69497633936237, 23.992974650533313], [89.72352987143233, 24.014389799585786], [89.784206127081, 24.032235757129513], [89.7913445100985, 23.989405459024567], [89.87878970206276, 23.967990309972095], [90.02155736241258, 24.007251416568295], [90.0400408132902, 24.01104938592664]]], "type": "Polygon"}, "properties": {"DISTNAME": "Manikganj", "Death": 2, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[88.87049310084217, 23.832361032639767], [88.82587820698285, 23.771684776991094], [88.79554007915851, 23.764546393973603], [88.78126331312353, 23.71100852134242], [88.66169539758056, 23.639624691167512], [88.63849565277371, 23.602148180325685], [88.59031156740565, 23.59857898881694], [88.59031156740565, 23.639624691167512], [88.5671118225988, 23.643193882676258], [88.57246560986192, 23.760977202464858], [88.5867423758969, 23.862699160464103], [88.67061837635242, 23.87340673499034], [88.74735599379045, 23.95192894818274], [88.77947871736916, 23.955498139691485], [88.85621633480719, 23.92694460762152], [88.87049310084217, 23.832361032639767]]], "type": "Polygon"}, "properties": {"DISTNAME": "Meherpur", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[89.3130728479266, 23.727069883131776], [89.3719645078209, 23.653901457202494], [89.26310416680417, 23.368366136502857], [89.16138220880492, 23.270213370012357], [89.07036782533191, 23.300551497836693], [89.07393701684066, 23.336243412924148], [89.03289131449009, 23.37015073225723], [88.96150748431518, 23.32375124264354], [88.96507667582392, 23.289843923310457], [88.9204617819646, 23.27199796576673], [88.9008312286665, 23.22559847615304], [88.8223090154741, 23.24701362520551], [88.81517063245661, 23.214890901626802], [88.72237165322923, 23.248798220959884], [88.71344867445737, 23.30590528509981], [88.74914058954482, 23.302336093591066], [88.77231470281481, 23.38388282813378], [88.77412493010604, 23.371935328011602], [88.81695522821099, 23.379073711029093], [88.87049310084217, 23.379073711029093], [88.88476986687715, 23.407627243099057], [88.93295395224521, 23.411196434607803], [88.95079990978894, 23.437965370923393], [88.9276001649821, 23.44153456243214], [88.94901531403457, 23.511133796852675], [88.94187693101708, 23.53433354165952], [88.95615369705206, 23.550394903448876], [88.98292263336765, 23.53968732892264], [89.00969156968324, 23.63070171239565], [89.0186145484551, 23.705654734079303], [89.04359888901632, 23.686024180781203], [89.05609105929693, 23.76811558548235], [89.11855191069998, 23.721716095868658], [89.24525820926044, 23.75562341520174], [89.3130728479266, 23.727069883131776]]], "type": "Polygon"}, "properties": {"DISTNAME": "Jhenaidah", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[89.0186145484551, 23.705654734079303], [89.00969156968324, 23.63070171239565], [88.98292263336765, 23.53968732892264], [88.95615369705206, 23.550394903448876], [88.94187693101708, 23.53433354165952], [88.94901531403457, 23.511133796852675], [88.9276001649821, 23.44153456243214], [88.95079990978894, 23.437965370923393], [88.93295395224521, 23.411196434607803], [88.88476986687715, 23.407627243099057], [88.87049310084217, 23.379073711029093], [88.81695522821099, 23.379073711029093], [88.77412493010604, 23.371935328011602], [88.77231470281481, 23.38388282813378], [88.76520195133418, 23.430826987905903], [88.80803224943912, 23.486149456291457], [88.78483250463228, 23.50756460534393], [88.75627897256231, 23.46830349874773], [88.66883378059805, 23.543256520431385], [88.63849565277371, 23.602148180325685], [88.66169539758056, 23.639624691167512], [88.78126331312353, 23.71100852134242], [88.79554007915851, 23.764546393973603], [88.82587820698285, 23.771684776991094], [88.87049310084217, 23.832361032639767], [89.00433778242012, 23.78953073453482], [89.0186145484551, 23.705654734079303]]], "type": "Polygon"}, "properties": {"DISTNAME": "Chuadanga", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[89.5093783809076, 23.580733031273212], [89.52365514694259, 23.54682571194013], [89.48796323185513, 23.48793405204583], [89.5093783809076, 23.471872690256475], [89.52365514694259, 23.509349201098303], [89.6146695304156, 23.464734307238984], [89.60931574315248, 23.36479694499411], [89.62359250918746, 23.296982306327948], [89.55934706203004, 23.316612859626048], [89.52722433845133, 23.275567157275475], [89.48617863610076, 23.295197710573575], [89.43264076346958, 23.250582816714257], [89.26310416680417, 23.368366136502857], [89.3719645078209, 23.653901457202494], [89.40587182715399, 23.680670393518085], [89.48439404034639, 23.63248630815002], [89.48617863610076, 23.587871414290703], [89.5093783809076, 23.580733031273212]]], "type": "Polygon"}, "properties": {"DISTNAME": "Magura", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[90.01441897939509, 23.63248630815002], [90.0465417029738, 23.62534792513253], [90.06260306476315, 23.561102477975112], [90.1250639161662, 23.562887073729485], [90.16967881002552, 23.516487584115794], [90.18217098030613, 23.493287839308948], [90.16254042700803, 23.459380519975866], [90.13398689493806, 23.470088094502103], [90.11078715013122, 23.445103753940884], [90.0982949798506, 23.307689880854184], [90.03761872420193, 23.336243412924148], [90.03048034118444, 23.277351753029848], [90.0072805963776, 23.295197710573575], [90.01441897939509, 23.321966646889166], [89.95909651100953, 23.354089370467875], [89.95552731950079, 23.321966646889166], [89.9287583831852, 23.313043668117302], [89.92518919167645, 23.296982306327948], [89.9091278298871, 23.30412068934544], [89.91805080865896, 23.327320434152284], [89.90377404262398, 23.339812604432893], [89.87522051055402, 23.321966646889166], [89.8306056166947, 23.341597200187266], [89.74672961623918, 23.293413114819202], [89.75029880774792, 23.26664417850361], [89.69497633936237, 23.209537114363684], [89.67713038181864, 23.236306050679275], [89.65928442427492, 23.22738307190741], [89.6343000837137, 23.248798220959884], [89.66999199880115, 23.277351753029848], [89.62359250918746, 23.296982306327948], [89.60931574315248, 23.36479694499411], [89.6146695304156, 23.464734307238984], [89.52365514694259, 23.509349201098303], [89.5093783809076, 23.471872690256475], [89.48796323185513, 23.48793405204583], [89.52365514694259, 23.54682571194013], [89.5093783809076, 23.580733031273212], [89.65571523276617, 23.59857898881694], [89.74851421199355, 23.582517627027585], [89.75743719076542, 23.600363584571312], [89.72352987143233, 23.63070171239565], [89.73959123322169, 23.66996281899185], [89.85183705736074, 23.720115208500715], [89.90377404262398, 23.668178223237476], [90.01441897939509, 23.63248630815002]]], "type": "Polygon"}, "properties": {"DISTNAME": "Faridpur", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[90.44093736469017, 23.609286563343176], [90.44986034346203, 23.580733031273212], [90.43558357742705, 23.557533286466366], [90.4587833222339, 23.548610307694503], [90.50161362033884, 23.57181005250135], [90.5373055354263, 23.562887073729485], [90.5765666420225, 23.523625967133285], [90.58727421654874, 23.52719515864203], [90.56764366325064, 23.57894843551884], [90.58548962079436, 23.596794393062567], [90.61404315286433, 23.595009797308194], [90.63188911040805, 23.619994137869412], [90.72647268538981, 23.512918392607048], [90.69613455756547, 23.486149456291457], [90.58905881230311, 23.48258026478271], [90.55872068447877, 23.380858306783466], [90.53392029973384, 23.386780786722625], [90.4391527689358, 23.40941183885343], [90.42666059865519, 23.400488860081566], [90.28032374679663, 23.437965370923393], [90.18217098030613, 23.493287839308948], [90.16967881002552, 23.516487584115794], [90.28567753405974, 23.67174741474622], [90.3606305557434, 23.628917116641276], [90.3802611090415, 23.64497847843063], [90.44093736469017, 23.609286563343176]]], "type": "Polygon"}, "properties": {"DISTNAME": "Munshiganj", "Death": 2, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[91.01828681393522, 22.167049450090985], [91.02093098486131, 22.32437762019481], [90.94419336742328, 22.492129621105846], [91.02450017637005, 22.5474520894914], [90.99594664430009, 22.63846647296441], [91.02450017637005, 22.675942983806237], [91.01379260184382, 22.70985030313932], [90.98166987826511, 22.71698868615681], [90.99237745279135, 22.7437576224724], [90.91563983535332, 22.804433878121074], [91.00308502731758, 22.97218587903211], [90.89779387780959, 23.01680077289143], [90.96699865174668, 23.135018490751463], [90.9888082612826, 23.12744570966254], [91.07982264475561, 23.068554049768238], [91.15477566643926, 23.077477028540102], [91.263636007456, 23.05070809222451], [91.25828222019288, 22.891879070085338], [91.35465039092901, 22.895448261594083], [91.32431226310467, 22.816926048401683], [91.46172613619137, 22.727696260683047], [91.50098724278757, 22.65095864324502], [91.3617887739465, 22.718773281911183], [91.28862034801722, 22.642035664473156], [91.34394281640277, 22.53317532345642], [91.31003549706969, 22.479637450825237], [91.263636007456, 22.558159664017637], [91.16369864521113, 22.458222301772764], [91.18868298577235, 22.361854131036637], [91.17262162398299, 22.172686981073127], [91.04056153815941, 22.033488512232054], [90.97988528251074, 22.035273107986427], [91.01736179335256, 22.112010725424454], [91.01828681393522, 22.167049450090985]]], "type": "Polygon"}, "properties": {"DISTNAME": "Noakhali", "Death": 2, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[90.9888082612826, 23.12744570966254], [90.96699865174668, 23.135018490751463], [90.86031736696776, 23.172060603521857], [90.79428732405597, 23.081046220048847], [90.74610323868791, 23.04356970920702], [90.68185779153049, 23.057846475242002], [90.66044264247802, 22.97218587903211], [90.54801310995254, 23.059631070996375], [90.5569360887244, 23.131014901171284], [90.6158277486187, 23.19347575257433], [90.56407447174189, 23.296982306327948], [90.5961971953206, 23.341597200187266], [90.55872068447877, 23.354089370467875], [90.53392029973384, 23.386780786722625], [90.55872068447877, 23.380858306783466], [90.58905881230311, 23.48258026478271], [90.69613455756547, 23.486149456291457], [90.73896485567042, 23.41655022187092], [90.84960979244153, 23.471872690256475], [91.03342315514192, 23.22559847615304], [90.9888082612826, 23.12744570966254]]], "type": "Polygon"}, "properties": {"DISTNAME": "Chandpur", "Death": 2, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[91.46172613619137, 22.727696260683047], [91.32431226310467, 22.816926048401683], [91.35465039092901, 22.895448261594083], [91.25828222019288, 22.891879070085338], [91.263636007456, 23.05070809222451], [91.36714256120962, 23.066769454013865], [91.42424962534955, 23.057846475242002], [91.38320392299897, 23.16670681625874], [91.4403109871389, 23.26664417850361], [91.57594026447123, 22.9596937087515], [91.46529532770012, 22.895448261594083], [91.46172613619137, 22.727696260683047]]], "type": "Polygon"}, "properties": {"DISTNAME": "Feni", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[92.06995654200006, 21.920913739878927], [91.92548308622781, 21.872755921288217], [91.88931527893914, 21.937477260646858], [91.8862860744112, 21.950007152103353], [91.84743676523658, 22.110702021871248], [91.74083691217527, 22.4038516177896], [91.57522642616954, 22.392430204961443], [91.46481943549895, 22.390526636156835], [91.34394281640277, 22.53317532345642], [91.28862034801722, 22.642035664473156], [91.3617887739465, 22.718773281911183], [91.50098724278757, 22.65095864324502], [91.46172613619137, 22.727696260683047], [91.46529532770012, 22.895448261594083], [91.57594026447123, 22.9596937087515], [91.59997282063023, 22.973018690384038], [91.60949066465355, 22.95017586472818], [91.63042992150486, 22.94065802070486], [91.65517631596538, 22.98063296560275], [91.72180122412863, 22.978729396798144], [91.72751193054268, 22.88355095656493], [91.76367973783135, 22.856900993299575], [91.7979439763152, 22.765529690675805], [91.81697966436184, 22.790276085136327], [91.88931527893914, 22.750301140238435], [91.88360457252509, 22.72365117697308], [91.89312241654841, 22.689386938489235], [91.92929022383703, 22.683676232075186], [91.98830085678162, 22.485705076390047], [92.03017937048435, 22.51996931487406], [92.0111436824377, 22.58659422303731], [92.04160078331228, 22.618954892716545], [92.08347929701483, 22.605629911083952], [92.14820063637342, 22.432405149859562], [92.11012926028013, 22.4038516177896], [92.15200777398286, 22.34103384723562], [92.15200777398286, 22.09928060904332], [92.21292197573206, 22.000295031200665], [92.1710434620295, 21.937477260646858], [92.1710434620295, 21.912730866186166], [92.12916494832677, 21.90702015977206], [92.10822569147552, 21.933670123037416], [92.06995654200006, 21.920913739878927]]], "type": "Polygon"}, "properties": {"DISTNAME": "Chittagong", "Death": 3, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[92.18211196603409, 21.18213474243197], [92.17485059963877, 21.21221754606961], [92.19007915007614, 21.254096059772337], [92.13297208593622, 21.391153013708106], [92.16723632442006, 21.427320820996783], [92.20530770051334, 21.394960151317548], [92.24337907660663, 21.40828513295014], [92.24337907660663, 21.463488628285404], [92.20721126931801, 21.50536714198796], [92.17485059963877, 21.50156000437869], [92.16533275561545, 21.539631380471974], [92.1843684436621, 21.56057063732328], [92.1710434620295, 21.59293130700246], [92.1120328290848, 21.64813480233778], [92.10632212267092, 21.701434728868435], [92.15200777398286, 21.735698967352278], [92.1710434620295, 21.768059637031683], [92.21482554453667, 21.78519175627372], [92.17865773724805, 21.846105958022918], [92.1710434620295, 21.84039525160881], [92.1843684436621, 21.78899889388299], [92.15581491159213, 21.77948104985967], [92.13297208593622, 21.79470960029704], [92.08919000342888, 21.813745288343682], [92.08538286581961, 21.87656305889749], [92.06995654200006, 21.920913739878927], [92.10822569147552, 21.933670123037416], [92.12916494832677, 21.90702015977206], [92.1710434620295, 21.912730866186166], [92.1710434620295, 21.937477260646858], [92.21292197573206, 22.000295031200665], [92.15200777398286, 22.09928060904332], [92.15200777398286, 22.34103384723562], [92.37662889293313, 22.33722670962635], [92.47561447077578, 22.240144700588303], [92.50226443404097, 22.097377040238484], [92.6183821311256, 21.84039525160881], [92.60505714949284, 21.741409673766384], [92.6183821311256, 21.52059569242533], [92.6811999016794, 21.284553160646965], [92.60315358068823, 21.23696394053036], [92.56127506698567, 21.385442307294227], [92.50607157165041, 21.351178068810214], [92.43563952587772, 21.370213756856856], [92.42992881946384, 21.431127958605998], [92.37662889293313, 21.476813609917997], [92.32903967281652, 21.417802976973462], [92.2776433150907, 21.41970654577807], [92.25860762704406, 21.36450305044275], [92.21101840692745, 21.3283352431543], [92.22434338855999, 21.229349665311645], [92.18211196603409, 21.18213474243197]]], "type": "Polygon"}, "properties": {"DISTNAME": "Bandarban", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[92.06995654200006, 21.920913739878927], [92.08538286581961, 21.87656305889749], [92.08919000342888, 21.813745288343682], [92.13297208593622, 21.79470960029704], [92.15581491159213, 21.77948104985967], [92.1843684436621, 21.78899889388299], [92.1710434620295, 21.84039525160881], [92.17865773724805, 21.846105958022918], [92.21482554453667, 21.78519175627372], [92.1710434620295, 21.768059637031683], [92.15200777398286, 21.735698967352278], [92.10632212267092, 21.701434728868435], [92.1120328290848, 21.64813480233778], [92.1710434620295, 21.59293130700246], [92.1843684436621, 21.56057063732328], [92.16533275561545, 21.539631380471974], [92.17485059963877, 21.50156000437869], [92.20721126931801, 21.50536714198796], [92.24337907660663, 21.463488628285404], [92.24337907660663, 21.40828513295014], [92.20530770051334, 21.394960151317548], [92.16723632442006, 21.427320820996783], [92.13297208593622, 21.391153013708106], [92.19007915007614, 21.254096059772337], [92.17485059963877, 21.21221754606961], [92.18211196603409, 21.18213474243197], [92.18817558127137, 21.157014050734517], [92.26812547106738, 21.071353454524626], [92.25480048943461, 21.021860665603185], [92.34807536086316, 20.79152884023887], [92.37853246173779, 20.717289656856906], [92.32713610401191, 20.73061463848967], [92.19578985649002, 21.002824977556543], [92.06444360896819, 21.16653189475784], [92.037793645703, 21.33785308717762], [91.99210799439106, 21.41018870175475], [91.87979743491582, 21.507270710792568], [91.84172605882253, 21.737602536157112], [91.85124390284585, 21.872755921288217], [91.8862860744112, 21.950007152103353], [91.88931527893914, 21.937477260646858], [91.92548308622781, 21.872755921288217], [92.06995654200006, 21.920913739878927]]], "type": "Polygon"}, "properties": {"DISTNAME": "Cox's Bazar", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[92.6183821311256, 21.84039525160881], [92.50226443404097, 22.097377040238484], [92.47561447077578, 22.240144700588303], [92.37662889293313, 22.33722670962635], [92.15200777398286, 22.34103384723562], [92.11012926028013, 22.4038516177896], [92.14820063637342, 22.432405149859562], [92.08347929701483, 22.605629911083952], [92.04160078331228, 22.618954892716545], [92.0111436824377, 22.58659422303731], [92.03017937048435, 22.51996931487406], [91.98830085678162, 22.485705076390047], [91.92929022383703, 22.683676232075186], [92.0054329760236, 22.725554745777686], [91.98449371917235, 22.81502247959702], [92.01685438885158, 22.87403311254161], [92.12535781071756, 22.963500846360716], [92.08728643462427, 23.070100699422085], [92.19007915007614, 23.100557800296656], [92.13487565474088, 23.203350515748582], [92.13297208593622, 23.311853937614387], [92.05873290255431, 23.370864570558922], [92.14248992995954, 23.41655022187092], [92.12726137952217, 23.53457148775999], [92.07776859060095, 23.64117134082136], [92.09109357223349, 23.6754355793052], [92.17294703083417, 23.73634978105457], [92.21292197573206, 23.688760560937965], [92.20911483812279, 23.66591773528188], [92.2319576637787, 23.65068918484468], [92.24718621421607, 23.715410524203094], [92.29858257194195, 23.694471267351844], [92.28716115911402, 23.643074909625966], [92.40137528739388, 23.235711185427817], [92.35759320488648, 23.228096910209103], [92.38424316815184, 23.06248642420337], [92.38043603054257, 22.936850883095588], [92.45657878272914, 22.875936681346218], [92.48132517718966, 22.75791541545709], [92.51178227806429, 22.725554745777686], [92.52891439730627, 22.567558534990667], [92.61267142471155, 22.131641278722554], [92.57460004861827, 22.12973770991789], [92.62980354395359, 21.86514164606956], [92.6183821311256, 21.84039525160881]]], "type": "Polygon"}, "properties": {"DISTNAME": "Rangamati", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[92.07776859060095, 23.64117134082136], [92.12726137952217, 23.53457148775999], [92.14248992995954, 23.41655022187092], [92.05873290255431, 23.370864570558922], [92.13297208593622, 23.311853937614387], [92.13487565474088, 23.203350515748582], [92.19007915007614, 23.100557800296656], [92.08728643462427, 23.070100699422085], [92.12535781071756, 22.963500846360716], [92.01685438885158, 22.87403311254161], [91.98449371917235, 22.81502247959702], [92.0054329760236, 22.725554745777686], [91.92929022383703, 22.683676232075186], [91.89312241654841, 22.689386938489235], [91.88360457252509, 22.72365117697308], [91.88931527893914, 22.750301140238435], [91.81697966436184, 22.790276085136327], [91.7979439763152, 22.765529690675805], [91.76367973783135, 22.856900993299575], [91.72751193054268, 22.88355095656493], [91.72180122412863, 22.978729396798144], [91.83601535240848, 23.091039956273335], [91.75416189380803, 23.309950368809723], [91.9635544623211, 23.475560854815456], [91.93690449905574, 23.683049854523915], [91.95403661829778, 23.702085542570558], [91.95784375590699, 23.73254264344513], [91.98259015036774, 23.73254264344513], [92.00924011363304, 23.66591773528188], [92.07776859060095, 23.64117134082136]]], "type": "Polygon"}, "properties": {"DISTNAME": "Khagrachhari", "Death": 1, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[89.62359250918746, 23.296982306327948], [89.66999199880115, 23.277351753029848], [89.6343000837137, 23.248798220959884], [89.65928442427492, 23.22738307190741], [89.67713038181864, 23.236306050679275], [89.69497633936237, 23.209537114363684], [89.69188304005485, 23.167182708459904], [89.74185172117728, 23.190977318518208], [89.77278471425308, 23.179080013489056], [89.74661064318894, 23.162423786448244], [89.74899010419477, 23.12673187136079], [89.71805711111898, 23.112455105325807], [89.67522681301404, 23.13387025437828], [89.67522681301404, 23.102937261302486], [89.72995441614813, 23.074383729232522], [89.79657932431138, 22.99110259402846], [89.75612848721227, 22.96730798397016], [89.6728473520082, 22.98396421101097], [89.61811974887411, 22.948272295923516], [89.5881385402007, 22.97111512157943], [89.5952769232182, 22.988247240821465], [89.56957874435511, 22.99681330044234], [89.55585940449998, 22.977444820646724], [89.45631640047765, 23.05534804118588], [89.45155747846599, 23.117214027337468], [89.4134861023727, 23.083901573255844], [89.38731203130857, 23.086281034261674], [89.38731203130857, 23.13149079337245], [89.41824502438436, 23.13862917638994], [89.43264076346958, 23.250582816714257], [89.48617863610076, 23.295197710573575], [89.52722433845133, 23.275567157275475], [89.55934706203004, 23.316612859626048], [89.62359250918746, 23.296982306327948]]], "type": "Polygon"}, "properties": {"DISTNAME": "Narail", "Death": 1, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[89.2480936795427, 22.837163679905075], [89.33448799697908, 22.720795823766025], [89.31545230893244, 22.68272444767274], [89.26786308881583, 22.701760135719383], [89.25596578378668, 22.547095170340413], [89.25596578378668, 22.390050743955612], [89.32259069194993, 22.185417097454206], [89.27500147183332, 22.090238657220993], [89.3678004510607, 21.956988840894496], [89.36542099005487, 21.890363932731248], [89.31069338692078, 21.84277471261464], [89.32972907496742, 21.67621244220652], [89.21313548568173, 21.647658910136556], [89.10130081840771, 21.702386513270653], [89.03467591024446, 21.785667648474714], [89.04895267627944, 21.847533634626302], [89.03467591024446, 21.873707705690435], [89.03229644923863, 21.91177908178372], [89.06560890332025, 21.90939962077789], [89.08226513036107, 22.002198600005272], [89.04419375426778, 22.090238657220993], [89.08940351337856, 22.14496626035509], [89.01088130018616, 22.29963122573406], [88.998983995157, 22.44953726910137], [88.94282871541952, 22.56565496618606], [88.9599608346615, 22.614195970704884], [88.94140103881591, 22.618479000515322], [88.93140730259154, 22.647032532585285], [88.964243864472, 22.679869094465914], [88.95853315805789, 22.705567273328825], [88.92569659617749, 22.721271715967248], [88.92569659617749, 22.765529690675805], [88.97280992409287, 22.836913520850715], [88.95425012824745, 22.87974381895566], [88.93283497919498, 22.869750082731116], [88.90428144712502, 22.889737555179977], [88.90904036913668, 22.914959841841892], [89.11843293764974, 22.941133912906025], [89.14460700871388, 22.90306253681274], [89.12557132066723, 22.879267926754437], [89.13508916469056, 22.829299245632], [89.18743730681882, 22.81264301859119], [89.2480936795427, 22.837163679905075]]], "type": "Polygon"}, "properties": {"DISTNAME": "Satkhira", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[89.26310416680417, 23.368366136502857], [89.43264076346958, 23.250582816714257], [89.41824502438436, 23.13862917638994], [89.38731203130857, 23.13149079337245], [89.38731203130857, 23.086281034261674], [89.4134861023727, 23.083901573255844], [89.45155747846599, 23.117214027337468], [89.45631640047765, 23.05534804118588], [89.55585940449998, 22.977444820646724], [89.56577160674584, 22.96968744497599], [89.5229413086409, 22.919718763853552], [89.45869586148348, 22.998240977045953], [89.35399957722694, 22.914959841841892], [89.37065580426776, 22.864991160719455], [89.35162011622111, 22.829299245632], [89.29927197409285, 22.857852777701964], [89.2480936795427, 22.837163679905075], [89.18743730681882, 22.81264301859119], [89.13508916469056, 22.829299245632], [89.12557132066723, 22.879267926754437], [89.14460700871388, 22.90306253681274], [89.11843293764974, 22.941133912906025], [88.90904036913668, 22.914959841841892], [88.86145114902007, 22.957790139946837], [88.8876252200842, 23.029173970121747], [88.87096899304339, 23.081522112250013], [88.99232150434074, 23.21715138958234], [88.9008312286665, 23.22559847615304], [88.9204617819646, 23.27199796576673], [88.96507667582392, 23.289843923310457], [88.96150748431518, 23.32375124264354], [89.03289131449009, 23.37015073225723], [89.07393701684066, 23.336243412924148], [89.07036782533191, 23.300551497836693], [89.16138220880492, 23.270213370012357], [89.26310416680417, 23.368366136502857]]], "type": "Polygon"}, "properties": {"DISTNAME": "Jessore", "Death": 1, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[89.55585940449998, 22.977444820646724], [89.56957874435511, 22.99681330044234], [89.5952769232182, 22.988247240821465], [89.5881385402007, 22.97111512157943], [89.61811974887411, 22.948272295923516], [89.6728473520082, 22.98396421101097], [89.75612848721227, 22.96730798397016], [89.69854553087112, 22.868322406127504], [89.71996067992359, 22.83500995204588], [89.66047415477783, 22.74934935583599], [89.62002331767872, 22.773143965894292], [89.54388056549215, 22.608961156492], [89.6343000837137, 22.349599906856497], [89.56767517555045, 22.197314402483357], [89.60098762963207, 22.118792189290957], [89.5486394875038, 21.99743967799361], [89.52960379945716, 21.82611848557383], [89.5486394875038, 21.716663279305635], [89.42490751520063, 21.728560584334787], [89.32972907496742, 21.67621244220652], [89.31069338692078, 21.84277471261464], [89.36542099005487, 21.890363932731248], [89.3678004510607, 21.956988840894496], [89.27500147183332, 22.090238657220993], [89.32259069194993, 22.185417097454206], [89.25596578378668, 22.390050743955612], [89.25596578378668, 22.547095170340413], [89.26786308881583, 22.701760135719383], [89.31545230893244, 22.68272444767274], [89.33448799697908, 22.720795823766025], [89.2480936795427, 22.837163679905075], [89.29927197409285, 22.857852777701964], [89.35162011622111, 22.829299245632], [89.37065580426776, 22.864991160719455], [89.35399957722694, 22.914959841841892], [89.45869586148348, 22.998240977045953], [89.5229413086409, 22.919718763853552], [89.56577160674584, 22.96968744497599], [89.55585940449998, 22.977444820646724]]], "type": "Polygon"}, "properties": {"DISTNAME": "Khulna", "Death": 4, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[89.5486394875038, 21.716663279305635], [89.52960379945716, 21.82611848557383], [89.5486394875038, 21.99743967799361], [89.60098762963207, 22.118792189290957], [89.56767517555045, 22.197314402483357], [89.6343000837137, 22.349599906856497], [89.54388056549215, 22.608961156492], [89.62002331767872, 22.773143965894292], [89.66047415477783, 22.74934935583599], [89.71996067992359, 22.83500995204588], [89.69854553087112, 22.868322406127504], [89.75612848721227, 22.96730798397016], [89.79657932431138, 22.99110259402846], [89.8627283402734, 22.893068800588253], [89.94981661308691, 22.854521532293745], [89.90984166818885, 22.761722553066363], [89.93982287686242, 22.75315649344543], [89.93982287686242, 22.72174760816847], [89.90984166818885, 22.724602961375467], [89.87272207649795, 22.693194076098507], [89.93839520025881, 22.67320660364942], [89.9084139915854, 22.666068220631928], [89.90270328517136, 22.646080748183067], [89.93268449384493, 22.637514688561964], [89.92411843422383, 22.610388833095612], [89.96694873232877, 22.591829037250193], [89.93268449384493, 22.51616217726462], [89.96980408553577, 22.506168441040302], [89.96552105572533, 22.487608645194655], [89.89556490215386, 22.500457734626252], [89.88985419573999, 22.481897938780776], [89.94696125987991, 22.464765819538798], [89.9412505534658, 22.447633700296763], [89.875577429705, 22.417652491623357], [89.90270328517136, 22.363400780690483], [89.85987298706641, 22.26489109504905], [89.89556490215386, 22.147821613562144], [89.875577429705, 22.080720813197672], [89.875577429705, 22.04645657471383], [89.84987925084204, 22.045028898110218], [89.8827158127225, 21.900833561157015], [89.8670113700839, 21.859430939655454], [89.86415601687702, 21.815172964947124], [89.84131319122093, 21.81802831815412], [89.82227750317429, 21.84277471261464], [89.72709906294108, 21.83325686859132], [89.69854553087112, 21.75949357741058], [89.64857684974868, 21.76425249942224], [89.61526439566705, 21.719042740311465], [89.5486394875038, 21.716663279305635]]], "type": "Polygon"}, "properties": {"DISTNAME": "Bagerhat", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[90.03048034118444, 23.277351753029848], [90.0197727666582, 23.23000047901371], [89.98550852817436, 23.21715138958234], [89.96837640893239, 23.162899678649467], [89.94410590667286, 23.155761295631976], [89.94696125987991, 23.11293099752703], [89.98408085157075, 23.10722029111298], [90.00835135383028, 23.135773823182944], [90.1111440692822, 23.108647967716365], [90.1111440692822, 23.037264137541456], [90.13255921833468, 23.017276665092595], [90.12827618852418, 23.005855252264666], [90.1025780096611, 23.005855252264666], [90.0654584179702, 22.965880307366547], [90.06403074136676, 22.934471422089757], [90.03690488590024, 22.934471422089757], [90.02120044326182, 22.863087591914848], [89.94981661308691, 22.854521532293745], [89.8627283402734, 22.893068800588253], [89.79657932431138, 22.99110259402846], [89.72995441614813, 23.074383729232522], [89.67522681301404, 23.102937261302486], [89.67522681301404, 23.13387025437828], [89.71805711111898, 23.112455105325807], [89.74899010419477, 23.12673187136079], [89.74661064318894, 23.162423786448244], [89.77278471425308, 23.179080013489056], [89.74185172117728, 23.190977318518208], [89.69188304005485, 23.167182708459904], [89.69497633936237, 23.209537114363684], [89.75029880774792, 23.26664417850361], [89.74672961623918, 23.293413114819202], [89.8306056166947, 23.341597200187266], [89.87522051055402, 23.321966646889166], [89.90377404262398, 23.339812604432893], [89.91805080865896, 23.327320434152284], [89.9091278298871, 23.30412068934544], [89.92518919167645, 23.296982306327948], [89.9287583831852, 23.313043668117302], [89.95552731950079, 23.321966646889166], [89.95909651100953, 23.354089370467875], [90.01441897939509, 23.321966646889166], [90.0072805963776, 23.295197710573575], [90.03048034118444, 23.277351753029848]]], "type": "Polygon"}, "properties": {"DISTNAME": "Gopalganj", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[90.53392029973384, 23.386780786722625], [90.55872068447877, 23.354089370467875], [90.5961971953206, 23.341597200187266], [90.56407447174189, 23.296982306327948], [90.6158277486187, 23.19347575257433], [90.5569360887244, 23.131014901171284], [90.54801310995254, 23.059631070996375], [90.54944078655615, 23.038691814145068], [90.50803816505464, 23.050113226973053], [90.49376139901966, 23.022987371506474], [90.41238383262021, 23.005855252264666], [90.42666059865519, 23.04011949074851], [90.34614900003186, 23.059779299714876], [90.36384282810138, 23.134346146579503], [90.29245899792647, 23.150050589217926], [90.28817596811587, 23.19859159373692], [90.23677961038999, 23.272830777118656], [90.24820102321792, 23.338503900879687], [90.23820728699343, 23.357063696725163], [90.268188495667, 23.37990652238102], [90.222502844355, 23.398466318226667], [90.24249031680404, 23.42130914388258], [90.2753268786845, 23.42130914388258], [90.28032374679663, 23.437965370923393], [90.42666059865519, 23.400488860081566], [90.4391527689358, 23.40941183885343], [90.53392029973384, 23.386780786722625]]], "type": "Polygon"}, "properties": {"DISTNAME": "Shariatpur", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[90.28032374679663, 23.437965370923393], [90.2753268786845, 23.42130914388258], [90.24249031680404, 23.42130914388258], [90.222502844355, 23.398466318226667], [90.268188495667, 23.37990652238102], [90.23820728699343, 23.357063696725163], [90.24820102321792, 23.338503900879687], [90.23677961038999, 23.272830777118656], [90.28817596811587, 23.19859159373692], [90.29245899792647, 23.150050589217926], [90.36384282810138, 23.134346146579503], [90.34614900003186, 23.059779299714876], [90.34385535565235, 23.050113226973053], [90.32386788320332, 23.05439625678349], [90.31387414697895, 23.037264137541456], [90.32957858961737, 23.011565958678545], [90.31672950018583, 22.978729396798144], [90.23249658057955, 22.971591013780653], [90.23820728699343, 23.037264137541456], [90.22535819756206, 23.064389993008035], [90.17253416323257, 23.064389993008035], [90.1511190141801, 23.05296858018005], [90.13255921833468, 23.017276665092595], [90.1111440692822, 23.037264137541456], [90.1111440692822, 23.108647967716365], [90.00835135383028, 23.135773823182944], [89.98408085157075, 23.10722029111298], [89.94696125987991, 23.11293099752703], [89.94410590667286, 23.155761295631976], [89.96837640893239, 23.162899678649467], [89.98550852817436, 23.21715138958234], [90.0197727666582, 23.23000047901371], [90.03048034118444, 23.277351753029848], [90.03761872420193, 23.336243412924148], [90.0982949798506, 23.307689880854184], [90.11078715013122, 23.445103753940884], [90.13398689493806, 23.470088094502103], [90.16254042700803, 23.459380519975866], [90.18217098030613, 23.493287839308948], [90.28032374679663, 23.437965370923393]]], "type": "Polygon"}, "properties": {"DISTNAME": "Madaripur", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[90.34614900003186, 23.059779299714876], [90.42666059865519, 23.04011949074851], [90.41238383262021, 23.005855252264666], [90.49376139901966, 23.022987371506474], [90.50803816505464, 23.050113226973053], [90.54944078655615, 23.038691814145068], [90.54801310995254, 23.059631070996375], [90.66044264247802, 22.97218587903211], [90.68507006388847, 22.907345566623235], [90.6498875011514, 22.846452669578355], [90.64795047219741, 22.843100119465817], [90.55943452278052, 22.770288612687466], [90.57513896541911, 22.72888599118596], [90.56086219938413, 22.684628016477575], [90.52945331410712, 22.678917310063525], [90.52802563750367, 22.62894862894109], [90.55086846315959, 22.59040136064658], [90.51374887146869, 22.5304389432996], [90.46378019034626, 22.534721973110265], [90.43950968808679, 22.50474076443669], [90.44664807110428, 22.48618096859127], [90.43665433487973, 22.456199759917865], [90.40810080280977, 22.481897938780776], [90.36241515149777, 22.50331308783325], [90.34242767904891, 22.464765819538798], [90.32101252999644, 22.48475329198783], [90.27675455528788, 22.470476525952847], [90.23392425718293, 22.454772083314253], [90.22821355076906, 22.461910466331744], [90.24106264020043, 22.473331879159673], [90.24106264020043, 22.487608645194655], [90.21964749114795, 22.477614908970338], [90.19109395907799, 22.474759555763285], [90.21393678473407, 22.50331308783325], [90.31387414697895, 22.57184156480116], [90.3381446492383, 22.58183530102565], [90.35099373866984, 22.57041388819772], [90.36241515149777, 22.580407624422037], [90.34385535565235, 22.60182277347451], [90.35242141527328, 22.610388833095612], [90.37383656432576, 22.59040136064658], [90.38383030055024, 22.598967420267684], [90.36384282810138, 22.631803982148085], [90.37669191753275, 22.646080748183067], [90.32101252999644, 22.663212867425102], [90.27960990849493, 22.691766399495066], [90.27960990849493, 22.72174760816847], [90.26105011264951, 22.74601811042794], [90.1968046654921, 22.780282348911783], [90.18024945330535, 22.75048296697571], [90.17538951643962, 22.741735080617502], [90.0354772092968, 22.808835880981746], [90.0397602391073, 22.860232238707795], [90.02120044326182, 22.863087591914848], [90.03690488590024, 22.934471422089757], [90.06403074136676, 22.934471422089757], [90.0654584179702, 22.965880307366547], [90.1025780096611, 23.005855252264666], [90.12827618852418, 23.005855252264666], [90.13255921833468, 23.017276665092595], [90.1511190141801, 23.05296858018005], [90.17253416323257, 23.064389993008035], [90.22535819756206, 23.064389993008035], [90.23820728699343, 23.037264137541456], [90.23249658057955, 22.971591013780653], [90.31672950018583, 22.978729396798144], [90.32957858961737, 23.011565958678545], [90.31387414697895, 23.037264137541456], [90.32386788320332, 23.05439625678349], [90.34385535565235, 23.050113226973053], [90.34614900003186, 23.059779299714876]]], "type": "Polygon"}, "properties": {"DISTNAME": "Barisal", "Death": 3, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[90.96699865174668, 23.135018490751463], [90.89779387780959, 23.01680077289143], [91.00308502731758, 22.97218587903211], [90.91563983535332, 22.804433878121074], [90.99237745279135, 22.7437576224724], [90.98166987826511, 22.71698868615681], [91.01379260184382, 22.70985030313932], [91.02450017637005, 22.675942983806237], [90.99594664430009, 22.63846647296441], [91.02450017637005, 22.5474520894914], [90.94419336742328, 22.492129621105846], [90.88494478837822, 22.56898621159411], [90.78215207292635, 22.66035751421805], [90.76216460047726, 22.773143965894292], [90.72790036199342, 22.80598052777492], [90.71933430237232, 22.8573768855008], [90.6498875011514, 22.846452669578355], [90.68507006388847, 22.907345566623235], [90.66044264247802, 22.97218587903211], [90.68185779153049, 23.057846475242002], [90.74610323868791, 23.04356970920702], [90.79428732405597, 23.081046220048847], [90.86031736696776, 23.172060603521857], [90.96699865174668, 23.135018490751463]]], "type": "Polygon"}, "properties": {"DISTNAME": "Lakshmipur", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[90.94419336742328, 22.492129621105846], [91.02093098486131, 22.32437762019481], [91.01828681393522, 22.167049450090985], [90.96775003138112, 22.097852932439878], [90.93205811629366, 22.102135962250372], [90.92206438006912, 22.072154753576797], [90.88922781818871, 22.050739604524324], [90.87352337555029, 22.10499131545737], [90.88494478837822, 22.18494120525321], [90.83354843065217, 22.18351352864977], [90.84211449027327, 22.147821613562314], [90.75502621745977, 22.04788425131744], [90.7878627793404, 22.01647536604048], [90.84639752008377, 22.005053953212496], [90.87495105215373, 21.970789714728483], [90.81356095820331, 21.862286292862677], [90.73503874501091, 21.855147909845186], [90.65080582540446, 21.895122854743136], [90.59940946767858, 21.887984471725645], [90.61796926352406, 21.95508527209006], [90.59227108466109, 21.980783450953027], [90.57513896541911, 22.147821613562314], [90.65651653181851, 22.286306244101524], [90.663654914836, 22.411941785209308], [90.62367996993811, 22.467621172745794], [90.58370502503999, 22.561847828576617], [90.55086846315959, 22.59040136064658], [90.52802563750367, 22.62894862894109], [90.52945331410712, 22.678917310063525], [90.56086219938413, 22.684628016477575], [90.57513896541911, 22.72888599118596], [90.55943452278052, 22.770288612687466], [90.64795047219741, 22.843100119465817], [90.6498875011514, 22.846452669578355], [90.71933430237232, 22.8573768855008], [90.72790036199342, 22.80598052777492], [90.76216460047726, 22.773143965894292], [90.78215207292635, 22.66035751421805], [90.88494478837822, 22.56898621159411], [90.94419336742328, 22.492129621105846]]], "type": "Polygon"}, "properties": {"DISTNAME": "Bhola", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[90.59940946767858, 21.887984471725645], [90.48662301600217, 21.804465390420887], [90.4848384202478, 21.770558071087805], [90.47674825282809, 21.76936834058489], [90.46627862440238, 21.79601830385019], [90.43772509233241, 21.812198638689836], [90.30447527600592, 21.828378973529595], [90.25022356507299, 21.8255236203226], [90.2121521889797, 21.798873657057243], [90.17122545967942, 21.792211166240975], [90.11126304233244, 21.80553614787351], [90.08270951026248, 21.838848601955135], [90.10721795862247, 21.898811019302116], [90.11554607214288, 21.92498509036625], [90.14409960421284, 21.926174820869164], [90.14647906521867, 21.930933742880825], [90.13696122119535, 21.949969430927467], [90.16194556175657, 21.986851076517837], [90.17384286678572, 21.977333232494516], [90.19287855483236, 21.98328188500909], [90.18276584555758, 21.999343246798446], [90.21072451237609, 22.041578679651934], [90.18930936332362, 22.070132211721898], [90.2035861293586, 22.08202951675105], [90.23808831394314, 22.048717062669425], [90.22857046991982, 22.034440296634443], [90.2511753494752, 22.018973800096546], [90.282108342551, 22.04276841015485], [90.34397432870259, 22.112962509826843], [90.34159486769676, 22.161741460446365], [90.37133813026963, 22.19029499251633], [90.33445648467927, 22.260489092188323], [90.3059029526093, 22.23907394313585], [90.2511753494752, 22.262868553194153], [90.2273807394169, 22.21408960257463], [90.16551475326531, 22.24383286514751], [90.14528933471576, 22.293801546269947], [90.1643250227624, 22.30807831230493], [90.13815095169826, 22.342580496889468], [90.14647906521867, 22.340201035883638], [90.17741205829446, 22.321165347836995], [90.19882720734694, 22.412774596561462], [90.211914242879, 22.413964327064377], [90.23392425718293, 22.454772083314253], [90.27675455528788, 22.470476525952847], [90.32101252999644, 22.48475329198783], [90.34242767904891, 22.464765819538798], [90.36241515149777, 22.50331308783325], [90.40810080280977, 22.481897938780776], [90.43665433487973, 22.456199759917865], [90.44664807110428, 22.48618096859127], [90.43950968808679, 22.50474076443669], [90.46378019034626, 22.534721973110265], [90.51374887146869, 22.5304389432996], [90.55086846315959, 22.59040136064658], [90.58370502503999, 22.561847828576617], [90.62367996993811, 22.467621172745794], [90.663654914836, 22.411941785209308], [90.65651653181851, 22.286306244101524], [90.57513896541911, 22.147821613562314], [90.59227108466109, 21.980783450953027], [90.61796926352406, 21.95508527209006], [90.59940946767858, 21.887984471725645]]], "type": "Polygon"}, "properties": {"DISTNAME": "Patuakhali", "Death": 1, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[90.23392425718293, 22.454772083314253], [90.211914242879, 22.413964327064377], [90.19882720734694, 22.412774596561462], [90.17741205829446, 22.321165347836995], [90.14647906521867, 22.340201035883638], [90.13815095169826, 22.342580496889468], [90.1643250227624, 22.30807831230493], [90.14528933471576, 22.293801546269947], [90.16551475326531, 22.24383286514751], [90.2273807394169, 22.21408960257463], [90.2511753494752, 22.262868553194153], [90.3059029526093, 22.23907394313585], [90.33445648467927, 22.260489092188323], [90.37133813026963, 22.19029499251633], [90.34159486769676, 22.161741460446365], [90.34397432870259, 22.112962509826843], [90.282108342551, 22.04276841015485], [90.2511753494752, 22.018973800096546], [90.22857046991982, 22.034440296634443], [90.23808831394314, 22.048717062669425], [90.2035861293586, 22.08202951675105], [90.18930936332362, 22.070132211721898], [90.21072451237609, 22.041578679651934], [90.18276584555758, 21.999343246798446], [90.19287855483236, 21.98328188500909], [90.17384286678572, 21.977333232494516], [90.16194556175657, 21.986851076517837], [90.13696122119535, 21.949969430927467], [90.14647906521867, 21.930933742880825], [90.14409960421284, 21.926174820869164], [90.11554607214288, 21.92498509036625], [90.10721795862247, 21.898811019302116], [90.08270951026248, 21.838848601955135], [90.02988547593299, 21.882154792261304], [90.03583412844756, 21.98090242400326], [89.99062436933679, 21.979712693500346], [89.98705517782804, 21.946400239418722], [89.91448161715022, 21.965435927465364], [89.88711781558317, 22.029681374622783], [89.875577429705, 22.04645657471383], [89.875577429705, 22.080720813197672], [89.89556490215386, 22.147821613562144], [89.95374272374642, 22.171259304469686], [89.97277841179306, 22.210520411065886], [89.99538329134845, 22.198623106036734], [90.02988547593299, 22.256919900679577], [90.02393682341841, 22.281904241240795], [90.05605954699712, 22.333062652866147], [90.08104388755834, 22.34733941890113], [90.0941309230904, 22.340201035883638], [90.17384286678572, 22.42824109309936], [90.17384286678572, 22.455604894666408], [90.19109395907799, 22.474759555763285], [90.21964749114795, 22.477614908970338], [90.24106264020043, 22.487608645194655], [90.24106264020043, 22.473331879159673], [90.22821355076906, 22.461910466331744], [90.23392425718293, 22.454772083314253]]], "type": "Polygon"}, "properties": {"DISTNAME": "Barguna", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[90.19109395907799, 22.474759555763285], [90.17384286678572, 22.455604894666408], [90.17384286678572, 22.42824109309936], [90.0941309230904, 22.340201035883638], [90.08104388755834, 22.34733941890113], [90.05605954699712, 22.333062652866147], [90.05724927750003, 22.35542958632101], [90.04154483486167, 22.372561705562873], [90.03868948165461, 22.365423322545382], [90.02298503901619, 22.36827867575238], [90.02726806882669, 22.391121501408463], [90.04154483486167, 22.401115237632837], [90.03440645184418, 22.41681968027143], [90.03868948165461, 22.445373212341394], [90.06010463070709, 22.443945535737782], [90.07009836693163, 22.465360684790255], [90.09008583938066, 22.438234829323903], [90.14433755031354, 22.483920480635845], [90.12149472465745, 22.49962492327427], [90.08865816277705, 22.486775833842728], [90.07009836693163, 22.50105259987771], [90.06295998391414, 22.558159664017637], [90.06867069032819, 22.589568549294597], [90.08865816277705, 22.583857842880718], [90.11292866503658, 22.600989962122583], [90.10436260541564, 22.64382026022753], [90.14243398150893, 22.669756385191135], [90.16337323836018, 22.717821497508965], [90.19240266263137, 22.744947352975316], [90.18024945330535, 22.75048296697571], [90.1968046654921, 22.780282348911783], [90.26105011264951, 22.74601811042794], [90.27960990849493, 22.72174760816847], [90.27960990849493, 22.691766399495066], [90.32101252999644, 22.663212867425102], [90.37669191753275, 22.646080748183067], [90.36384282810138, 22.631803982148085], [90.38383030055024, 22.598967420267684], [90.37383656432576, 22.59040136064658], [90.35242141527328, 22.610388833095612], [90.34385535565235, 22.60182277347451], [90.36241515149777, 22.580407624422037], [90.35099373866984, 22.57041388819772], [90.3381446492383, 22.58183530102565], [90.31387414697895, 22.57184156480116], [90.21393678473407, 22.50331308783325], [90.19109395907799, 22.474759555763285]]], "type": "Polygon"}, "properties": {"DISTNAME": "Jhalokati", "Death": 0, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}, {"geometry": {"coordinates": [[[90.18024945330535, 22.75048296697571], [90.19240266263137, 22.744947352975316], [90.16337323836018, 22.717821497508965], [90.14243398150893, 22.669756385191135], [90.10436260541564, 22.64382026022753], [90.11292866503658, 22.600989962122583], [90.08865816277705, 22.583857842880718], [90.06867069032819, 22.589568549294597], [90.06295998391414, 22.558159664017637], [90.07009836693163, 22.50105259987771], [90.08865816277705, 22.486775833842728], [90.12149472465745, 22.49962492327427], [90.14433755031354, 22.483920480635845], [90.09008583938066, 22.438234829323903], [90.07009836693163, 22.465360684790255], [90.06010463070709, 22.443945535737782], [90.03868948165461, 22.445373212341394], [90.03440645184418, 22.41681968027143], [90.04154483486167, 22.401115237632837], [90.02726806882669, 22.391121501408463], [90.02298503901619, 22.36827867575238], [90.03868948165461, 22.365423322545382], [90.04154483486167, 22.372561705562873], [90.05724927750003, 22.35542958632101], [90.05605954699712, 22.333062652866147], [90.02393682341841, 22.281904241240795], [90.02988547593299, 22.256919900679577], [89.99538329134845, 22.198623106036734], [89.97277841179306, 22.210520411065886], [89.95374272374642, 22.171259304469686], [89.89556490215386, 22.147821613562144], [89.85987298706641, 22.26489109504905], [89.90270328517136, 22.363400780690483], [89.875577429705, 22.417652491623357], [89.9412505534658, 22.447633700296763], [89.94696125987991, 22.464765819538798], [89.88985419573999, 22.481897938780776], [89.89556490215386, 22.500457734626252], [89.96552105572533, 22.487608645194655], [89.96980408553577, 22.506168441040302], [89.93268449384493, 22.51616217726462], [89.96694873232877, 22.591829037250193], [89.92411843422383, 22.610388833095612], [89.93268449384493, 22.637514688561964], [89.90270328517136, 22.646080748183067], [89.9084139915854, 22.666068220631928], [89.93839520025881, 22.67320660364942], [89.87272207649795, 22.693194076098507], [89.90984166818885, 22.724602961375467], [89.93982287686242, 22.72174760816847], [89.93982287686242, 22.75315649344543], [89.90984166818885, 22.761722553066363], [89.94981661308691, 22.854521532293745], [90.02120044326182, 22.863087591914848], [90.0397602391073, 22.860232238707795], [90.0354772092968, 22.808835880981746], [90.17538951643962, 22.741735080617502], [90.18024945330535, 22.75048296697571]]], "type": "Polygon"}, "properties": {"DISTNAME": "Pirojpur", "Death": 1, "highlight": {}, "style": {"fillColor": "none"}}, "type": "Feature"}], "name": "Dist2", "type": "FeatureCollection"}
+                    
+                    ).addTo(feature_group_d84cddb96a21413981c6ea1d3b83ea9d);
+                geo_json_7647667add864ec2b9bdfdbef60625ef.setStyle(function(feature) {return feature.properties.style;});
+
+            
+    
+            var layer_control_842d96cf4e084e86baacf01f42a909ea = {
+                base_layers : { "openstreetmap" : tile_layer_4e4718e87b684c12abb65d59ec0e2376, },
+                overlays : { "Weekly Cases except Dhaka" : feature_group_dd9dbd1fa11144238fd6f51097699270,"Daily Cases in Dhaka City (18.05.2020)" : feature_group_92408630598b453c975d133a7327faee,"Intensity (18.05.2020)" : feature_group_597e0c6b2423458c8841f6f5f229686a,"Zero cases in seven days" : feature_group_43b242056bc9438395759701a5066c8a,"District" : feature_group_d84cddb96a21413981c6ea1d3b83ea9d, }
+                };
+            L.control.layers(
+                layer_control_842d96cf4e084e86baacf01f42a909ea.base_layers,
+                layer_control_842d96cf4e084e86baacf01f42a909ea.overlays,
+                {position: 'topright',
+                 collapsed: true,
+                 autoZIndex: true
+                }).addTo(map_c781e42335c64f048473459ebc451e57);
+        
+</script>
